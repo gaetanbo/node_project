@@ -2,8 +2,9 @@ const http=require('http')
 const express= require('express')
 const app=express()
 
+const PORT = process.env.PORT || 3000;
 
-app.get('/',function(req,res) {
+app.get('/',function(req,res) {	
 	res.end('Hello World')
 })
 
@@ -23,6 +24,6 @@ app.get('/',function(req,res) {
 //    res.send(req.params);
 //})
 
-app.listen(5000,function() {
-	console.log('Example app listening on port 5000!')
+app.listen(PORT,function() {
+	console.log(`Example app listening on port ${PORT}!`);
 })
