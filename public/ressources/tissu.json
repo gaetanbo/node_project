@@ -1,0 +1,926 @@
+[
+{
+    "LocalizationNameVariable": "@ITEMS_T2_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T2_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Cotton"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Baumwolle"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Coton"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Хлопок"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Bawełna"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Algodón"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Algodão"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "656",
+    "UniqueName": "T2_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T3_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T3_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Flax"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Flachs"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Lin"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Лен"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Len"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lino"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Linho"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "657",
+    "UniqueName": "T3_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T4_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Hemp"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Hanf"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Chanvre"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Пенька"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Konopie"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Cáñamo"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Cânhamo"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "658",
+    "UniqueName": "T4_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T5_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Skyflower"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Himmelsblume"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Vanillier de Cayenne"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Звездоцвет"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Witułka"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Duranta"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Verbena"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "659",
+    "UniqueName": "T5_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T6_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Redleaf Cotton"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Rotblatt-Baumwolle"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Coton feuille-rouge"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Хлопок-краснолист"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Czerwona Bawełna"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Algodón rojo"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Algodão-vermelho"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "660",
+    "UniqueName": "T6_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T7_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Sunflax"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Sonnenflachs"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Lin ensoleillé"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Златолен"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Słoneczny Len"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lino solar"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Linhossol"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "661",
+    "UniqueName": "T7_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T8_FIBER",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_FIBER_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Ghost Hemp"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Geisterhanf"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Chanvre fantôme"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Призрачная пенька"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Mroczne Konopie"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Cáñamo fantasma"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Cânhamo-fantasma"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        }
+    ],
+    "Index": "662",
+    "UniqueName": "T8_FIBER"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T2_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T2_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Simple Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Einfacher Stoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Morceau de tissu"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Простая ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Prosta Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela simple"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Simples"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "751",
+    "UniqueName": "T2_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T3_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T3_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Neat Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Ordentlicher Stoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu propre"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Крепкая ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Czysta Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela pulcra"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Limpo"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "752",
+    "UniqueName": "T3_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T4_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Fine Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Guter Stoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu délicat"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Изысканная ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Dobra Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela buena"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Fino"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "753",
+    "UniqueName": "T4_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T5_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Ornate Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Kunstvoller Stoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu ouvragé"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Ткань с узором"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ozdobna Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela decorada"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Ornado"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "754",
+    "UniqueName": "T5_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T6_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Lavish Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Qualitätsstoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu somptueux"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Дорогая ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Bogata Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela suntuosa"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Rico"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "755",
+    "UniqueName": "T6_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T7_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Opulent Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Luxusstoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu opulent"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Роскошная ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Wykwintna Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela opulenta"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Opulento"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "756",
+    "UniqueName": "T7_CLOTH"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T8_CLOTH",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_CLOTH_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Baroque Cloth"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Barocker Stoff"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Tissu baroque"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Великолепная ткань"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Barokowa Tkanina"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Tela barroca"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Tecido Barroco"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining fiber."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке волокна."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar fibras"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar fibra."
+        }
+    ],
+    "Index": "757",
+    "UniqueName": "T8_CLOTH"
+}
+]
