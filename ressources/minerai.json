@@ -1,0 +1,861 @@
+[
+{
+    "LocalizationNameVariable": "@ITEMS_T2_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T2_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Copper Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Kupfererz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai de cuivre"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Медная руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Miedzi"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de cobre"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Cobre"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "611",
+    "UniqueName": "T2_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T3_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T3_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Tin Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Zinnerz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai d\u0027étain"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Оловянная руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Cyny"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de estaño"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Estanho"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "612",
+    "UniqueName": "T3_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T4_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Iron Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Eisenerz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai de fer"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Железная руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Żelaza"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de hierro"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Ferro"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "613",
+    "UniqueName": "T4_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T5_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Titanium Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Titanerz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai de titane"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Титановая руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Tytanu"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de titanio"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Titânio"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "614",
+    "UniqueName": "T5_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T6_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Runite Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Runiterz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai de runite"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Рунитовая руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Runiczna"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de runita"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Runita"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "615",
+    "UniqueName": "T6_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T7_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Meteorite Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Meteoriterz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai de météorite"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Метеоритная руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Meteorytowa"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de meteorito"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Meteorito"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "616",
+    "UniqueName": "T7_ORE"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T8_ORE",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_ORE_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Adamantium Ore"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Adamanterz"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai d\u0027adamantine"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Адамантиевая руда"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda Adamantytu"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Mineral de adamantio"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério de Adamântio"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel."
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        }
+    ],
+    "Index": "617",
+    "UniqueName": "T8_ORE"
+},
+{"LocalizationNameVariable": "@ITEMS_T2_METALBAR","LocalizationDescriptionVariable": "@ITEMS_T2_METALBAR_DESC","LocalizedNames": [{"Key": "EN-US","Value": "Copper Bar"},{"Key": "DE-DE","Value": "Kupferbarren"},{"Key": "FR-FR","Value": "Barre en cuivre"},{"Key": "RU-RU","Value": "Слиток меди"},{"Key": "PL-PL","Value": "Sztabka Miedzi"},{"Key": "ES-ES","Value": "Lingote de cobre"},{"Key": "PT-BR","Value": "Barra de Cobre"}],"LocalizedDescriptions": [{"Key": "EN-US","Value": "Advanced material used in crafting, created by refining ore."},{"Key": "DE-DE","Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."},{"Key": "FR-FR","Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."},{"Key": "RU-RU","Value": "Продвинутый материал для крафта, создаваемый при переработке руды."},{"Key": "PL-PL","Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."},{"Key": "ES-ES","Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"},{"Key": "PT-BR","Value": "Material avançado usado na fabricação, criado ao refinar minério."}],"Index": "707","UniqueName": "T2_METALBAR"},
+{
+    "LocalizationNameVariable": "@ITEMS_T3_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T3_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Bronze Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Bronzebarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre de bronze"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток бронзы"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Brązu"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de bronce"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Bronze"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "708",
+    "UniqueName": "T3_METALBAR"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T4_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Steel Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Stahlbarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre d\u0027acier"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток стали"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Stali"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de acero"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Aço"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "709",
+    "UniqueName": "T4_METALBAR"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T5_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Titanium Steel Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Titanstahlbarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre de titane"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток титановой стали"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Stali Tytanowej"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de titanio"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Aço Titânio"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "710",
+    "UniqueName": "T5_METALBAR"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T6_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Runite Steel Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Runitstahlbarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre de runite"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток рунитовой стали"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Runicznej Stali"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de runita"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Aço Runita"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "711",
+    "UniqueName": "T6_METALBAR"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T7_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Meteorite Steel Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Meteoritstahlbarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre de météorite"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток метеоритной стали"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Meteorytowej Stali"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de meteorito"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Aço Meteorito"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "712",
+    "UniqueName": "T7_METALBAR"
+},
+{
+    "LocalizationNameVariable": "@ITEMS_T8_METALBAR",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_METALBAR_DESC",
+    "LocalizedNames": [
+        {
+            "Key": "EN-US",
+            "Value": "Adamantium Steel Bar"
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Adamantstahlbarren"
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Barre d\u0027adamantine"
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Слиток адамантиевой стали"
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Sztabka Adamantytowej Stali"
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Lingote de adamantio"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Barra de Aço Adamântio"
+        }
+    ],
+    "LocalizedDescriptions": [
+        {
+            "Key": "EN-US",
+            "Value": "Advanced material used in crafting, created by refining ore."
+        },
+        {
+            "Key": "DE-DE",
+            "Value": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz."
+        },
+        {
+            "Key": "FR-FR",
+            "Value": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné."
+        },
+        {
+            "Key": "RU-RU",
+            "Value": "Продвинутый материал для крафта, создаваемый при переработке руды."
+        },
+        {
+            "Key": "PL-PL",
+            "Value": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy."
+        },
+        {
+            "Key": "ES-ES",
+            "Value": "Material avanzado utilizado en fabricación, creado al refinar minerales"
+        },
+        {
+            "Key": "PT-BR",
+            "Value": "Material avançado usado na fabricação, criado ao refinar minério."
+        }
+    ],
+    "Index": "713",
+    "UniqueName": "T8_METALBAR"
+}
+]
