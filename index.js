@@ -47,7 +47,7 @@ app.get('/bbiz', function (req, res) {
 });
 
 app.post('/bbiz', function (req, res) {
-    getItemsInfo();
+//    getItemsInfo();
     let itemAsked = req.body.item;
     //console.log(itemAsked);
 
@@ -65,13 +65,14 @@ app.post('/bbiz', function (req, res) {
                 let city_relevant_order = [];
                 info.forEach(function (order) {
                     if (order.city == "Caerleon" || order.city == "Black Market") {
-                        city_relevant_order.push(order)
-                        // On a un tableau avec les order de BM et CA, faire les comparaisons dans le tableau avant de le passer au template
-
-                        // Si je veux fecth licone de limage il faut que je le fasse ici et que j'envoie l'url en params sur mon render ?
+			console.log(numberWithCommas(order.buy_price_min));
+			// ça serait possible de mettre les virgules de l'affichage une fois sur l'ejs ? Ou il faut refaire le tableau en 
+			//passant les middleware numberWithCommas et moment maintenant ?
+			// Si je veux fecth licone de limage il faut que je le fasse ici et que j'envoie l'url en params sur mon render ?
                         // Pareil pour la date il faut que je la transforme avec moment ici avant de la passer en params sur mon render ?
 
-
+                        city_relevant_order.push(order)
+                        // On a un tableau avec les order de BM et CA, faire les comparaisons dans le tableau avant de le passer au template
                     } else {
                         // l'object n'a pas d'order au BM où à Caerleon donc on s'en fout
                     }
@@ -81,6 +82,12 @@ app.post('/bbiz', function (req, res) {
         }
     });
 });
+
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Test app listening on port ${PORT}!`));
