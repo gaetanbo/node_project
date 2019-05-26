@@ -5,29 +5,32 @@ const express = require('express');
 const request = require('request');
 const moment = require('moment');
 const app = express();
+const fs = require('fs');
+
+//console.log(process.env.USER)
 
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
-let items_info = ('/public/ressources/items/');
-console.log(items_info);
-
 
 app.get('/', function (req, res) {
+    console.log('requested home');
     res.render('index');
 });
-
 app.get('/recipe', function (req, res) {
+    console.log('requested recipe');
     res.render('recipe');
 });
+
 
 app.post('/recipe', function (req, res) {
     res.render('recipe');
 });
 
 app.get('/player', function (req, res) {
+    console.log('requested player');
     res.render('player');
 });
 
@@ -36,6 +39,7 @@ app.post('/player', function (req, res) {
 });
 
 app.get('/guild', function (req, res) {
+    console.log('requested guild');
     res.render('guild');
 });
 app.post('/guild', function (req, res) {
@@ -43,13 +47,29 @@ app.post('/guild', function (req, res) {
 });
 
 app.get('/bbiz', function (req, res) {
-    res.render('bbiz', {info: null, error: null});
+    //    let items_file = ('./public/items/tank.json');
+    var path = './public/items';
+    let nom = [];
+    fs.readdir(path, function (err, items) {
+        //console.log(items);
+        for (var i = 0; i < items.length; i++) {
+            // console.log(err);
+            nom.push(items[i]);
+        }
+        //console.log(nom)
+        res.render('bbiz', {info: null, error: null, select: nom});
+
+    })
+    console.log('requested bbiz');
+    // console.log(nom);
 });
 
 app.post('/bbiz', function (req, res) {
-//    getItemsInfo();
+    //    getItemsInfo();
     let itemAsked = req.body.item;
-    //console.log(itemAsked);
+    let groupAsked = req.body.bbiz_group;
+    console.log(itemAsked);
+    console.log(groupAsked);
 
     let url = `https://www.albion-online-data.com/api/v2/stats/prices/${itemAsked}`;
     request(url, function (err, response, body) {
@@ -65,10 +85,10 @@ app.post('/bbiz', function (req, res) {
                 let city_relevant_order = [];
                 info.forEach(function (order) {
                     if (order.city == "Caerleon" || order.city == "Black Market") {
-			console.log(numberWithCommas(order.buy_price_min));
-			// ça serait possible de mettre les virgules de l'affichage une fois sur l'ejs ? Ou il faut refaire le tableau en 
-			//passant les middleware numberWithCommas et moment maintenant ?
-			// Si je veux fecth licone de limage il faut que je le fasse ici et que j'envoie l'url en params sur mon render ?
+                        //console.log(numberWithCommas(order.buy_price_min));
+                        // ça serait possible de mettre les virgules de l'affichage une fois sur l'ejs ? Ou il faut refaire le tableau en
+                        //passant les middleware numberWithCommas et moment maintenant ?
+                        // Si je veux fecth licone de limage il faut que je le fasse ici et que j'envoie l'url en params sur mon render ?
                         // Pareil pour la date il faut que je la transforme avec moment ici avant de la passer en params sur mon render ?
 
                         city_relevant_order.push(order)
