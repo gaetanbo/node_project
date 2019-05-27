@@ -28,11 +28,11 @@
     <fieldset>
         <form action="/bbiz" method="post">
             <select name="bbiz_group">
-                <% if (select !== null) { %>
-                <% select.forEach(function(item,i){%>
-                <option label="<%= item %>" value="<%= item %>"><%= item %></option>
-                <% }); %>
-                <% } %>
+                <%# if (select !== null) { %>
+                <%# select.forEach(function(item,i){%>
+                <option label="<%# = item %>" value="<%# = item %>"><%# = item %></option>
+                <%# }); %>
+                <%# } %>
             </select>
 
             <input name="item" type="text" class="ghost-input" placeholder="Enter an Item">

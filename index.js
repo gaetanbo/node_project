@@ -65,21 +65,18 @@ app.get('/bbiz', function (req, res) {
 });
 
 app.post('/bbiz', function (req, res) {
-    //    getItemsInfo();
     let itemAsked = req.body.item;
-    let groupAsked = req.body.bbiz_group;
-    console.log(itemAsked);
-    console.log(groupAsked);
-
+    //let groupAsked = req.body.bbiz_group;
+    //console.log(groupAsked);
     let url = `https://www.albion-online-data.com/api/v2/stats/prices/${itemAsked}`;
     request(url, function (err, response, body) {
         if (err) {
-            res.render('bbiz', {info: null, error: 'Error please try again '});
+            res.render('bbiz', {info: null, select: null, error: 'Error please try again '});
         } else {
             let info = JSON.parse(body);
             // console.log(info);
             if (info[0] === undefined) {       // IS NOT AN ARRAY {
-                res.render('bbiz', {info: null, error: 'Error,Item not Found ! '});
+                res.render('bbiz', {info: null, select: null, error: 'Error,Item not Found ! '});
             } else {
                 // On devrait commencer a comparer les prix ici !!
                 let city_relevant_order = [];
@@ -97,7 +94,7 @@ app.post('/bbiz', function (req, res) {
                         // l'object n'a pas d'order au BM où à Caerleon donc on s'en fout
                     }
                 });
-                res.render('bbiz', {info: city_relevant_order, error: null});
+                res.render('bbiz', {info: city_relevant_order, select: null, error: null});
             }
         }
     });
