@@ -15,3 +15,8 @@ a:hover {
 a:focus {
     color: white;
 }
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
