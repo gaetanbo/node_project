@@ -24,9 +24,40 @@
 </div>
 <hr class="my-4">
 <div class="container">
-
+    <form action="/recipe" method="post">
+        <select name="recipe_group">
+            <% if (select !==  null){ %>
+                <% select.forEach(function(item,i) { %>
+            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
+            <% }); %>
+            <% } %>
+        </select>
+        <input type="submit" value="POST">
+    </form>
+    
+    <form action="/recipe2" method="post">
+        <select name="recipe_item">4
+            <% if(select1 !== null){%>
+                <% select1.forEach(function(item,i) { %>
+            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
+            <% }); %>
+            <% } %>
+        </select>
+        <input type="submit" value="POST">
+    </form>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+             <% if(iteminfo !== null) { %>
+                <p><%#= iteminfo[1][0] %>    </p>
+                <%# (iteminfo.craftResourceList).forEach(function(resource,counter){ %>
+                    <p><%#= iteminfo.craftResourceList %>,<%#= iteminfo.craftResourceList %></p>
+                <%# }); %>
+            <% }%>
+        </div>
+    </div>
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

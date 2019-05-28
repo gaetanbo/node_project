@@ -1,33 +1,30 @@
+//const http = require('http');
+//const path = require('path');
 const bodyParser = require('body-parser');
 const express = require('express');
 const request = require('request');
 const moment = require('moment');
 const app = express();
 const fs = require('fs');
+
 //console.log(process.env.USER)
 
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
+            let item_compo =[];     // used for recipe 2 
+let usefullItem = [];
+let worthyOrder = [];
+let bbizerror = "";
+let BM_prices = [];
+let BM_dates = [];
+let CA_prices = [];
+let CA_dates = [];
+var q_level = [1, 2, 3, 4, 5];
+var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
+let diffs = [];
 moment.locale('fr');
-
-
-// Let declarations
-let usefullItem = [];       // for  getObjectList()
-
-
-
-//let item_compo =[];     // used for recipe 2 
-//let worthyOrder = [];
-//let bbizerror = "";
-//let BM_prices = [];
-//let BM_dates = [];
-//let CA_prices = [];
-//let CA_dates = [];
-//var q_level = [1, 2, 3, 4, 5];
-//var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
-//let diffs = [];
 
 
 app.get('/', function (req, res) {
@@ -35,6 +32,55 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
+app.get('/recipe', function (req, res) {
+    console.log('requested recipe');
+    var path = './public/items';
+    let nom = [];
+    fs.readdir(path, function (err, items) {
+        for (var i = 0; i < items.length; i++) {
+            nom.push(items[i]);
+    //        console.log(nom);
+        }
+        res.render('recipe', {select: nom,select1:null,iteminfo:null});
+    })
+});
+app.post('/recipe', function (req, res) {
+    //console.log(req);
+    getObjectList(req.body.recipe_group);
+    let recipeItems=[];
+    usefullItem.forEach(x=>{
+        //console.log(x.LocalizedNames[2].Value);
+        console.log(x.UniqueNames);
+        recipeItems.push(x.uniqueName,x.UniqueNames,x.LocalizedNames[2].Value);
+        console.log(recipeItems);
+    })
+    //console.log(usefullItem[0].UniqueName);
+    res.render('recipe', {select:null,select1:recipeItems,iteminfo:null});
+});
+app.post('/recipe2', function (req, res) {
+    console.log('reqbody  ');
+    console.log(req.body);
+    let itemdata=req.body.recipe_item;
+    //console.log(itemdata);
+    //getRecipe(itemdata);
+    //console.log(item_compo.body);
+    
+    res.render('recipe', {select:null,select1:null,iteminfo:itemdata});
+});
+
+app.get('/player', function (req, res) {
+    console.log('requested player');
+    res.render('player');
+});
+app.post('/player', function (req, res) {
+    res.render('player');
+});
+app.get('/guild', function (req, res) {
+    console.log('requested guild');
+    res.render('guild');
+});
+app.post('/guild', function (req, res) {
+});
 
 
 app.get('/bbiz', function (req, res) {
@@ -92,40 +138,43 @@ app.post('/bbiz', function (req, res) {
     });
 });
 
-let nom =[]; // Tableau contenant le nom de chaque fichier json du /public/item
+
 app.get('/bbiz2', function (req, res) {
-    
+    var path = './public/items';
+    let nom = [];
+    // Il faudrait que les valeurs du select soit aussi présentes sur la page de réponse get, pour pouvoir refaire des posts à la suite
+    fs.readdir(path, function (err, items) {
+        for (var i = 0; i < items.length; i++) {
+            nom.push(items[i]);
+        }
+        res.render('bbiz2', {select1: nom, error: null, categoryName: null, data: null});
+    });
     console.log('requested bbiz2');
-    let path = "./public/items/";
-    fs.readdir(path,function(err,items) {
-        noms=[];
-        items.forEach(function(item,i){
-            nom.push(item);
-        })
-    })
-    res.render('bbiz2',{select1:nom,error:null,categoryName:null,data:null});
 });
 
 app.post('/bbiz2', function (req, res) {
-    console.log('posted bbiz2');
-    let catAsked =req.body.bbiz_group; 
-    getObjectList(catAsked);
-    //console.log(usefullItem);         
-    // usefullItem === Liste de tous les items présents dans le JSON demandé
-    
-    //  usefullItem.LocalizedNames[2].Value        -> Nom FR pour l'affichage
-    //  usefullItem.UniqueName                     -> Nom  pour la price query
-    // faire une boucle sur chaque usefullItem
-        // dedans fetch les prix BM et CA, les comparer et push dans un tableau ceux interessant
-        // retourner au render seulement les usefullItem dans le nouveau tableau
-                            //nouveau tableau ===  Faire un fat tableau qui contient toutes les réponses positive au test BM/CA
-        
-    res.render('bbiz2',{select1:null,error:null,categoryName:catAsked,data:usefullItem});
+    let groupAsked = req.body.bbiz_group;
+    let cat = groupAsked.substring(0, groupAsked.length - 5);
+    getObjectList(groupAsked);
+    //console.log(usefullItem[10]);
+    bbizWorthy("T7_ARMOR_PLATE_SET1@2");
+    console.log(worthyOrder);
+    //               // Commented the loop on all items to not run a thousand query on each try
+    //          //              usefullItem.forEach(function (itemName, i) {
+    //          //              console.log(itemName.UniqueName);
+    //          //              bbizWorthy(itemName.UniqueName);
+    // if (bbizerror !== null) {
+    //     res.render('bbiz2', {select1: null, error: bbizerror, categoryName: cat, data: null});
+    // } else
+    if (worthyOrder !== null) {
+        res.render('bbiz2', {select1: null, error: null, categoryName: cat, data: worthyOrder});
+    }
+    // })
 });
 
 
-
 function getObjectList(jsonFile) {
+    usefullItem = [];
     var fichier = './public/items/' + jsonFile;
     let rawcontent = fs.readFileSync(fichier);
     let contentFile = JSON.parse(rawcontent);
