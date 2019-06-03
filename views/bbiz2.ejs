@@ -54,16 +54,23 @@
             </thead>
             <tbody>
             <% if (data !== null) { %>
-                <% data.forEach(function(item,i){%>
-                <p><%=item.LocalizedNames[2].Value %></p>
-                <p><%=item.UniqueName %></p>
-                <% }); %>
+            <% if (databank !== null) { %>
+            <% databank.forEach(function(itemss,i){%>
+            <tr>
+                <td><%= itemss.LocalizedNames[2].Value%><img width="64" height="64"
+                                                             src="<%=data[1]%>" </img></td>
+                <td></td>
+                <td></td>
+                <td><%=data[5]%></td>
+                <td><%=data[2]%></td>
+                <td><%=data[3]%></td>
+                <td><%=data[4]%></td>
+            </tr>
+            <% }); %>
             <% } %>
-
+            <% } %>
             </tbody>
-
         </table>
-
         <% if (error !== null) { %>
         <p><%= error %></p>
         <% } %>
@@ -87,16 +94,16 @@
    <%# data.forEach(function(item,i){%>
             <tr>
                 <td> <%#= item.item_id %></td> <!-- Need to be changed to something usefull -->
-                <td></td>
-                <!--<td> < item.item_id.substring(0,2) %></td>
-                <td> <%#= item.item_id %></td>
-                <td> <%#= item.quality %></td>
-                <td>
-                    <%#= item.buy_price_min %> 
-                    <%#= item.buy_price_min_date %>
-                    <%#= item.sell_price_min_date %>
-                </td>
-                <td> <%#= item.item_id %></td>
-                <td> <%#= item.city %></td>
-            </tr> -->
-            <%# }); %>
+<td></td>
+<!--<td> < item.item_id.substring(0,2) %></td>
+<td> <%#= item.item_id %></td>
+<td> <%#= item.quality %></td>
+<td>
+    <%#= item.buy_price_min %>
+    <%#= item.buy_price_min_date %>
+    <%#= item.sell_price_min_date %>
+</td>
+<td> <%#= item.item_id %></td>
+<td> <%#= item.city %></td>
+</tr> -->
+<%# }); %>

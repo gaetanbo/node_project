@@ -25,21 +25,40 @@
 <hr class="my-4">
 
 <div class="container">
-    <fieldset>
-        <form action="/bbiz" method="post">
-            <select name="bbiz_group">
-                <%# if (select !== null) { %>
-                <%# select.forEach(function(item,i){%>
-                <option label="<%# = item %>" value="<%# = item %>"><%# = item %></option>
-                <%# }); %>
-                <%# } %>
-            </select>
-
-            <input name="item" type="text" placeholder="Enter an Item">
-            <input type="submit" value="Get Item Craft List">
-        </form>
-
-
+    <% if (error !== null) { %>
+    <div class="row">
+        <div class="col-12">
+            <p><%= error %></p>
+        </div>
+    </div>
+    <hr class="my-4">
+    <% } %>
+    <div class="row">
+        <div class="col-12">
+            <form action="/bbiz" method="post">
+                <select name="bbiz_group" style="min-width: 25%;">
+                    <% if (select !== null) { %>
+                    <% select.forEach(function(item,i){%>
+                    <option label="<%= item %>" value="<%= item %>"><%= item %></option>
+                    <% }); %>
+                    <% } %>
+                </select>
+                <input type="submit" value="Get Item Craft List" style="margin-left:15%;min-width: 25%;">
+            </form>
+        </div>
+    </div>
+    <% if (info !== null) { %>
+    <div class="row">
+        <hr class="my-4">
+        <div class="col-6">
+            <p class="text-center"> Category asked : </p>
+        </div>
+        <div class="col-6">
+            <p class="capitalize text-success"> <%= info.substring(0,info.length-5) %></p>
+        </div>
+    </div>
+    <% } %>
+    <div class="row">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -52,31 +71,33 @@
                 <td>Benef</td>
             </tr>
             </thead>
-            <tbody>
-            <% if (info !== null) { %>
-            <% info.forEach(function(item,i){%>
+            <% if (data !== null) { %>
+            <% data.forEach(function(item,i) {%>
             <tr>
-                <td> <%= item.item_id %></td>
-                <td> <%= item.item_id.substring(0,2) %></td>
-                <td> <%= item.item_id %></td>
-                <td> <%= item.quality %></td>
-                <td>
-                    <%= item.buy_price_min %> @
-                    <%= item.buy_price_min_date %>
-                </td>
-                <td> <%= item.item_id %></td>
-                <td> <%= item.city %></td>
+                <td><%= item[i] %></td>
             </tr>
             <% }); %>
             <% } %>
+            <tbody>
+
+            <!--            <%# info.forEach(function(item,i){%>-->
+            <!--            <tr>-->
+            <!--                <td> <%#= item.item_id %></td>-->
+            <!--                <td> <%#= item.item_id.substring(0,2) %></td>-->
+            <!--                <td> <%#= item.item_id %></td>-->
+            <!--                <td> <%#= item.quality %></td>-->
+            <!--                <td>-->
+            <!--                    <%#= item.buy_price_min %>-->
+            <!--                    <%#= item.buy_price_min_date %>-->
+            <!--                </td>-->
+            <!--                <td> <%#= item.item_id %></td>-->
+            <!--                <td> <%#= item.city %></td>-->
+            <!--            </tr>-->
+            <!--            <%# }); %>-->
+            <!--            <%# } %>-->
             </tbody>
-
         </table>
-
-        <% if (error !== null) { %>
-        <p><%= error %></p>
-        <% } %>
-    </fieldset>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

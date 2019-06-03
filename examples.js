@@ -46,6 +46,16 @@ app.use(function (err, req, res, next) {
 	// handle error
 })
 
+                §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+// var options = {
+//     url: 'https://api.moncul.com',
+//     headers: {
+//         'User-Agent': 'request',
+//         name: 'AGENT '
+//     }
+// };
+                §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
+
 
  */
 
@@ -78,6 +88,8 @@ app.use(function (err, req, res, next) {
     })
  */
 /***** FROM CODEPEN LADIV
+
+
  $.get("https://www.albion-online-data.com/api/v2/stats/prices/" + item, function (d) {
     let BM_prices = [];
     let BM_dates = [];
@@ -127,3 +139,132 @@ app.use(function (err, req, res, next) {
     }
 });
  })
+
+
+ */
+
+/**     PROMISES EXAMPLE 1        **/
+/**
+ var userDetails;
+
+ function initialize() {
+    var options = {
+        url: 'https://api.github.com/users/narenaryan',
+        headers: {
+            'User-Agent': 'request'
+        }
+    };
+    return new Promise(function (resolve, reject) {
+        request.get(options, function (err, resp, body) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(JSON.parse(body));
+            }
+        })
+    })
+}
+
+ function main() {
+    var initializePromise = initialize();
+    initializePromise.then(function (result) {
+        userDetails = result;
+        console.log("Initialized User Details");
+        return userDetails;
+    }, function (err) {
+        console.log(err);
+    }).then(function (result) {
+        console.log(result.login + " " + result.public_gists);
+    })
+}
+
+ main();
+ **/
+/**    END PROMISES EXAMPLE 1        **/
+
+
+/**     PROMISES EXAMPLE 2       **/
+
+ var userDetails;
+
+ function getData(url) {
+    var options = {
+        url: url,
+        headers: {
+            'User-Agent': 'request'
+        }
+    };
+    return new Promise(function (resolve, reject) {
+        request.get(options, function (err, resp, body) {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(body);
+            }
+        })
+    })
+}
+
+ var errHandler = function (err) {
+    console.log(err);
+}
+
+ function main() {
+    var userProfileURL = "https://api.github.com/users/narenaryan";
+    var dataPromise = getData(userProfileURL);
+    dataPromise.then(JSON.parse, errHandler)
+        .then(function (result) {
+            userDetails = result;
+            var anotherPromise = getData(userDetails.followers_url)
+                .then(JSON.parse);
+            return anotherPromise;
+        }, errHandler).then(function (data) {
+        console.log(data)
+    }, errHandler);
+}
+ **/
+/**     END PROMISES EXAMPLE 2       **/
+
+
+/**     PROMISES EXAMPLE 3       **/
+/**
+ var message = "";
+
+ promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        message += "my";
+        resolve(message);
+    }, 2000)
+})
+
+ promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        message += " first";
+        resolve(message);
+    }, 2000)
+})
+
+ promise3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        message += " promise";
+        resolve(message);
+    }, 2000)
+})
+
+ var printResult = (results) => {
+    console.log("Results = ", results, "message = ", message)
+}
+
+ function main() {
+    // See the order of promises. Final result will be according to it
+    //Promise.all([promise1, promise2, promise3]).then(printResult);
+    Promise.all([promise2]).then(printResult);
+    Promise.all([promise3]).then(printResult);
+    // Promise.all([promise3, promise2, promise1]).then(printResult);
+    console.log("\"\"" + message);
+}
+
+ main();
+ **/
+
+/**     END PROMISES EXAMPLE 3       **/
