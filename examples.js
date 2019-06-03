@@ -89,8 +89,10 @@ app.use(function (err, req, res, next) {
  */
 /***** FROM CODEPEN LADIV
 
+ **/
 
- $.get("https://www.albion-online-data.com/api/v2/stats/prices/" + item, function (d) {
+
+$.get("https://www.albion-online-data.com/api/v2/stats/prices/" + item, function (d) {
     let BM_prices = [];
     let BM_dates = [];
     let Ca_prices = [];
@@ -125,7 +127,7 @@ app.use(function (err, req, res, next) {
         }
     });
     q_level.forEach(q => diffs[q] = Math.round(BM_prices[q] * .98) - Ca_prices[q]);
-    if (diffs.some(diff => diff > 0)) {
+    if (diffs.some(diff => diff > 5000)) {
         $("#table_content").append("<tbody id=" + jq(item) + "></tbody>");
         $("#" + jq(item)).append("<tr><td rowspan=6><img width=\"64\" height=\"64\" title=" + name + " src=" + "  https://gameinfo.albiononline.com/api/gameinfo/items/" + item + "></img></td></tr>");
         $("#" + jq(item)).click(e => refresh(item));
@@ -138,10 +140,10 @@ app.use(function (err, req, res, next) {
         });
     }
 });
- })
+})
 
 
- */
+*/
 
 /**     PROMISES EXAMPLE 1        **/
 /**

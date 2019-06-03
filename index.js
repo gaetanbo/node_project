@@ -31,7 +31,6 @@ app.get('/bbiz', function (req, res) {
 
 
 app.post('/bbiz', function (req, res, body) {
-    // Need to handle err in case we dont catch json ?
     categoryAsked = req.body.bbiz_group;
     usefullItem.splice(0, usefullItem.length);      // Empty list of items before call
     getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
@@ -41,81 +40,58 @@ app.post('/bbiz', function (req, res, body) {
         //                    // Mais le render se fait avant la réponse de bbizworthy :(
         bbizworthy(x)
     });
-    console.log('res : ' + bmca_result);
-    res.render('bbiz', {select: jsonList, info: categoryAsked, data: null, error: null,});
-
-    console.log(usefullItem.length + " items trouvés !");
+    res.render('bbiz', {select: jsonList, info: categoryAsked, data: bmca_result, error: null,});
 })
 
 
 function bbizworthy(x) {
-    if (
-        x.Index === "2560" ||
-        x.Index === "2561" ||
-        x.Index === "2562" ||
-        x.Index === "2563" ||
-        x.Index === "2624" ||
-        x.Index === "2625" ||
-        x.Index === "2626" ||
-        x.Index === "2634" ||
-        x.Index === "2633" ||
-        x.Index === "2632" || x.Index === "2631") {  // Pour empecher de tourner sur tous les items à chaque test 2631-> 2634 = T8_ARMOR_LEATHER_SET2 -> T8_ARMOR_LEATHER_SET2@3
-        let BM_prices = [];
-        let BM_name = [];
-        let BM_dates = [];
-        let Ca_prices = [];
-        let Ca_dates = [];
-        let diffs = [];
-        var q_level = [1, 2, 3, 4, 5];
-        var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
 
-        var dataPromise = getData(x.UniqueName);
-        dataPromise.then(JSON.parse, errHandler)
-            .then(function (result) {
-                result.forEach(x => {
-                    switch (x.city) {
-                        case "Black Market" :
-                            q_level.forEach(q => {
-                                if (q == x.quality) {
-                                    BM_prices[q] = x.buy_price_min
-                                    BM_name[q] = x.item_id
-                                    // console.log((BM_name[q]));
-                                }
-                            });
-                            q_level.forEach(q => {
-                                if (q == x.quality) {
-                                    BM_dates[q] = moment(x.buy_price_min_date)
-                                }
-                            });
-                            break;
-                        case "Caerleon" :
-                            q_level.forEach(q => {
-                                if (q == x.quality) {
-                                    Ca_prices[q] = x.sell_price_min
-                                }
-                            });
-                            q_level.forEach(q => {
-                                if (q == x.quality) {
-                                    Ca_dates[q] = moment(x.sell_price_min_date)
-                                }
-                            });
-                            break;
-                    }
-                });
-                q_level.forEach(q => diffs[q] = Math.round(BM_prices[q] * .98) - Ca_prices[q]);
-                if (diffs.some(diff => diff > 0)) {
+    let BM_prices = [];
+    let BM_name = [];
+    let BM_dates = [];
+    let Ca_prices = [];
+    let Ca_dates = [];
+    let diffs = [];
+    var q_level = [1, 2, 3, 4, 5];
+    var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
+    var dataPromise = getData(x.UniqueName);
+    dataPromise.then(function (resultats) {
+        res = JSON.parse(resultats);
+        res.forEach(y => {
+            switch (y.city) {
+                case "Black Market":
                     q_level.forEach(q => {
-                        if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 0) {
-                            console.log("BM : " + BM_prices[q]);
-                            bmca_result.push(BM_prices[q], BM_dates[q], Ca_prices[q], Ca_dates[q], diffs[q], q, BM_name[q]);
-                            //bmca_result.push(BM_name[q], BM_prices[q], Ca_prices[q], diffs[q], q);
+                        if (q === y.quality) {
+                            BM_prices[q] = y.buy_price_min
+                            BM_dates[q] = moment(y.buy_price_min_date)
+                            BM_name[q] = y.item_id
+
                         }
-                    });
+                    })
+                    break;
+                case "Caerleon":
+                    q_level.forEach(q => {
+                        if (q === y.quality) {
+                            Ca_prices[q] = y.sell_price_min
+                            Ca_dates[q] = moment(y.sell_price_min_date)
+                        }
+                    })
+                    break;
+            }
+        });
+        q_level.forEach(q => diffs[q] = Math.round(BM_prices[q] * .98) - Ca_prices[q]);
+        if (diffs.some(diff => diff > 0)) {
+            q_level.forEach(q => {
+                // Benef > 10,000 !!!!!
+                if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 10000) {
+                    bmca_result.push(BM_name[q], q_text[q], BM_prices[q], BM_dates[q].fromNow(), Ca_prices[q], Ca_dates[q].fromNow(), diffs[q]);
+                    console.log("Item " + BM_name[q] + " " + q_text[q] + " BM : " + numberWithCommas(BM_prices[q]) + " CA : " + numberWithCommas(Ca_prices[q]) + " Diff =  " + numberWithCommas(diffs[q]) + " @ " + Ca_dates[q].fromNow())
                 }
-                //console.log(bmca_result);
-                return bmca_result;
-            }, errHandler);
-    }
+            })
+        }       //
+
+        return bmca_result;
+    }, errHandler);
 }
 
 function getData(itemName) {
@@ -140,7 +116,7 @@ function getData(itemName) {
 
 var errHandler = function (err) {
     console.log(err);
-}
+};
 
 function getObjectList(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
     var fichier = './public/items/' + jsonFile;
@@ -153,18 +129,6 @@ function getObjectList(jsonFile) {          // Doesnt return only flat item now,
             //console.log('bullshit tier');
         } else {
             usefullItem.push(item);
-            //let enchant = name.substring(name.length, name.length - 2);
-            // if (enchant.includes("@1")) {
-            //     //console.log("its .1 !");
-            // } else if (enchant.includes("@2")) {
-            //     //console.log("its .2 !");
-            // } else if (enchant.includes("@3")) {
-            //     //console.log("its .3 !");
-            // } else {
-            //     usefullItem.push(item);
-            //     //               console.log("its flat !");
-            //     //              console.log(usefullItem);
-            // }
         }
     });
     return usefullItem
@@ -177,8 +141,14 @@ function getJsonList() {
         items.forEach(function (item, i) {
             jsonList.push(item);
         })
-    })
+    });
     return jsonList;
+}
+
+function numberWithCommas(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return parts.join(".");
 }
 
 const PORT = process.env.PORT || 3000;
