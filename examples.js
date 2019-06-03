@@ -185,9 +185,9 @@ app.use(function (err, req, res, next) {
 
 /**     PROMISES EXAMPLE 2       **/
 
- var userDetails;
+var userDetails;
 
- function getData(url) {
+function getData(url) {
     var options = {
         url: url,
         headers: {
@@ -205,11 +205,11 @@ app.use(function (err, req, res, next) {
     })
 }
 
- var errHandler = function (err) {
+var errHandler = function (err) {
     console.log(err);
 }
 
- function main() {
+function main() {
     var userProfileURL = "https://api.github.com/users/narenaryan";
     var dataPromise = getData(userProfileURL);
     dataPromise.then(JSON.parse, errHandler)
@@ -222,7 +222,8 @@ app.use(function (err, req, res, next) {
         console.log(data)
     }, errHandler);
 }
- **/
+
+**/
 /**     END PROMISES EXAMPLE 2       **/
 
 
