@@ -18,7 +18,6 @@ getJsonList();
 // Initialize var for .get/bbiz :
 let categoryAsked = "";
 let usefullItem = [];
-let bmca_result = [];
 
 
 app.get('/', function (req, res) {
@@ -34,9 +33,8 @@ app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
     usefullItem=[];      // Empty list of items before call
     getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
-    bmca_result=[];
+    
     Promise.all(usefullItem.map(x=> bbizworthy(x))).then(data => {
-        console.log(data);
         res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null,});
     }).catch(err => {
         res.render('index');
@@ -57,6 +55,7 @@ function bbizworthy(x) {
             var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
         
         var dataPromise = getData(x.UniqueName);
+        let worth= [];
         dataPromise.then(function (resultats) {
             try{
                 res = JSON.parse(resultats);
@@ -87,25 +86,39 @@ function bbizworthy(x) {
                     q_level.forEach(q => {
                                                 // Benef > 10,000 !!!!!
                         if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 10000) {
-                            let donnee = {
+/*	        	            let enchant = BM_name[q].substring(BM_name[q].length, BM_name[q].length - 2);
+	        	            console.log(enchant);
+	        	            let enchantment= "";
+				            if (enchant.includes("@1")) {
+				                enchantment[q] = ".1";
+				             } else if (enchant.includes("@2")) {
+				                enchantment[q] = ".2";
+				             } else if (enchant.includes("@3")) {
+				                enchantment[q] = ".3";
+				             } else {
+				             	enchantment[q] = "flat";
+				            }
+*/                            let donnee = {
                                 nom :BM_name[q],
+                                src: "https://gameinfo.albiononline.com/api/gameinfo/items/" + BM_name[q],
+                                //enchant: enchantment[q],
+                                tiers: BM_name[q].substring(0,2),
                                 qualite: q_text[q],
-                                bm_prix: BM_prices[q],
+                                bm_prix: numberWithCommas(BM_prices[q]),
                                 bm_date: BM_dates[q].fromNow(),
-                                ca_prix: Ca_prices[q], 
+                                ca_prix: numberWithCommas(Ca_prices[q]), 
                                 ca_date:Ca_dates[q].fromNow(), 
-                                benef: diffs[q]
+                                benef: numberWithCommas(diffs[q])
                             }
                             //bmca_result.push(BM_name[q], q_text[q], BM_prices[q], BM_dates[q].fromNow(), Ca_prices[q], Ca_dates[q].fromNow(), diffs[q]);
                             //console.log(donnee);
-                            bmca_result.push(donnee);
-                            
+                            worth.push(donnee);
                            // console.log("Item " + BM_name[q] + " " + q_text[q] + " BM : " + numberWithCommas(BM_prices[q]) + " CA : " + numberWithCommas(Ca_prices[q]) + " Diff =  " + numberWithCommas(diffs[q]) + " @ " + Ca_dates[q].fromNow())
                         }
                     })
                 }     
                 //console.log(bmca_result);
-                resolve (bmca_result);
+                resolve (worth);
     }  catch(err){
             reject(err);
         }
@@ -156,7 +169,7 @@ function getObjectList(jsonFile) {          // Doesnt return only flat item now,
 }
 
 function getJsonList() {
-    console.log('called getJsonList()');
+    //console.log('called getJsonList()');
     let path = "./public/items/";
     fs.readdir(path, function (err, items) {
         items.forEach(function (item, i) {

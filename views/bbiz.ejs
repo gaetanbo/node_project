@@ -73,7 +73,25 @@
             </thead>
             <tbody>
             <% if (data !== null) { %>
-                
+                <% data.forEach(y=>{ %>
+                    <% y.forEach(z=>{ %>
+                        <tr>
+                            <td><img width="64" height="64" src="<%=z.src%>" </img><%= z.nom %></td>
+                            <td><%= z.tiers %></td>
+                            <td></td>
+                            <td><%= z.qualite %></td>
+                            <td>
+                                <p><%= z.bm_prix %></p>
+                                <p><%= z.bm_date %></p>
+                            </td>
+                            <td>
+                                <p><%= z.ca_prix %></p>
+                                <p><%= z.ca_date %></p>
+                            </td>
+                            <td><%= z.benef %></td>
+                        </tr>
+                    <%  }); %>
+                <%  }); %>
             <% } %>
             </tbody>
         </table>
