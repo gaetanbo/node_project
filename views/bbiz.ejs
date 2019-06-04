@@ -92,7 +92,12 @@
                 <% data.forEach(y=>{ %>
                     <% y.forEach(z=>{ %>
                         <tr>
-                            <td><img width="64" height="64" src="<%=z.src%>" </img><%= z.nom %></td>
+                            <td>
+                                <img width="64" height="64" src="<%=z.src%>" </img>
+                                <button onclick="clipboard('<%= z.nom %>')">
+                                <input type="text" id="<%= z.nom %>" value="<%= z.nom %>"></input>
+                                </button>
+                            </td>
                             <td><%= z.tiers %></td>
                             <td></td>
                             <td><%= z.qualite %></td>
@@ -113,7 +118,13 @@
         </table>
     </div>
 </div>
-
+<script>
+    function clipboard(id){
+        var copyText = document.getElementById(id);
+        copyText.select();
+        document.execCommand('copy');
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

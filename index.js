@@ -40,8 +40,8 @@ app.post('/bbiz', function (req, res, body) {
     }).catch(err => {
         res.render('index');
     })
-    //  LocalizedNames.find(x=>x.Key=='FR-FR');// Proper way to find the FR Name
 })
+
 
 
 function bbizworthy(x,benefAsked) {
@@ -99,7 +99,8 @@ function bbizworthy(x,benefAsked) {
 				             	enchantment[q] = "flat";
 				            }
 */                            let donnee = {
-                                nom :BM_name[q],
+								//nom:BM_name[q],
+                                nom :x.LocalizedNames.find(x=>x.Key=='FR-FR').Value,
                                 src: "https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/" + BM_name[q],
                                 // https://gameinfo.albiononline.com/api/gameinfo/items/
                                 //enchant: enchantment[q],

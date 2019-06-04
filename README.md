@@ -6,10 +6,9 @@
 
 
 - `function getObjectList(jsonFile)`  Doesnt return only flat item now, return all 120 weapons each time
-- CHANGE FILTER TO MIN 5000K Silver BENEFICE
 
 
-
+- [ ] Add req.body.bbiz_group  to logger ?
 
 
  
