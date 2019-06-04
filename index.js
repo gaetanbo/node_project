@@ -25,17 +25,18 @@ app.get('/', function (req, res) {
 });
 
 app.get('/bbiz', function (req, res) {
-    res.render('bbiz', {select: jsonList, info: null, data: null, error: null});
+    res.render('bbiz', {select: jsonList, info: null, data: null,benefAskedAffichage:null, error: null});
 })
 
 
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
+    benefAsked = req.body.benef;
     usefullItem=[];      // Empty list of items before call
     getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
-    
-    Promise.all(usefullItem.map(x=> bbizworthy(x))).then(data => {
-        res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null,});
+    benefAskedAffichage = numberWithCommas(benefAsked);
+    Promise.all(usefullItem.map(x=> bbizworthy(x,benefAsked))).then(data => {
+        res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null,benefAskedAffichage});
     }).catch(err => {
         res.render('index');
     })
@@ -43,17 +44,16 @@ app.post('/bbiz', function (req, res, body) {
 })
 
 
-function bbizworthy(x) {
+function bbizworthy(x,benefAsked) {
     return new Promise(function(resolve,reject){
-            let BM_prices = [];
-            let BM_name = [];
-            let BM_dates = [];
-            let Ca_prices = [];
-            let Ca_dates = [];
-            let diffs = [];
-            var q_level = [1, 2, 3, 4, 5];
-            var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
-        
+        let BM_prices = [];
+        let BM_name = [];
+        let BM_dates = [];
+        let Ca_prices = [];
+        let Ca_dates = [];
+        let diffs = [];
+        var q_level = [1, 2, 3, 4, 5];
+        var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
         var dataPromise = getData(x.UniqueName);
         let worth= [];
         dataPromise.then(function (resultats) {
@@ -85,7 +85,7 @@ function bbizworthy(x) {
                 if (diffs.some(diff => diff > 0)) {
                     q_level.forEach(q => {
                                                 // Benef > 10,000 !!!!!
-                        if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 10000) {
+                        if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > benefAsked) {
 /*	        	            let enchant = BM_name[q].substring(BM_name[q].length, BM_name[q].length - 2);
 	        	            console.log(enchant);
 	        	            let enchantment= "";
@@ -100,7 +100,8 @@ function bbizworthy(x) {
 				            }
 */                            let donnee = {
                                 nom :BM_name[q],
-                                src: "https://gameinfo.albiononline.com/api/gameinfo/items/" + BM_name[q],
+                                src: "https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/" + BM_name[q],
+                                // https://gameinfo.albiononline.com/api/gameinfo/items/
                                 //enchant: enchantment[q],
                                 tiers: BM_name[q].substring(0,2),
                                 qualite: q_text[q],
@@ -110,19 +111,14 @@ function bbizworthy(x) {
                                 ca_date:Ca_dates[q].fromNow(), 
                                 benef: numberWithCommas(diffs[q])
                             }
-                            //bmca_result.push(BM_name[q], q_text[q], BM_prices[q], BM_dates[q].fromNow(), Ca_prices[q], Ca_dates[q].fromNow(), diffs[q]);
-                            //console.log(donnee);
                             worth.push(donnee);
-                           // console.log("Item " + BM_name[q] + " " + q_text[q] + " BM : " + numberWithCommas(BM_prices[q]) + " CA : " + numberWithCommas(Ca_prices[q]) + " Diff =  " + numberWithCommas(diffs[q]) + " @ " + Ca_dates[q].fromNow())
                         }
                     })
                 }     
-                //console.log(bmca_result);
                 resolve (worth);
     }  catch(err){
             reject(err);
         }
-            
     }, e=>reject(e));
     });
 }
