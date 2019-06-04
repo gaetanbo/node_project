@@ -32,66 +32,86 @@ app.get('/bbiz', function (req, res) {
 
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
-    usefullItem.splice(0, usefullItem.length);      // Empty list of items before call
+    usefullItem=[];      // Empty list of items before call
     getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
-    bmca_result.splice(0, bmca_result.length);
-    usefullItem.forEach(x => {
-        //                    //  ICI On devrait attendre le result de chaque bbizworthy(x) et les ajouter au fur et à mesure a lobj 'data' du render
-        //                    // Mais le render se fait avant la réponse de bbizworthy :(
-        bbizworthy(x)
-    });
-    res.render('bbiz', {select: jsonList, info: categoryAsked, data: bmca_result, error: null,});
+    bmca_result=[];
+    Promise.all(usefullItem.map(x=> bbizworthy(x))).then(data => {
+        console.log(data);
+        res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null,});
+    }).catch(err => {
+        res.render('index');
+    })
+    //  LocalizedNames.find(x=>x.Key=='FR-FR');// Proper way to find the FR Name
 })
 
 
 function bbizworthy(x) {
+    return new Promise(function(resolve,reject){
+            let BM_prices = [];
+            let BM_name = [];
+            let BM_dates = [];
+            let Ca_prices = [];
+            let Ca_dates = [];
+            let diffs = [];
+            var q_level = [1, 2, 3, 4, 5];
+            var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
+        
+        var dataPromise = getData(x.UniqueName);
+        dataPromise.then(function (resultats) {
+            try{
+                res = JSON.parse(resultats);
+                res.forEach(y => {
+                    switch (y.city) {
+                        case "Black Market":
+                            q_level.forEach(q => {
+                                if (q === y.quality) {
+                                    BM_prices[q] = y.buy_price_min
+                                    BM_dates[q] = moment(y.buy_price_min_date)
+                                    BM_name[q] = y.item_id
 
-    let BM_prices = [];
-    let BM_name = [];
-    let BM_dates = [];
-    let Ca_prices = [];
-    let Ca_dates = [];
-    let diffs = [];
-    var q_level = [1, 2, 3, 4, 5];
-    var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
-    var dataPromise = getData(x.UniqueName);
-    dataPromise.then(function (resultats) {
-        res = JSON.parse(resultats);
-        res.forEach(y => {
-            switch (y.city) {
-                case "Black Market":
+                                }
+                            })
+                            break;
+                        case "Caerleon":
+                            q_level.forEach(q => {
+                                if (q === y.quality) {
+                                    Ca_prices[q] = y.sell_price_min
+                                    Ca_dates[q] = moment(y.sell_price_min_date)
+                                }
+                            })
+                            break;
+                    }
+                });
+                q_level.forEach(q => diffs[q] = Math.round(BM_prices[q] * .98) - Ca_prices[q]);
+                if (diffs.some(diff => diff > 0)) {
                     q_level.forEach(q => {
-                        if (q === y.quality) {
-                            BM_prices[q] = y.buy_price_min
-                            BM_dates[q] = moment(y.buy_price_min_date)
-                            BM_name[q] = y.item_id
-
+                                                // Benef > 10,000 !!!!!
+                        if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 10000) {
+                            let donnee = {
+                                nom :BM_name[q],
+                                qualite: q_text[q],
+                                bm_prix: BM_prices[q],
+                                bm_date: BM_dates[q].fromNow(),
+                                ca_prix: Ca_prices[q], 
+                                ca_date:Ca_dates[q].fromNow(), 
+                                benef: diffs[q]
+                            }
+                            //bmca_result.push(BM_name[q], q_text[q], BM_prices[q], BM_dates[q].fromNow(), Ca_prices[q], Ca_dates[q].fromNow(), diffs[q]);
+                            //console.log(donnee);
+                            bmca_result.push(donnee);
+                            
+                           // console.log("Item " + BM_name[q] + " " + q_text[q] + " BM : " + numberWithCommas(BM_prices[q]) + " CA : " + numberWithCommas(Ca_prices[q]) + " Diff =  " + numberWithCommas(diffs[q]) + " @ " + Ca_dates[q].fromNow())
                         }
                     })
-                    break;
-                case "Caerleon":
-                    q_level.forEach(q => {
-                        if (q === y.quality) {
-                            Ca_prices[q] = y.sell_price_min
-                            Ca_dates[q] = moment(y.sell_price_min_date)
-                        }
-                    })
-                    break;
-            }
-        });
-        q_level.forEach(q => diffs[q] = Math.round(BM_prices[q] * .98) - Ca_prices[q]);
-        if (diffs.some(diff => diff > 0)) {
-            q_level.forEach(q => {
-                // Benef > 10,000 !!!!!
-                if (BM_prices[q] && Ca_prices[q] && diffs[q] && diffs[q] > 10000) {
-                    bmca_result.push(BM_name[q], q_text[q], BM_prices[q], BM_dates[q].fromNow(), Ca_prices[q], Ca_dates[q].fromNow(), diffs[q]);
-                    console.log("Item " + BM_name[q] + " " + q_text[q] + " BM : " + numberWithCommas(BM_prices[q]) + " CA : " + numberWithCommas(Ca_prices[q]) + " Diff =  " + numberWithCommas(diffs[q]) + " @ " + Ca_dates[q].fromNow())
-                }
-            })
-        }       //
-
-        return bmca_result;
-    }, errHandler);
+                }     
+                //console.log(bmca_result);
+                resolve (bmca_result);
+    }  catch(err){
+            reject(err);
+        }
+            
+    }, e=>reject(e));
+    });
 }
 
 function getData(itemName) {
@@ -115,7 +135,8 @@ function getData(itemName) {
 }
 
 var errHandler = function (err) {
-    console.log(err);
+    //console.log(err);
+    reject(err);
 };
 
 function getObjectList(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
