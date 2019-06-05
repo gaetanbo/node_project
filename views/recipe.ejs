@@ -60,8 +60,7 @@
     <div class="row" style="margin-top: 5%">
         <div class="col-6">
             <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p>
-            <img width="64" height="64"
-                 src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"></img>
+            <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
         </div>
         <div class="col-6">
             <p>Tiers : <%= iteminfo.tier %></p>
@@ -72,21 +71,17 @@
                 <tr>
                     <th>Ressource</th>
                     <th>Qté</th>
-                    <th>Prix Caerleon (WIP -> 2nd/3rd price false)</th>
+                    <th>Prix Caerleon</th>
                 </tr>
                 </thead>
                 <tbody>
                 <% iteminfo.craftingRequirements.craftResourceList.forEach(x=> { %>
                 <tr>
-                    <td><p><%= x.uniqueName %> </p><img width="64" height="64"
-                                                        src="https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/<%=x.uniqueName%>" </img>
+                    <td>
+                        <p><%= x.uniqueName %> </p>
+                        <img width="64" height="64" src="https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/<%=x.uniqueName%>"/>
                     </td>
                     <td><p><%= x.count %></p></td>
-                    <% if (prices!== null) { %>
-                    <td><p><%= prices[0].sell_price_min %> / unit last updated @ <%= prices[0].sell_price_min_date %></p></td>
-                    <td><p><%= prices[1].sell_price_min %> / unit last updated @ <%= prices[1].sell_price_min_date %></p></td>
-                    <td><p><%= prices[2].sell_price_min %> / unit last updated @ <%= prices[2].sell_price_min_date %></p></td>
-                    <% } %>
                 <% }) %>
                 </tr>
 
