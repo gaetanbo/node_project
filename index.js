@@ -38,7 +38,7 @@ app.get('/recipe', function (req, res) {
         for (var i = 0; i < items.length; i++) {
             nom.push(items[i]);
         }
-        res.render('recipe', {select: nom, select1: null, iteminfo: null});
+        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null});
     })
 });
 
@@ -66,7 +66,7 @@ app.post('/recipe', function (req, res) {
         }
         recipeItems.push(selectdata);
     })
-    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null});
+    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null});
 });
 
 app.post('/recipe2', function (req, res) {
@@ -76,8 +76,19 @@ app.post('/recipe2', function (req, res) {
     let item = "";
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
-        //console.log(item);
-        res.render('recipe', {select: null, select1: null, iteminfo: item});
+        //        console.log(item);
+        item.craftingRequirements.craftResourceList.forEach(x => {
+            let prices = [];
+            var prixPromise = getPrice(x.uniqueName, "Caerleon");
+            //console.log(prixPromise);
+            prixPromise.then(function (prix) {
+                price = JSON.parse(prix);
+                prices.push(price);
+                res.render('recipe', {select: null, select1: null, iteminfo: item, prices});
+            }).catch(err => {
+                res.render('index');
+            })
+        });
     }).catch(err => {
         res.render('index');
     })
@@ -181,8 +192,9 @@ function bbizworthy(x, benefAsked) {
                             let donnee = {
                                 //nom:BM_name[q],
                                 nom: x.LocalizedNames.find(x => x.Key == 'FR-FR').Value,
-                                src: "https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/" + BM_name[q],
-                                // https://gameinfo.albiononline.com/api/gameinfo/items/
+                                src: "https://gameinfo.albiononline.com/api/gameinfo/items/" + BM_name[q] + "?quality=" + q,
+                                //https://gameinfo.albiononline.com/api/gameinfo/items/T8_BAG?quality=5
+                                // https://gameinfo.albiononline.com/api/gameinfo/items/+ BM_name[q].png?count=1&quality=4
                                 enchant: enchantment,
                                 tiers: BM_name[q].substring(0, 2),
                                 qualite: q_text[q],
@@ -225,6 +237,7 @@ function getData(itemName) {
 }
 
 function getObjectList(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
+    usefullItem = [];
     var fichier = './public/items/' + jsonFile;
     let rawcontent = fs.readFileSync(fichier);
     let contentFile = JSON.parse(rawcontent);
@@ -257,6 +270,27 @@ function numberWithCommas(x) {
     return parts.join(".");
 }
 
+function getPrice(item, city) {
+    var url = `https://www.albion-online-data.com/api/v2/stats/prices/${item}?locations=${city}`
+    var options = {
+        url: url,
+        headers: {
+            'User-Agent': 'request',
+            'Access-Control-Allow-Origin': '*'
+        }
+    };
+    return new Promise(function (resolve, reject) {
+        request.get(options, function (err, resp, body2) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(body2);
+            }
+        })
+    })
+}
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Test app listening on port ${PORT}!`));
+
 
