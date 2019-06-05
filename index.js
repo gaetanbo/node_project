@@ -76,13 +76,9 @@ app.post('/recipe2', function (req, res) {
     let item = "";
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
-        console.log(item.craftingRequirements.craftResourceList);
         var prixPromises = item.craftingRequirements.craftResourceList.map(x=>getPrice(x.uniqueName, "Caerleon"));
         Promise.all(prixPromises).then(prix=> {
                 prices=[].concat.apply([],prix.map(x=> JSON.parse(x)));
-                //item.craftingRequirements.craftResourceList.push(prices)
-                console.log(prices);
-                
                 res.render('recipe', {select: null, select1: null, iteminfo: item,prices:null});
             }).catch(err => {
                 res.render('index');
