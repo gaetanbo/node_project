@@ -31,6 +31,39 @@ app.get('/guild', function (req, res) {
 app.get('/player', function (req, res) {
     res.render('player');
 });
+
+app.post('/player', function (req, res) {
+    var player ="";
+    player= req.body.player_asked;
+//    $.get("https://gameinfo.albiononline.com/api/gameinfo/search?q="+player,function(data)  {
+//				if (data.players === undefined || data.players.length == 0) {
+//					alert('No player Found');
+//				} else if(data.players.length == 1) {
+//				 	var playerId = data.players[0].Id;
+//					console.log(data.players);
+//				 	$("#player_results").append("<p><strong>"+data.players[0].Name+"</strong></p>");
+//					$.get("https://gameinfo.albiononline.com/api/gameinfo/players/"+playerId,function(playerdata)  {
+//						console.log(playerdata);
+//						var craftot = addCommas(playerdata.LifetimeStatistics.Crafting.Total);
+//						var gathertot = addCommas(playerdata.LifetimeStatistics.Gathering.All.Total);
+//						var pvetot = addCommas(playerdata.LifetimeStatistics.PvE.Total);
+//						var deathtot = addCommas(playerdata.DeathFame);
+//					});
+//				} else{
+//					data.players.forEach(x=> {
+//						if (x.GuildName === null || x.GuildName === "") {
+//                            console.log(x.Name)
+//                            $("#player_results").append("<p><strong>"+x.Name+"</strong> ");
+//						} else {
+//                            console.log(x.Name)
+//                            console.log(x.GuildNameName)
+//					   }
+//                    });
+//                }
+//    });
+    res.render('player');
+});
+
 app.get('/recipe', function (req, res) {
     var path = './public/items';
     let nom = [];
