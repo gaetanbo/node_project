@@ -83,12 +83,13 @@
                     </td>
                     <td><p><%= x.count %></p></td>
                     <% if (prices!== null) { %>
-                    <% prices.forEach(y=> { %>
-                    <td><p><%= y.sell_price_min %> / unit last updated @ <%= y.sell_price_min_date %></p></td>
-                    <% });%>
+                    <td><p><%= prices[0].sell_price_min %> / unit last updated @ <%= prices[0].sell_price_min_date %></p></td>
+                    <td><p><%= prices[1].sell_price_min %> / unit last updated @ <%= prices[1].sell_price_min_date %></p></td>
+                    <td><p><%= prices[2].sell_price_min %> / unit last updated @ <%= prices[2].sell_price_min_date %></p></td>
                     <% } %>
-                </tr>
                 <% }) %>
+                </tr>
+
                 </tbody>
             </table>
         </div>
