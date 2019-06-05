@@ -77,22 +77,18 @@ app.post('/recipe2', function (req, res) {
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
         //        console.log(item);
-        item.craftingRequirements.craftResourceList.forEach(x => {
-            let prices = [];
-            var prixPromise = getPrice(x.uniqueName, "Caerleon");
-            //console.log(prixPromise);
-            prixPromise.then(function (prix) {
-                price = JSON.parse(prix);
-                prices.push(price);
+        var prixPromises = item.craftingRequirements.craftResourceList.map(x=>getPrice(x.uniqueName, "Caerleon"));
+        Promise.all(prixPromises).then(prix=> {
+                prices=[].concat.apply([],prix.map(x=> JSON.parse(x)));
+                console.log(prices);
                 res.render('recipe', {select: null, select1: null, iteminfo: item, prices});
             }).catch(err => {
                 res.render('index');
-            })
-        });
-    }).catch(err => {
-        res.render('index');
-    })
-});
+        }).catch(err => {
+            res.render('index');
+        })
+    });
+})
 
 app.get('/bbiz', function (req, res) {
     res.render('bbiz', {select: jsonList, info: null, data: null, benefAskedAffichage: null, error: null});
