@@ -24,40 +24,72 @@
 </div>
 <hr class="my-4">
 <div class="container">
-    <form action="/recipe" method="post">
-        <select name="recipe_group">
-            <% if (select !==  null){ %>
-                <% select.forEach(function(item,i) { %>
-            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
-            <% }); %>
-            <% } %>
-        </select>
-        <input type="submit" value="POST">
-    </form>
-    
-    <form action="/recipe2" method="post">
-        <select name="recipe_item">4
-            <% if(select1 !== null){%>
-                <% select1.forEach(function(item,i) { %>
-            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
-            <% }); %>
-            <% } %>
-        </select>
-        <input type="submit" value="POST">
-    </form>
-</div>
-<div class="container">
     <div class="row">
-        <div class="col-12">
-             <% if(iteminfo !== null) { %>
-                <p><%#= iteminfo[1][0] %>    </p>
-                <%# (iteminfo.craftResourceList).forEach(function(resource,counter){ %>
-                    <p><%#= iteminfo.craftResourceList %>,<%#= iteminfo.craftResourceList %></p>
-                <%# }); %>
-            <% }%>
+        <div class="col-6">
+            <form action="/recipe" method="post">
+                <select name="recipe_group">
+                    <% if (select !== null){ %>
+                    <% select.forEach(function(item,i) { %>
+                    <option label="<%= item %>" value="<%= item %>"><%= item %></option>
+                    <% }); %>
+                    <% } %>
+                </select>
+                <input type="submit" value="POST">
+            </form>
+        </div>
+        <div class="col-6">
+            <form action="/recipe2" method="post">
+                <select name="recipe_item">
+                    <% if(select1 !== null){%>
+                    <% select1.forEach(function(item,i) { %>
+                    <option label="<%= item.UniqueName %>" value="<%= item.UniqueName %>"><%= item.FrName %> @ <%=
+                        item.enchant
+                        %>
+                    </option>
+                    <% }); %>
+                    <% } %>
+                </select>
+                <input type="submit" value="POST">
+            </form>
         </div>
     </div>
+</div>
+<div class="container">
+    <% if(iteminfo !== null) { %>
+
+    <div class="row">
+        <div class="col-6">
+            <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p> <img width="64" height="64"
+                                                                      src="https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/<%=iteminfo.uniqueName%>" </img>
+        </div>
+        <div class="col-6">
+            <p> Level : <%= iteminfo.level %></p>
+            <p>Tiers : <%= iteminfo.tier %></p>
+        </div>
+        <div class="col-12">
+            <table>
+                <thead>
+                <tr>
+                    <th>Ressource</th>
+                    <th>Qté</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% iteminfo.craftingRequirements.craftResourceList.forEach(x=> { %>
+                <tr>
+                    <td><p><%= x.uniqueName %> </p><img width="64" height="64"
+                                                        src="https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/<%=x.uniqueName%>" </img>
+                    </td>
+                    <td><p><%= x.count %></p></td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+        <% }%>
     </div>
+</div>
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
