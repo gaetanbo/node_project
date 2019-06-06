@@ -60,7 +60,12 @@
     <div class="row" style="margin-top: 5%">
         <div class="col-4">
             <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p>
-            <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
+
+            <% if(enchant !== null) { %>
+              <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName + enchant%>"/>
+            <% } else { %>
+              <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
+            <% } %>
         </div>
         <div class="col-4">
             <p>Tiers : <%= iteminfo.tier %></p>

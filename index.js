@@ -100,7 +100,7 @@ app.post('/recipe', function (req, res) {
         }
         recipeItems.push(selectdata);
     })
-    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null});
+    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null,enchant:null});
 });
 
 
@@ -113,6 +113,7 @@ app.post('/recipe2', function (req, res) {
         item = JSON.parse(recipe);
         let craftingList = []
         let enchant = "";
+        console.log('item asked '+itemdata)
         if (itemdata.includes("@1")) {
               craftingList = item.enchantments.enchantments[0].craftingRequirements.craftResourceList;
               enchant = "@1";
@@ -131,9 +132,11 @@ app.post('/recipe2', function (req, res) {
             let newarray=[];
             craftingList.forEach( (y,i) => {
               if (prices[i] !== undefined){
-                if (y.uniqueName === prices[i].item_id.substring(0,prices[i].item_id.length + (enchant!==""?-2:0))) {
-                  console.log(y.count);
-                  console.log(prices[i].sell_price_min);
+                // console.log(y.uniqueName);
+                // console.log(prices[i].item_id.substring(0,prices[i].item_id.length +(enchant!==""?-2:0)));
+                // if (y.uniqueName === prices[i].item_id.substring(0,prices[i].item_id.length - 2))
+                if ( y.uniqueName === prices[i].item_id || y.uniqueName ===  prices[i].item_id.substring(0,prices[i].item_id.length -2 )){
+                  console.log(y.uniqueName)
                   let obj0 = {
                   'prix': numberWithCommas(prices[i].sell_price_min),
                   'date':prices[i].sell_price_min_date,
@@ -152,7 +155,8 @@ app.post('/recipe2', function (req, res) {
             total += valeur;
           })
           let readable_total = numberWithCommas(total);
-          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total});
+          console.log(item);
+          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total, enchant});
         }).catch(err => {
             console.log(err);
             res.render('index');
