@@ -119,7 +119,7 @@ app.post('/recipe2', function (req, res) {
                     if (y.uniqueName === prices[i].item_id) {
                         let obj0 = {
                             'prix': numberWithCommas(prices[i].sell_price_min),
-                            'date':prices[0].sell_price_min_date,
+                            'date':prices[i].sell_price_min_date,
                             'name':y.uniqueName,
                             'count':y.count
                         };
