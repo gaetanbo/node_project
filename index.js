@@ -4,12 +4,12 @@ const request = require('request');
 const moment = require('moment');
 const app = express();
 const fs = require('fs');
-const logger = require('./logger');
+//const logger = require('./logger');
 
 moment.locale('fr');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(logger);
+//app.use(logger);
 app.set('view engine', 'ejs');
 
 // Initialize the list of JSON file on server
@@ -35,33 +35,34 @@ app.get('/player', function (req, res) {
 app.post('/player', function (req, res) {
     var player = "";
     player = req.body.player_asked;
-//    $.get("https://gameinfo.albiononline.com/api/gameinfo/search?q="+player,function(data)  {
-//				if (data.players === undefined || data.players.length == 0) {
-//					alert('No player Found');
-//				} else if(data.players.length == 1) {
-//				 	var playerId = data.players[0].Id;
-//					console.log(data.players);
-//				 	$("#player_results").append("<p><strong>"+data.players[0].Name+"</strong></p>");
-//					$.get("https://gameinfo.albiononline.com/api/gameinfo/players/"+playerId,function(playerdata)  {
-//						console.log(playerdata);
-//						var craftot = addCommas(playerdata.LifetimeStatistics.Crafting.Total);
-//						var gathertot = addCommas(playerdata.LifetimeStatistics.Gathering.All.Total);
-//						var pvetot = addCommas(playerdata.LifetimeStatistics.PvE.Total);
-//						var deathtot = addCommas(playerdata.DeathFame);
-//					});
-//				} else{
-//					data.players.forEach(x=> {
-//						if (x.GuildName === null || x.GuildName === "") {
-//                            console.log(x.Name)
-//                            $("#player_results").append("<p><strong>"+x.Name+"</strong> ");
-//						} else {
-//                            console.log(x.Name)
-//                            console.log(x.GuildNameName)
-//					   }
-//                    });
-//                }
-//    });
+    console.log(player)
     res.render('player');
+      //    $.get("https://gameinfo.albiononline.com/api/gameinfo/search?q="+player,function(data)  {
+      //				if (data.players === undefined || data.players.length == 0) {
+      //					alert('No player Found');
+      //				} else if(data.players.length == 1) {
+      //				 	var playerId = data.players[0].Id;
+      //					console.log(data.players);
+      //				 	$("#player_results").append("<p><strong>"+data.players[0].Name+"</strong></p>");
+      //					$.get("https://gameinfo.albiononline.com/api/gameinfo/players/"+playerId,function(playerdata)  {
+      //						console.log(playerdata);
+      //						var craftot = addCommas(playerdata.LifetimeStatistics.Crafting.Total);
+      //						var gathertot = addCommas(playerdata.LifetimeStatistics.Gathering.All.Total);
+      //						var pvetot = addCommas(playerdata.LifetimeStatistics.PvE.Total);
+      //						var deathtot = addCommas(playerdata.DeathFame);
+      //					});
+      //				} else{
+      //					data.players.forEach(x=> {
+      //						if (x.GuildName === null || x.GuildName === "") {
+      //                            console.log(x.Name)
+      //                            $("#player_results").append("<p><strong>"+x.Name+"</strong> ");
+      //						} else {
+      //                            console.log(x.Name)
+      //                            console.log(x.GuildNameName)
+      //					   }
+      //                    });
+      //                }
+      //    });
 });
 
 app.get('/recipe', function (req, res) {
@@ -71,7 +72,7 @@ app.get('/recipe', function (req, res) {
         for (var i = 0; i < items.length; i++) {
             nom.push(items[i]);
         }
-        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null});
+        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null,total:null});
     })
 });
 
@@ -99,7 +100,7 @@ app.post('/recipe', function (req, res) {
         }
         recipeItems.push(selectdata);
     })
-    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null});
+    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null});
 });
 
 
@@ -110,30 +111,50 @@ app.post('/recipe2', function (req, res) {
     let item = "";
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
-        var prixPromises = item.craftingRequirements.craftResourceList.map(x => getPrice(x.uniqueName, "Caerleon"));
-        Promise.all(prixPromises).then(prix => {
+        let craftingList = []
+        let enchant = "";
+        if (itemdata.includes("@1")) {
+              craftingList = item.enchantments.enchantments[0].craftingRequirements.craftResourceList;
+              enchant = "@1";
+          } else if (itemdata.includes("@2")) {
+              craftingList = item.enchantments.enchantments[1].craftingRequirements.craftResourceList
+              enchant = "@2";
+          } else if (itemdata.includes("@3")) {
+              craftingList = item.enchantments.enchantments[2].craftingRequirements.craftResourceList
+              enchant = "@3";
+          }else{
+              craftingList = item.craftingRequirements.craftResourceList
+          }
+          Promise.all(craftingList.map(x=>getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
             prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
+            console.log(prices);
             let newarray=[];
-            item.craftingRequirements.craftResourceList.forEach( (y,i) => {
-                if (prices[i] !== undefined){
-                    if (y.uniqueName === prices[i].item_id) {
-                        let obj0 = {
-                            'prix': numberWithCommas(prices[i].sell_price_min),
-                            'date':prices[i].sell_price_min_date,
-                            'name':y.uniqueName,
-                            'count':y.count
-                        };
-                        newarray.push(obj0);
-                    }
-                }
-            });
-            console.log(newarray)
-            res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray});
+            craftingList.forEach( (y,i) => {
+              if (prices[i] !== undefined){
+                if (y.uniqueName === prices[i].item_id.substring(0,prices[i].item_id.length + (enchant!==""?-2:0))) {
+                  console.log(y.count);
+                  console.log(prices[i].sell_price_min);
+                  let obj0 = {
+                  'prix': numberWithCommas(prices[i].sell_price_min),
+                  'date':prices[i].sell_price_min_date,
+                  'name':y.uniqueName,
+                  'count':y.count,
+                  'total_price': numberWithCommas(y.count * prices[i].sell_price_min),
+                  'total_inter': y.count * prices[i].sell_price_min
+                };
+                newarray.push(obj0);
+              }
+            }
+          });
+          let total = 0;
+          newarray.forEach(x=> {
+            let valeur = x.total_inter
+            total += valeur;
+          })
+          let readable_total = numberWithCommas(total);
+          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total});
         }).catch(err => {
-            console.log(err)
-            res.render('index');
-        }).catch(err => {
-            console.log(err)
+            console.log(err);
             res.render('index');
         })
     });
@@ -323,6 +344,7 @@ function getPrice(item, city) {
             'Access-Control-Allow-Origin': '*'
         }
     };
+    //console.log(url);
     return new Promise(function (resolve, reject) {
         request.get(options, function (err, resp, body2) {
             if (err) {
@@ -336,5 +358,3 @@ function getPrice(item, city) {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Test app listening on port ${PORT}!`));
-
-
