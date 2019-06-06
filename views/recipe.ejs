@@ -71,8 +71,9 @@
             <p>Tiers : <%= iteminfo.tier %></p>
         </div>
         <div class="col-4">
-          <% if (total !== null ) { %>
+          <% if (total !== null && cost !== null ) { %>
               <p style="color:red">Total for crafting is : <%= total %></p>
+              <p style="color:green">Item at Caerleon costs : <%= cost %></p>
           <% } %>
         </div>
 

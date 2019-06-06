@@ -72,7 +72,7 @@ app.get('/recipe', function (req, res) {
         for (var i = 0; i < items.length; i++) {
             nom.push(items[i]);
         }
-        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null,total:null});
+        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null,total:null,cost:null});
     })
 });
 
@@ -100,7 +100,7 @@ app.post('/recipe', function (req, res) {
         }
         recipeItems.push(selectdata);
     })
-    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null,enchant:null});
+    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null,enchant:null,cost:null});
 });
 
 
@@ -109,11 +109,29 @@ app.post('/recipe2', function (req, res) {
     itemdata = req.body.recipe_item;
     var recipePromise = getRecipe(itemdata);
     let item = "";
+    let costvalue = 0;
+    // let costval;
+    // var costPromise = getPrice(itemdata);
+    // costPromise.then(function(cost) {
+    //   costData = JSON.parse(cost);
+    //   costData.forEach( (w,i)=> {
+    //     if (w.city === "Caerleon" && w.quality == 0 ) {
+    //     var data = w.sell_price_min;
+    //     console.log(data);
+    //     costval = data;
+    //     }
+    //   })
+    //   costvalue = numberWithCommas(costval);
+    //   console.log(costvalue);
+    // }).catch(err => {
+    //     console.log(err);
+    //     res.render('index');
+    // });
+
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
         let craftingList = []
         let enchant = "";
-        console.log('item asked '+itemdata)
         if (itemdata.includes("@1")) {
               craftingList = item.enchantments.enchantments[0].craftingRequirements.craftResourceList;
               enchant = "@1";
@@ -128,15 +146,10 @@ app.post('/recipe2', function (req, res) {
           }
           Promise.all(craftingList.map(x=>getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
             prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
-            console.log(prices);
             let newarray=[];
             craftingList.forEach( (y,i) => {
               if (prices[i] !== undefined){
-                // console.log(y.uniqueName);
-                // console.log(prices[i].item_id.substring(0,prices[i].item_id.length +(enchant!==""?-2:0)));
-                // if (y.uniqueName === prices[i].item_id.substring(0,prices[i].item_id.length - 2))
                 if ( y.uniqueName === prices[i].item_id || y.uniqueName ===  prices[i].item_id.substring(0,prices[i].item_id.length -2 )){
-                  console.log(y.uniqueName)
                   let obj0 = {
                   'prix': numberWithCommas(prices[i].sell_price_min),
                   'date':prices[i].sell_price_min_date,
@@ -155,8 +168,7 @@ app.post('/recipe2', function (req, res) {
             total += valeur;
           })
           let readable_total = numberWithCommas(total);
-          console.log(item);
-          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total, enchant});
+          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total, enchant,cost:costvalue});
         }).catch(err => {
             console.log(err);
             res.render('index');
