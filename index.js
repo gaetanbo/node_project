@@ -114,36 +114,16 @@ app.post('/recipe2', function (req, res) {
         Promise.all(prixPromises).then(prix => {
             prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
             let newarray=[];
-            item.craftingRequirements.craftResourceList.forEach( y => {
-                if (y.uniqueName === prices[0].item_id) {
-                    let obj0 = {
-                        'prix': numberWithCommas(prices[0].sell_price_min),
-                        'date':prices[0].sell_price_min_date,
-                        'name':y.uniqueName,
-                        'count':y.count
-                    };
-                    newarray.push(obj0);
-                }
-                if (prices[1] !== undefined){
-                    if (y.uniqueName === prices[1].item_id) {
-                        let obj1 = {
-                            'prix': numberWithCommas(prices[1].sell_price_min),
-                            'date':prices[1].sell_price_min_date,
+            item.craftingRequirements.craftResourceList.forEach( (y,i) => {
+                if (prices[i] !== undefined){
+                    if (y.uniqueName === prices[i].item_id) {
+                        let obj0 = {
+                            'prix': numberWithCommas(prices[i].sell_price_min),
+                            'date':prices[0].sell_price_min_date,
                             'name':y.uniqueName,
                             'count':y.count
                         };
-                        newarray.push(obj1);
-                    }
-                }
-                if (prices[2] !== undefined) {
-                    if (y.uniqueName === prices[2].item_id) {
-                        let obj2 = {
-                            'prix': numberWithCommas(prices[2].sell_price_min),
-                            'date':prices[2].sell_price_min_date,
-                            'name':y.uniqueName,
-                            'count':y.count
-                        }
-                        newarray.push(obj2)
+                        newarray.push(obj0);
                     }
                 }
             });
