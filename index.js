@@ -33,8 +33,8 @@ app.get('/player', function (req, res) {
 });
 
 app.post('/player', function (req, res) {
-    var player ="";
-    player= req.body.player_asked;
+    var player = "";
+    player = req.body.player_asked;
 //    $.get("https://gameinfo.albiononline.com/api/gameinfo/search?q="+player,function(data)  {
 //				if (data.players === undefined || data.players.length == 0) {
 //					alert('No player Found');
@@ -102,6 +102,7 @@ app.post('/recipe', function (req, res) {
     res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null});
 });
 
+
 app.post('/recipe2', function (req, res) {
     let itemdata = "";
     itemdata = req.body.recipe_item;
@@ -109,13 +110,50 @@ app.post('/recipe2', function (req, res) {
     let item = "";
     recipePromise.then(function (recipe) {
         item = JSON.parse(recipe);
-        var prixPromises = item.craftingRequirements.craftResourceList.map(x=>getPrice(x.uniqueName, "Caerleon"));
-        Promise.all(prixPromises).then(prix=> {
-                prices=[].concat.apply([],prix.map(x=> JSON.parse(x)));
-                res.render('recipe', {select: null, select1: null, iteminfo: item,prices:null});
-            }).catch(err => {
-                res.render('index');
+        var prixPromises = item.craftingRequirements.craftResourceList.map(x => getPrice(x.uniqueName, "Caerleon"));
+        Promise.all(prixPromises).then(prix => {
+            prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
+            let newarray=[];
+            item.craftingRequirements.craftResourceList.forEach( y => {
+                if (y.uniqueName === prices[0].item_id) {
+                    let obj0 = {
+                        'prix': numberWithCommas(prices[0].sell_price_min),
+                        'date':prices[0].sell_price_min_date,
+                        'name':y.uniqueName,
+                        'count':y.count
+                    };
+                    newarray.push(obj0);
+                }
+                if (prices[1] !== undefined){
+                    if (y.uniqueName === prices[1].item_id) {
+                        let obj1 = {
+                            'prix': numberWithCommas(prices[1].sell_price_min),
+                            'date':prices[1].sell_price_min_date,
+                            'name':y.uniqueName,
+                            'count':y.count
+                        };
+                        newarray.push(obj1);
+                    }
+                }
+                if (prices[2] !== undefined) {
+                    if (y.uniqueName === prices[2].item_id) {
+                        let obj2 = {
+                            'prix': numberWithCommas(prices[2].sell_price_min),
+                            'date':prices[2].sell_price_min_date,
+                            'name':y.uniqueName,
+                            'count':y.count
+                        }
+                        newarray.push(obj2)
+                    }
+                }
+            });
+            console.log(newarray)
+            res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray});
         }).catch(err => {
+            console.log(err)
+            res.render('index');
+        }).catch(err => {
+            console.log(err)
             res.render('index');
         })
     });
@@ -215,7 +253,6 @@ function bbizworthy(x, benefAsked) {
                             } else {
                                 enchantment = "flat";
                             }
-
                             let donnee = {
                                 //nom:BM_name[q],
                                 nom: x.LocalizedNames.find(x => x.Key == 'FR-FR').Value,
@@ -272,7 +309,7 @@ function getObjectList(jsonFile) {          // Doesnt return only flat item now,
         let name = item.UniqueName;
         let tiers = name.substring(0, 2);
         if (tiers == "T1" || tiers == "T2" || tiers == "T3") {
-//console.log('bullshit tier');
+            //console.log('bullshit tier');
         } else {
             usefullItem.push(item);
         }

@@ -77,16 +77,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <% iteminfo.craftingRequirements.craftResourceList.forEach(x=> { %>
-                <tr>
-                    <td>
-                        <p><%= x.uniqueName %> </p>
-                        <img width="64" height="64" src="https://albiononline2d.ams3.cdn.digitaloceanspaces.com/thumbnails/orig/<%=x.uniqueName%>"/>
-                    </td>
-                    <td><p><%= x.count %></p></td>
-                <% }) %>
-                </tr>
-
+                <% if (prices !== null ) { %>
+                    <% prices.forEach( x=> { %>
+                        <tr>
+                            <td>
+                                <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=x.name%>"/>
+                                <p><%= x.name %></p>
+                            </td>
+                            <td><p><%= x.count %></p></td>
+                            <td><p><%= x.prix%> silver</p><p> @ <%= x.date%></p></td>
+                        </tr>
+                    <% })%>
+                <% } %>
                 </tbody>
             </table>
             </div>
