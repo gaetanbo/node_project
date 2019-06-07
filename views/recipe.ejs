@@ -1,114 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<% include partial/header %>
-<body>
-<h1 class="text-center">Recipe</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-2"><a href="/bbiz"><p>BBiz !</p></a></div>
-        <div class="col-2"><a href="/player"><p>Player</p></a></div>
-        <div class="col-2"><a href="/recipe"><p>Recipe</p></a></div>
-        <div class="col-2"><a href="/guild"><p>Guild</p></a></div>
-        <div class="col-2"><a href="/"><p>Home</p></a></div>
-    </div>
-</div>
-<hr class="my-4">
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <form action="/recipe" method="post">
-                <select name="recipe_group" required>
-                    <% if (select !== null){ %>
-                    <% select.forEach(function(item,i) { %>
-                    <option label="<%= item %>" value="<%= item %>"><%= item %></option>
-                    <% }); %>
-                    <% } %>
-                </select>
-                <input type="submit" value="POST">
-            </form>
-        </div>
-        <div class="col-6">
-            <form action="/recipe2" method="post">
-                <select name="recipe_item" required>
-                    <% if(select1 !== null){%>
-                    <% select1.forEach(function(item,i) { %>
-                    <option label="<%= item.UniqueName %>" value="<%= item.UniqueName %>"><%= item.FrName %> @ <%=
-                        item.enchant
-                        %>
-                    </option>
-                    <% }); %>
-                    <% } %>
-                </select>
-                <input type="submit" value="POST">
-            </form>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <% if(iteminfo !== null) { %>
-
-    <div class="row" style="margin-top: 5%">
-        <div class="col-4">
-            <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p>
-
-            <% if(enchant !== null) { %>
-              <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName + enchant%>"/>
-            <% } else { %>
-              <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
-            <% } %>
-        </div>
-        <div class="col-4">
-            <p>Tiers : <%= iteminfo.tier %></p>
-        </div>
-        <div class="col-4">
-          <% if (total !== null && cost !== null ) { %>
-              <p style="color:red">Total for crafting is : <%= total %></p>
-              <p style="color:green">Item at Caerleon costs : <%= cost %></p>
-          <% } %>
-        </div>
-
-    </div>
-        <div class="row">
-            <div class="col-12">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Ressource</th>
-                    <th>Qté</th>
-                    <th>Prix Caerleon</th>
-                    <th>Prix Total Ressource</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% if (prices !== null ) { %>
-                    <% prices.forEach( x=> { %>
-                        <tr>
-                            <td>
-                                <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=x.name%>"/>
-                                <p><%= x.name %></p>
-                            </td>
-                            <td><p><%= x.count %></p></td>
-                            <td><p><%= x.prix%> silver</p><p> @ <%= x.date%></p></td>
-                            <td><p><%= x.total_price %> </p></td>
-                        </tr>
-                    <% })%>
-                <% } %>
-                </tbody>
-            </table>
+    <%- include('partial/header', {title: "Recipe"}); %>
+    <body>
+        <hr class="my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form action="/recipe" method="post">
+                        <select name="recipe_group" required>
+                            <% if (select !== null){ %>
+                            <% select.forEach(function(item,i) { %>
+                            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
+                            <% }); %>
+                            <% } %>
+                        </select>
+                        <input type="submit" value="POST">
+                    </form>
+                </div>
+                <div class="col-6">
+                    <form action="/recipe2" method="post">
+                        <select name="recipe_item" required>
+                            <% if(select1 !== null){%>
+                            <% select1.forEach(function(item,i) { %>
+                            <option label="<%= item.UniqueName %>" value="<%= item.UniqueName %>"><%= item.FrName %> @ <%=
+                                item.enchant
+                                %>
+                            </option>
+                            <% }); %>
+                            <% } %>
+                        </select>
+                        <input type="submit" value="POST">
+                    </form>
+                </div>
             </div>
-    </div>
-    <% }%>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+        </div>
+        <div class="container">
+            <% if(iteminfo !== null) { %>
+            <div class="row" style="margin-top: 5%">
+                <div class="col-4">
+                    <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p>
+                    <% if(enchant !== null) { %>
+                    <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName + enchant%>"/>
+                    <% } else { %>
+                    <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
+                    <% } %>
+                </div>
+                <div class="col-4">
+                    <p>Tiers : <%= iteminfo.tier %></p>
+                </div>
+                <div class="col-4">
+                <% if (total !== null && cost !== null ) { %>
+                    <p style="color:red">Total for crafting is : <%= total %></p>
+                    <p style="color:green">Item at Caerleon costs : <%= cost %></p>
+                <% } %>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Ressource</th>
+                            <th>Qté</th>
+                            <th>Prix Caerleon</th>
+                            <th>Prix Total Ressource</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% if (prices !== null ) { %>
+                            <% prices.forEach( x=> { %>
+                                <tr>
+                                    <td>
+                                        <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=x.name%>"/>
+                                        <p><%= x.name %></p>
+                                    </td>
+                                    <td><p><%= x.count %></p></td>
+                                    <td><p><%= x.prix%> silver</p><p> @ <%= x.date%></p></td>
+                                    <td><p><%= x.total_price %> </p></td>
+                                </tr>
+                            <% })%>
+                        <% } %>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            <% }%>
+        </div>
+    </body>
 </html>
