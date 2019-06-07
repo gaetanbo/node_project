@@ -5,6 +5,7 @@ const moment = require('moment');
 const app = express();
 const fs = require('fs');
 //const logger = require('./logger');
+const foundryRoute = require("./foundry.js");
 
 moment.locale('fr');
 app.use(express.static('public'));
@@ -19,6 +20,7 @@ getJsonList();
 let categoryAsked = "";
 let usefullItem = [];
 
+app.use("/", foundryRoute);
 
 app.get('/', function (req, res) {
     res.render('index');
