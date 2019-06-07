@@ -5,7 +5,12 @@ const moment = require('moment');
 const app = express();
 const fs = require('fs');
 //const logger = require('./logger');
-const foundryRoute = require("./foundry.js");
+
+// Add my services / function I need from other files
+const utils = require("./utils"); 
+
+// Add my routes from declared from other files
+const foundryRoute = require("./foundry");
 
 moment.locale('fr');
 app.use(express.static('public'));
@@ -14,11 +19,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 // Initialize the list of JSON file on server
-let jsonList = [];
-getJsonList();
+let jsonList = utils.getJsonList();
 // Initialize var for .get/bbiz :
 let categoryAsked = "";
-let usefullItem = [];
 
 app.use("/", foundryRoute);
 
@@ -80,7 +83,7 @@ app.get('/recipe', function (req, res) {
 
 
 app.post('/recipe', function (req, res) {
-    getObjectList(req.body.recipe_group);
+    let usefullItem = utils.getObjectList(req.body.recipe_group);
     let recipeItems = [];
     let selectdata = [];
     usefullItem.forEach(x => {
@@ -113,7 +116,7 @@ app.post('/recipe2', function (req, res) {
     let item = "";
     let costvalue = 0;
     // let costval;
-    // var costPromise = getPrice(itemdata);
+    // var costPromise = utils.getPrice(itemdata);
     // costPromise.then(function(cost) {
     //   costData = JSON.parse(cost);
     //   costData.forEach( (w,i)=> {
@@ -123,7 +126,7 @@ app.post('/recipe2', function (req, res) {
     //     costval = data;
     //     }
     //   })
-    //   costvalue = numberWithCommas(costval);
+    //   costvalue = utils.numberWithCommas(costval);
     //   console.log(costvalue);
     // }).catch(err => {
     //     console.log(err);
@@ -146,18 +149,18 @@ app.post('/recipe2', function (req, res) {
           }else{
               craftingList = item.craftingRequirements.craftResourceList
           }
-          Promise.all(craftingList.map(x=>getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
+          Promise.all(craftingList.map(x=>utils.getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
             prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
             let newarray=[];
             craftingList.forEach( (y,i) => {
               if (prices[i] !== undefined){
                 if ( y.uniqueName === prices[i].item_id || y.uniqueName ===  prices[i].item_id.substring(0,prices[i].item_id.length -2 )){
                   let obj0 = {
-                  'prix': numberWithCommas(prices[i].sell_price_min),
+                  'prix': utils.numberWithCommas(prices[i].sell_price_min),
                   'date':prices[i].sell_price_min_date,
                   'name':y.uniqueName,
                   'count':y.count,
-                  'total_price': numberWithCommas(y.count * prices[i].sell_price_min),
+                  'total_price': utils.numberWithCommas(y.count * prices[i].sell_price_min),
                   'total_inter': y.count * prices[i].sell_price_min
                 };
                 newarray.push(obj0);
@@ -169,7 +172,7 @@ app.post('/recipe2', function (req, res) {
             let valeur = x.total_inter
             total += valeur;
           })
-          let readable_total = numberWithCommas(total);
+          let readable_total = utils.numberWithCommas(total);
           res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total, enchant,cost:costvalue});
         }).catch(err => {
             console.log(err);
@@ -186,9 +189,8 @@ app.get('/bbiz', function (req, res) {
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
     benefAsked = req.body.benef;
-    usefullItem = [];      // Empty list of items before call
-    getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
-    benefAskedAffichage = numberWithCommas(benefAsked);
+    usefullItem = utils.getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
+    benefAskedAffichage = utils.numberWithCommas(benefAsked);
     Promise.all(usefullItem.map(x => bbizworthy(x, benefAsked))).then(data => {
         res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null, benefAskedAffichage});
     }).catch(err => {
@@ -227,7 +229,7 @@ function bbizworthy(x, benefAsked) {
         let diffs = [];
         var q_level = [1, 2, 3, 4, 5];
         var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
-        var dataPromise = getData(x.UniqueName);
+        var dataPromise = utils.getData(x.UniqueName);
         let worth = [];
         dataPromise.then(function (resultats) {
             try {
@@ -281,11 +283,11 @@ function bbizworthy(x, benefAsked) {
                                 enchant: enchantment,
                                 tiers: BM_name[q].substring(0, 2),
                                 qualite: q_text[q],
-                                bm_prix: numberWithCommas(BM_prices[q]),
+                                bm_prix: utils.numberWithCommas(BM_prices[q]),
                                 bm_date: BM_dates[q].fromNow(),
-                                ca_prix: numberWithCommas(Ca_prices[q]),
+                                ca_prix: utils.numberWithCommas(Ca_prices[q]),
                                 ca_date: Ca_dates[q].fromNow(),
-                                benef: numberWithCommas(diffs[q])
+                                benef: utils.numberWithCommas(diffs[q])
                             };
                             worth.push(donnee);
                         }
@@ -297,81 +299,6 @@ function bbizworthy(x, benefAsked) {
             }
         }, e => reject(e));
     });
-}
-
-function getData(itemName) {
-    var url = "https://www.albion-online-data.com/api/v2/stats/prices/" + itemName;
-    var options = {
-        url: url,
-        headers: {
-            'User-Agent': 'request',
-            'Access-Control-Allow-Origin': '*'
-        }
-    };
-    return new Promise(function (resolve, reject) {
-        request.get(options, function (err, resp, body) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(body);
-            }
-        })
-    })
-}
-
-function getObjectList(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
-    usefullItem = [];
-    var fichier = './public/items/' + jsonFile;
-    let rawcontent = fs.readFileSync(fichier);
-    let contentFile = JSON.parse(rawcontent);
-    contentFile.forEach(function (item, i) {
-        let name = item.UniqueName;
-        let tiers = name.substring(0, 2);
-        if (tiers == "T1" || tiers == "T2" || tiers == "T3") {
-            //console.log('bullshit tier');
-        } else {
-            usefullItem.push(item);
-        }
-    });
-    return usefullItem
-}
-
-function getJsonList() {
-//console.log('called getJsonList()');
-    let path = "./public/items/";
-    fs.readdir(path, function (err, items) {
-        items.forEach(function (item, i) {
-            jsonList.push(item);
-        })
-    });
-    return jsonList;
-}
-
-function numberWithCommas(x) {
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return parts.join(".");
-}
-
-function getPrice(item, city) {
-    var url = `https://www.albion-online-data.com/api/v2/stats/prices/${item}?locations=${city}`
-    var options = {
-        url: url,
-        headers: {
-            'User-Agent': 'request',
-            'Access-Control-Allow-Origin': '*'
-        }
-    };
-    //console.log(url);
-    return new Promise(function (resolve, reject) {
-        request.get(options, function (err, resp, body2) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(body2);
-            }
-        })
-    })
 }
 
 const PORT = process.env.PORT || 3000;
