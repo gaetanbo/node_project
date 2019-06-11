@@ -4,10 +4,10 @@ const request = require('request');
 const moment = require('moment');
 const app = express();
 const fs = require('fs');
-//const logger = require('./logger');
+const logger = require('./logger');
 
 // Add my services / function I need from other files
-const utils = require("./utils"); 
+const utils = require("./utils");
 
 // Add my routes from declared from other files
 const foundryRoute = require("./foundry");
@@ -15,7 +15,7 @@ const foundryRoute = require("./foundry");
 moment.locale('fr');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
-//app.use(logger);
+app.use(logger);
 app.set('view engine', 'ejs');
 
 // Initialize the list of JSON file on server
