@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link href="/css/foundry.css" rel="stylesheet" type="text/css">
     <%- include('partial/header', {title: "Foundry"}); %>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
     <body>
         <hr class="my-4">
         <div class="container">
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Item Before</th>
-                    <th>Price</th>
-                    <th>Item After</th>
-                    <th>Price</th>
+                    <th>Item</th>
+                    <th>Before</th>
+                    <th></th>
+                    <th>After</th>
                     <th>Benef</th>
                 </tr>
                 </thead>
@@ -18,16 +24,24 @@
                 <% listItems.forEach(y=>{ %>
                 <tr>
                     <td>
-                        <img width="64" height="64" src="<%=y.src%>" </img>
-                        <%= y.name %>
+                        <%= y.item %>
                     </td>
-                    <td><%= y.price %></td>
                     <td>
-                        <img width="64" height="64" src="<%=y.src_next%>" </img>
-                        <%= y.next_name %>
+                        <img width="64" height="64" src="<%=y.src%>"></img>
+                        <p class='silver'><%= y.price %></p>
                     </td>
-                    <td><%= y.price_next %></td>
-                    <td>0</td>
+                    <td>
+                        <img width="32" height="32" src="<%=y.src_enchant%>"></img>
+                        ->
+                    </td>
+                    <td>
+                        <img width="64" height="64" src="<%=y.src_next%>"></img>
+                        <p class='silver'><%= y.price_next %></p>
+                    </td>
+                    <td>
+                        <p class='silver'><%= y.benef %></p>
+                        <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.ratio%> * <%=y.price_enchant%>"><%=y.ratio * y.price_enchant%></p>
+                    </td>
                 </tr>
                 <% }); %>
                 </tbody>

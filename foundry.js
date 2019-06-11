@@ -87,16 +87,19 @@ foundryRoute.get('/foundry', (req, res) => {
                                 let itemNextPrice = await utils.getPrice(willEnchant.after_name, "Caerleon")
                                 itemNextPrice = JSON.parse(itemNextPrice)[0];
                                 itemNextPrice = (itemNextPrice.sell_price_max + itemNextPrice.sell_price_min)/2
-                                //benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice )) WILL BE CALCULATED ON FRONT
+                                //benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice )) WILL BE UPDATED ON FRONT
                                 listItems.push({
+                                    item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
                                     name : item.UniqueName,
                                     next_name : willEnchant.after_name,
-                                    price : itemPrice,
-                                    price_next : itemNextPrice,
+                                    price : utils.numberWithCommas(itemPrice),
+                                    price_next : utils.numberWithCommas(itemNextPrice),
                                     src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName,
                                     src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name,
                                     ratio,
-                                    price_enchant : itemEnchantPrice
+                                    price_enchant : itemEnchantPrice,
+                                    src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
+                                    benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
                                 })
                             }
                         }catch(e){
@@ -104,6 +107,8 @@ foundryRoute.get('/foundry', (req, res) => {
                         }
                     }
                 };
+                listItems.sort((a,b)=> b.benef - a.benef);
+                listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
                 res.render('foundry', {listItems});
             }).catch(e => {
                 res.render('index');

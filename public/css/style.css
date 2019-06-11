@@ -3,7 +3,6 @@ body {
     color: #fff;
 }
 
-
 a {
     color: cadetblue;
 }
@@ -18,4 +17,16 @@ a:focus {
 
 p.capitalize {
     text-transform: capitalize;
+}
+
+p.silver{
+    position: relative;
+}
+
+p.silver::after {
+    content: url('../img/coins.png');
+    height: 24px;
+    width: 25px;
+    margin-left: 5px;
+    position: absolute;
 }
