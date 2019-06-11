@@ -4,7 +4,34 @@
     <body>
         <hr class="my-4">
         <div class="container">
-
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Item Before</th>
+                    <th>Price</th>
+                    <th>Item After</th>
+                    <th>Price</th>
+                    <th>Benef</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% listItems.forEach(y=>{ %>
+                <tr>
+                    <td>
+                        <img width="64" height="64" src="<%=y.src%>" </img>
+                        <%= y.name %>
+                    </td>
+                    <td><%= y.price %></td>
+                    <td>
+                        <img width="64" height="64" src="<%=y.src_next%>" </img>
+                        <%= y.next_name %>
+                    </td>
+                    <td><%= y.price_next %></td>
+                    <td>0</td>
+                </tr>
+                <% }); %>
+                </tbody>
+            </table>
         </div>
     </body>
 </html>

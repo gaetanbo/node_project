@@ -2,8 +2,9 @@ const fs = require('fs');
 const request = require('request');
 
 const utils = {
-    getPrice : function(item, city) {
-        var url = `https://www.albion-online-data.com/api/v2/stats/prices/${item}?locations=${city}`
+    getPrice : function(item, city, quality) {
+        let q = quality?"&qualities="+quality:"";
+        var url = `https://www.albion-online-data.com/api/v2/stats/prices/${item}?locations=${city}${q}`
         var options = {
             url: url,
             headers: {

@@ -36,13 +36,13 @@ const ratio = [
 ];
 
 function pickWillEnchant(name){
-    let enchant = "@1";
+    let enchant = { current : "", after : "@1", after_name : name + "@1" };
     if (name.includes("@1")) {
-        enchant = "@2";
+        enchant = { current : "@1", after : "@2", after_name : name.substring(0,name.length-2) + "@2" };
     } else if (name.includes("@2")) {
-        enchant = "@3";
+        enchant = { current : "@2", after : "@3", after_name : name.substring(0,name.length-2) + "@3" };
     } else if (name.includes("@3")) {
-        enchant = "";
+        enchant = { current : "@3", after : "", after_name : "" };
     }
     return enchant;
 }
@@ -71,15 +71,42 @@ function loadEnchantPrices(){
 foundryRoute.get('/foundry', (req, res) => {
     if(req.query.category){
         try{
-            loadEnchantPrices().then( _ => {
+            loadEnchantPrices().then( async _ => {
+                let listItems = [];
                 let usefullItem = utils.getObjectList(req.query.category + ".json");
                 for(let item of usefullItem){
                     let willEnchant = pickWillEnchant(item.UniqueName);
                     let ratio = pickRatio(item.UniqueName);
-                    let itemEnchantPrice = enchantPrices[willEnchant].prices[item.UniqueName.substring(1,2)];
-                    let itemPrice = utils.getPrice(item.UniqueName, "Caerleon")
+                    if(willEnchant.after !== ""){
+                        try{
+                            let itemEnchantPrice = enchantPrices[willEnchant.after].prices[item.UniqueName.substring(1,2)];
+                            let itemPrice = await utils.getPrice(item.UniqueName, "Caerleon")
+                            itemPrice = JSON.parse(itemPrice)[0];
+                            itemPrice = (itemPrice.buy_price_max + itemPrice.buy_price_min)/2
+                            if(itemPrice > 0){
+                                let itemNextPrice = await utils.getPrice(willEnchant.after_name, "Caerleon")
+                                itemNextPrice = JSON.parse(itemNextPrice)[0];
+                                itemNextPrice = (itemNextPrice.sell_price_max + itemNextPrice.sell_price_min)/2
+                                //benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice )) WILL BE CALCULATED ON FRONT
+                                listItems.push({
+                                    name : item.UniqueName,
+                                    next_name : willEnchant.after_name,
+                                    price : itemPrice,
+                                    price_next : itemNextPrice,
+                                    src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName,
+                                    src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name,
+                                    ratio,
+                                    price_enchant : itemEnchantPrice
+                                })
+                            }
+                        }catch(e){
+                            // if it crashed it just skips the item
+                        }
+                    }
                 };
-                res.render('foundry');
+                res.render('foundry', {listItems});
+            }).catch(e => {
+                res.render('index');
             })
         }catch(e){
             res.render('index');
