@@ -31,8 +31,13 @@
                         <p class='silver'><%= y.price %></p>
                     </td>
                     <td>
-                        <img width="32" height="32" src="<%=y.src_enchant%>"></img>
-                        ->
+                        <p>
+                            <%=y.ratio%> x 
+                            <img width="32" height="32" src="<%=y.src_enchant%>"></img>
+                        </p>
+                        <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.price_enchant%> /u">
+                            <%=y.ratio * y.price_enchant%>
+                        </p>
                     </td>
                     <td>
                         <img width="64" height="64" src="<%=y.src_next%>"></img>
@@ -40,7 +45,6 @@
                     </td>
                     <td>
                         <p class='silver'><%= y.benef %></p>
-                        <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.ratio%> * <%=y.price_enchant%>"><%=y.ratio * y.price_enchant%></p>
                     </td>
                 </tr>
                 <% }); %>

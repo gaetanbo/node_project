@@ -87,20 +87,22 @@ foundryRoute.get('/foundry', (req, res) => {
                                 let itemNextPrice = await utils.getPrice(willEnchant.after_name, "Caerleon")
                                 itemNextPrice = JSON.parse(itemNextPrice)[0];
                                 itemNextPrice = (itemNextPrice.sell_price_max + itemNextPrice.sell_price_min)/2
-                                //benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice )) WILL BE UPDATED ON FRONT
-                                listItems.push({
-                                    item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
-                                    name : item.UniqueName,
-                                    next_name : willEnchant.after_name,
-                                    price : utils.numberWithCommas(itemPrice),
-                                    price_next : utils.numberWithCommas(itemNextPrice),
-                                    src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName,
-                                    src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name,
-                                    ratio,
-                                    price_enchant : itemEnchantPrice,
-                                    src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
-                                    benef : itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
-                                })
+                                let benef = itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
+                                if(itemNextPrice >0 && benef > 0){
+                                    listItems.push({
+                                        item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
+                                        name : item.UniqueName,
+                                        next_name : willEnchant.after_name,
+                                        price : utils.numberWithCommas(itemPrice),
+                                        price_next : utils.numberWithCommas(itemNextPrice),
+                                        src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName,
+                                        src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name,
+                                        ratio,
+                                        price_enchant : itemEnchantPrice,
+                                        src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
+                                        benef
+                                    })
+                                }
                             }
                         }catch(e){
                             // if it crashed it just skips the item
