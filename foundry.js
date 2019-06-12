@@ -58,7 +58,7 @@ function loadEnchantPrices(){
                 price = await utils.getPrice(`T${i}_${enchantPrices[enchantItem].name}`, "Caerleon");
                 let obj = JSON.parse(price)[0];
                 if(obj){
-                    enchantPrices[enchantItem].prices[i] = (obj.buy_price_max + obj.buy_price_min)/2;
+                    enchantPrices[enchantItem].prices[i] = obj.sell_price_min;
                 }else{
                     enchantPrices[enchantItem].prices[i] = -1;
                 }
@@ -82,11 +82,11 @@ foundryRoute.get('/foundry', (req, res) => {
                             let itemEnchantPrice = enchantPrices[willEnchant.after].prices[item.UniqueName.substring(1,2)];
                             let itemPrice = await utils.getPrice(item.UniqueName, "Caerleon")
                             itemPrice = JSON.parse(itemPrice)[0];
-                            itemPrice = (itemPrice.buy_price_max + itemPrice.buy_price_min)/2
+                            itemPrice = itemPrice.sell_price_min
                             if(itemPrice > 0){
                                 let itemNextPrice = await utils.getPrice(willEnchant.after_name, "Caerleon")
                                 itemNextPrice = JSON.parse(itemNextPrice)[0];
-                                itemNextPrice = (itemNextPrice.sell_price_max + itemNextPrice.sell_price_min)/2
+                                itemNextPrice = itemNextPrice.sell_price_min
                                 let benef = itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
                                 if(itemNextPrice >0 && benef > 0){
                                     listItems.push({
@@ -100,7 +100,8 @@ foundryRoute.get('/foundry', (req, res) => {
                                         ratio,
                                         price_enchant : itemEnchantPrice,
                                         src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
-                                        benef
+                                        benef,
+                                        complete_price_enchant : utils.numberWithCommas(ratio * itemEnchantPrice)
                                     })
                                 }
                             }
