@@ -4,52 +4,68 @@
     <%- include('partial/header', {title: "Foundry"}); %>
     <script>
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="tooltip"]').tooltip();
+            $('#s_file').change(e => {
+                if(window.location.href.includes("?category=")){
+                     window.location.href =  window.location.href.replace(/=.*/,"=") + $('#s_file option:selected').val();
+                }else{
+                    window.location.href = window.location.href + "?category=" + $('#s_file option:selected').val();
+                }
+            });
         })
     </script>
     <body>
         <hr class="my-4">
         <div class="container">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Before</th>
-                    <th></th>
-                    <th>After</th>
-                    <th>Benef</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% listItems.forEach(y=>{ %>
-                <tr>
-                    <td>
-                        <%= y.item %>
-                    </td>
-                    <td>
-                        <img width="64" height="64" src="<%=y.src%>"></img>
-                        <p class='silver'><%= y.price %></p>
-                    </td>
-                    <td>
-                        <p>
-                            <%=y.ratio%> x 
-                            <img width="32" height="32" src="<%=y.src_enchant%>"></img>
-                        </p>
-                        <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.price_enchant%> /u">
-                            <%=y.complete_price_enchant%>
-                        </p>
-                    </td>
-                    <td>
-                        <img width="64" height="64" src="<%=y.src_next%>"></img>
-                        <p class='silver'><%= y.price_next %></p>
-                    </td>
-                    <td>
-                        <p class='silver'><%= y.benef %></p>
-                    </td>
-                </tr>
+            <select id="s_file" class="form-control">
+                <option value="" disabled selected>Category</option>
+                <% fileList.forEach(y=>{ y=y.replace('.json','')%>
+                    <option label="<%= y %>" value="<%= y %>"><%= y %></option>
                 <% }); %>
-                </tbody>
-            </table>
+            </select>
+            <br>
+             <% if (listItems !== null) { %>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Before</th>
+                        <th></th>
+                        <th>After</th>
+                        <th>Benef</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% listItems.forEach(y=>{ %>
+                    <tr>
+                        <td>
+                            <%= y.item %>
+                        </td>
+                        <td>
+                            <img width="64" height="64" src="<%=y.src%>"></img>
+                            <p class='silver'><%= y.price %></p>
+                        </td>
+                        <td>
+                            <p>
+                                <%=y.ratio%> x 
+                                <img width="32" height="32" src="<%=y.src_enchant%>"></img>
+                            </p>
+                            <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.price_enchant%> /u">
+                                <%=y.complete_price_enchant%>
+                            </p>
+                        </td>
+                        <td>
+                            <img width="64" height="64" src="<%=y.src_next%>"></img>
+                            <p class='silver'><%= y.price_next %></p>
+                        </td>
+                        <td>
+                            <p class='silver'><%= y.benef %></p>
+                        </td>
+                    </tr>
+                    <% }); %>
+                    </tbody>
+                </table>
+            <% }; %>
         </div>
     </body>
 </html>

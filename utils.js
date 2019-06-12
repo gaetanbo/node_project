@@ -60,13 +60,8 @@ const utils = {
     },
     getJsonList : function () {
         let jsonList = [];
-        let path = "./public/items/";
-        fs.readdir(path, function (err, items) {
-            items.forEach(function (item, i) {
-                jsonList.push(item);
-            })
-        });
-        return jsonList;
+        let files = fs.readdirSync("./public/items/")
+        return files;
     },
     numberWithCommas: function(x) {
         var parts = x.toString().split(".");

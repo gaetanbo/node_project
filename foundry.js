@@ -69,7 +69,8 @@ function loadEnchantPrices(){
 }
 
 foundryRoute.get('/foundry', (req, res) => {
-    if(req.query.category){
+    let fileList = utils.getJsonList();
+    if(fileList.some(x => x.replace('.json','') === req.query.category)){
         try{
             loadEnchantPrices().then( async _ => {
                 let listItems = [];
@@ -112,7 +113,7 @@ foundryRoute.get('/foundry', (req, res) => {
                 };
                 listItems.sort((a,b)=> b.benef - a.benef);
                 listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
-                res.render('foundry', {listItems});
+                res.render('foundry', {fileList, listItems});
             }).catch(e => {
                 res.render('index');
             })
@@ -120,7 +121,7 @@ foundryRoute.get('/foundry', (req, res) => {
             res.render('index');
         }
     }else{
-        res.render('index');
+        res.render('foundry', {fileList, listItems : []});
     }
 })
 
