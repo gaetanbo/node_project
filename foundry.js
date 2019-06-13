@@ -1,6 +1,8 @@
 const foundryRoute = require('express').Router();
 const utils = require("./utils"); 
 
+const _quality = [1, 2, 3, 4, 5];
+
 const enchantPrices = { 
     '@1' : {
         name : "RUNE",
@@ -80,30 +82,45 @@ foundryRoute.get('/foundry', (req, res) => {
                     let ratio = pickRatio(item.UniqueName);
                     if(willEnchant.after !== ""){
                         try{
+                            // Get price of ressources needed to upgrade
                             let itemEnchantPrice = enchantPrices[willEnchant.after].prices[item.UniqueName.substring(1,2)];
-                            let itemPrice = await utils.getPrice(item.UniqueName, "Caerleon")
-                            itemPrice = JSON.parse(itemPrice)[0];
-                            itemPrice = itemPrice.sell_price_min
-                            if(itemPrice > 0){
-                                let itemNextPrice = await utils.getPrice(willEnchant.after_name, "Caerleon")
-                                itemNextPrice = JSON.parse(itemNextPrice)[0];
-                                itemNextPrice = itemNextPrice.sell_price_min
-                                let benef = itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
-                                if(itemNextPrice >0 && benef > 0){
-                                    listItems.push({
-                                        item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
-                                        name : item.UniqueName,
-                                        next_name : willEnchant.after_name,
-                                        price : utils.numberWithCommas(itemPrice),
-                                        price_next : utils.numberWithCommas(itemNextPrice),
-                                        src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName,
-                                        src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name,
-                                        ratio,
-                                        price_enchant : itemEnchantPrice,
-                                        src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
-                                        benef,
-                                        complete_price_enchant : utils.numberWithCommas(ratio * itemEnchantPrice)
-                                    })
+
+                            let hrstart = process.hrtime()
+
+                            // Get price TN
+                            let itemInfo = await utils.getPrice(item.UniqueName, "Caerleon", _quality.reduce((a,c) => (a?a+",":a) + c) )
+                            itemInfo = JSON.parse(itemInfo);
+                            // Get price TN+1
+                            let itemNextInfo = await utils.getPrice(willEnchant.after_name, "Caerleon", _quality.reduce((a,c) => (a?a+",":a) + c) )
+                            itemNextInfo = JSON.parse(itemNextInfo);
+
+                            let hrend = process.hrtime(hrstart);
+                            console.log('%s ET: %ds %dms',item.UniqueName, hrend[0], hrend[1] / 1000000);
+
+                            // Check for every quality
+                            for(let quality of _quality){
+                                let qualitytItemInfo = itemInfo.find( x => x.quality == quality); // Get the correct item by quality inside the array for TN
+                                let qualitytItemNextInfo = itemNextInfo.find( x => x.quality == quality); // Get the correct item by quality inside the array for TN+1
+                                if(qualitytItemInfo && qualitytItemNextInfo){ // If he is found, proceeed
+                                    let itemPrice = qualitytItemInfo.sell_price_min // Get the price
+                                    let itemNextPrice = qualitytItemNextInfo.sell_price_min // If
+                                    let benef = itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
+                                    if(itemPrice > 0 && itemNextPrice > 0 && benef > 0){
+                                        listItems.push({
+                                            item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
+                                            name : item.UniqueName,
+                                            next_name : willEnchant.after_name,
+                                            price : utils.numberWithCommas(itemPrice),
+                                            price_next : utils.numberWithCommas(itemNextPrice),
+                                            src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName + "?quality=" + quality,
+                                            src_next : "https://gameinfo.albiononline.com/api/gameinfo/items/" + willEnchant.after_name + "?quality=" + quality,
+                                            ratio,
+                                            price_enchant : itemEnchantPrice,
+                                            src_enchant : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName.substring(0,3) + enchantPrices[willEnchant.after].name,
+                                            benef,
+                                            complete_price_enchant : utils.numberWithCommas(ratio * itemEnchantPrice)
+                                        })
+                                    }
                                 }
                             }
                         }catch(e){
