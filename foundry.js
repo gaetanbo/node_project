@@ -2,6 +2,8 @@ const foundryRoute = require('express').Router();
 const utils = require("./utils"); 
 
 const _quality = [1, 2, 3, 4, 5];
+const _cities = ["Caerleon","Thetford","Fort Sterling","Lymhurst","Bridgewatch","Martlock"];
+const _tiers = [3,4,5,6,7,8];
 
 const enchantPrices = { 
     '@1' : {
@@ -70,13 +72,27 @@ function loadEnchantPrices(){
     })
 }
 
+foundryRoute.post('/foundry', function (req, res) {
+    const city = req.body.city;
+    const category = req.body.category;
+    const tiers = req.body.tiers.length > 1 ? req.body.tiers.reduce((a,c) => (a?a+",":a) + c) : req.body.tiers;
+    return res.redirect(`/foundry?category=${category}&city=${city}&tiers=${tiers}`);
+});
+
 foundryRoute.get('/foundry', (req, res) => {
+    let city = "Caerleon";
+    if(req.query.city && _cities.some( x => x.toLowerCase() === req.query.city.toLowerCase())){ // Check if the city used exists
+        city = req.query.city;
+    }
     let fileList = utils.getJsonList();
-    if(fileList.some(x => x.replace('.json','') === req.query.category)){
+    if(fileList.some(x => x.replace('.json','') === req.query.category)){ // Check if the category used exists
         try{
             loadEnchantPrices().then( async _ => {
                 let listItems = [];
                 let usefullItem = utils.getObjectList(req.query.category + ".json");
+                if(req.query.tiers){ // Check if tiers list paramater is exists
+                    usefullItem = usefullItem.filter(item => req.query.tiers.split(',').includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
+                }
                 for(let item of usefullItem){
                     let willEnchant = pickWillEnchant(item.UniqueName);
                     let ratio = pickRatio(item.UniqueName);
@@ -88,10 +104,10 @@ foundryRoute.get('/foundry', (req, res) => {
                             let hrstart = process.hrtime()
 
                             // Get price TN
-                            let itemInfo = await utils.getPrice(item.UniqueName, "Caerleon", _quality.reduce((a,c) => (a?a+",":a) + c) )
+                            let itemInfo = await utils.getPrice(item.UniqueName, city, _quality.reduce((a,c) => (a?a+",":a) + c) )
                             itemInfo = JSON.parse(itemInfo);
                             // Get price TN+1
-                            let itemNextInfo = await utils.getPrice(willEnchant.after_name, "Caerleon", _quality.reduce((a,c) => (a?a+",":a) + c) )
+                            let itemNextInfo = await utils.getPrice(willEnchant.after_name, city, _quality.reduce((a,c) => (a?a+",":a) + c) )
                             itemNextInfo = JSON.parse(itemNextInfo);
 
                             let hrend = process.hrtime(hrstart);
@@ -101,9 +117,9 @@ foundryRoute.get('/foundry', (req, res) => {
                             for(let quality of _quality){
                                 let qualitytItemInfo = itemInfo.find( x => x.quality == quality); // Get the correct item by quality inside the array for TN
                                 let qualitytItemNextInfo = itemNextInfo.find( x => x.quality == quality); // Get the correct item by quality inside the array for TN+1
-                                if(qualitytItemInfo && qualitytItemNextInfo){ // If he is found, proceeed
-                                    let itemPrice = qualitytItemInfo.sell_price_min // Get the price
-                                    let itemNextPrice = qualitytItemNextInfo.sell_price_min // If
+                                if(qualitytItemInfo && qualitytItemNextInfo){ // If quality is found, proceed
+                                    let itemPrice = qualitytItemInfo.sell_price_min
+                                    let itemNextPrice = qualitytItemNextInfo.sell_price_min
                                     let benef = itemNextPrice - (itemPrice + ( ratio * itemEnchantPrice ))
                                     if(itemPrice > 0 && itemNextPrice > 0 && benef > 0){
                                         listItems.push({
@@ -130,7 +146,11 @@ foundryRoute.get('/foundry', (req, res) => {
                 };
                 listItems.sort((a,b)=> b.benef - a.benef);
                 listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
-                res.render('foundry', {fileList, listItems});
+                res.render('foundry', {fileList, cities : _cities, tiers : _tiers, listItems, selected : {
+                    city,
+                    category : req.query.category,
+                    tiers : req.query.tiers.split(',')
+                }});
             }).catch(e => {
                 res.render('index');
             })
@@ -138,7 +158,7 @@ foundryRoute.get('/foundry', (req, res) => {
             res.render('index');
         }
     }else{
-        res.render('foundry', {fileList, listItems : []});
+        res.render('foundry', {fileList, cities : _cities, tiers : _tiers, listItems : [], selected : {}});
     }
 })
 

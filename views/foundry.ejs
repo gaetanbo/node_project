@@ -5,24 +5,42 @@
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
-            $('#s_file').change(e => {
-                if(window.location.href.includes("?category=")){
-                     window.location.href =  window.location.href.replace(/=.*/,"=") + $('#s_file option:selected').val();
-                }else{
-                    window.location.href = window.location.href + "?category=" + $('#s_file option:selected').val();
-                }
-            });
         })
     </script>
     <body>
         <hr class="my-4">
         <div class="container">
-            <select id="s_file" class="form-control">
-                <option value="" disabled selected>Category</option>
-                <% fileList.forEach(y=>{ y=y.replace('.json','')%>
-                    <option label="<%= y %>" value="<%= y %>"><%= y %></option>
-                <% }); %>
-            </select>
+            <form action="/foundry" method="post">
+                <div class="form-row">
+                    <div class="col-3">
+                        <select name="category" class="form-control" >
+                            <option value="" disabled <%= selected.category ? "" : "selected" %> >Category</option>
+                            <% fileList.forEach(y=>{ y=y.replace('.json','')%>
+                                <option label="<%= y %>" value="<%= y %>" <%= y == selected.category ? "selected" : ""  %> ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <select name="city" class="form-control">
+                            <option value="" disabled <%= selected.city ? "" : "selected" %>>City</option>
+                            <% cities.forEach(y=> {%>
+                                <option label="<%= y %>" value="<%= y %>" <%= y == selected.city ? "selected" : ""  %> ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <% tiers.forEach(y=>{ %>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tiers" id="<%= 'T' + y %>" value="<%= y %>" <%= selected.tiers.includes(y + "") ? "checked" : ""  %> >
+                                <label class="form-check-label" for="<%= 'T' + y %>"><%= 'T' + y %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
+                    </div>
+                </div>
+            </form>
             <br>
              <% if (listItems !== null) { %>
                 <table class="table table-striped">
