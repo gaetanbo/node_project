@@ -72,14 +72,7 @@ function loadEnchantPrices(){
     })
 }
 
-foundryRoute.post('/foundry', function (req, res) {
-    const city = req.body.city;
-    const category = req.body.category;
-    const tiers = req.body.tiers.length > 1 ? req.body.tiers.reduce((a,c) => (a?a+",":a) + c) : req.body.tiers;
-    return res.redirect(`/foundry?category=${category}&city=${city}&tiers=${tiers}`);
-});
-
-foundryRoute.get('/foundry', (req, res) => {
+foundryRoute.get('/foundry/query', (req, res) => {
     let city = "Caerleon";
     if(req.query.city && _cities.some( x => x.toLowerCase() === req.query.city.toLowerCase())){ // Check if the city used exists
         city = req.query.city;
@@ -91,7 +84,7 @@ foundryRoute.get('/foundry', (req, res) => {
                 let listItems = [];
                 let usefullItem = utils.getObjectList(req.query.category + ".json");
                 if(req.query.tiers){ // Check if tiers list paramater is exists
-                    usefullItem = usefullItem.filter(item => req.query.tiers.split(',').includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
+                    usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
                 }
                 for(let item of usefullItem){
                     let willEnchant = pickWillEnchant(item.UniqueName);
@@ -146,20 +139,21 @@ foundryRoute.get('/foundry', (req, res) => {
                 };
                 listItems.sort((a,b)=> b.benef - a.benef);
                 listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
-                res.render('foundry', {fileList, cities : _cities, tiers : _tiers, listItems, selected : {
-                    city,
-                    category : req.query.category,
-                    tiers : req.query.tiers.split(',')
-                }});
+                return res.status(200).json(listItems);
             }).catch(e => {
-                res.render('index');
+                return res.status(500).json(e);
             })
         }catch(e){
-            res.render('index');
+            return res.status(500).json(e);
         }
     }else{
-        res.render('foundry', {fileList, cities : _cities, tiers : _tiers, listItems : [], selected : {}});
+        return res.status(500).json({message : "Error with query"});
     }
+    
+})
+
+foundryRoute.get('/foundry', (req, res) => {
+    res.render('foundry', {categories : utils.getJsonList(), cities : _cities, tiers : _tiers});
 })
 
 module.exports = foundryRoute;

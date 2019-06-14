@@ -4,86 +4,141 @@
     <%- include('partial/header', {title: "Foundry"}); %>
     <script>
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+            $('#lookup').click( _ => {
+
+                $('#table_body').empty();
+                $('#table_body').append(`
+                    <tr>
+                        <td colspan="5">
+                            <div class="text-center">
+                                <div class="spinner-grow" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `)
+
+                let tiers = $('input[type=checkbox]:checked').map(function(_, el) {
+                                return $(el).val();
+                            }).get();
+                let category = $('[name=category]').val();
+                let city = $('[name=city]').val();
+
+                $.ajax({
+                    url: "foundry/query",
+                    data: {city, category, tiers},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#table_body').empty();
+                        for(d of data){
+                            $('#table_body').append(
+                                $('<tr>').append(
+                                    $('<td>').text(d.item)
+                                ).append(
+                                    $('<td>').append(
+                                        $('<img>')
+                                            .attr('src', d.src)
+                                            .attr('width', '64')
+                                            .attr('height', '64')
+                                    ).append(
+                                        $('<p>')
+                                            .text(d.price)
+                                            .addClass('silver')
+                                    )
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.ratio + " x")
+                                            .append(
+                                                $('<img>')
+                                                    .attr('src', d.src_enchant)
+                                                    .attr('width', '32')
+                                                    .attr('height', '32'))
+                                    ).append(
+                                        $('<p>')
+                                            .text(d.complete_price_enchant)
+                                            .addClass('silver')
+                                            .attr('data-toggle', 'tooltip')
+                                            .attr('data-placement', 'left')
+                                            .attr('title', d.price_enchant + " /u")
+                                    )
+                                ).append(
+                                    $('<td>').append(
+                                        $('<img>')
+                                            .attr('src', d.src_next)
+                                            .attr('width', '64')
+                                            .attr('height', '64')
+                                    ).append(
+                                        $('<p>')
+                                            .text(d.price_next)
+                                            .addClass('silver')
+                                    )
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.benef)
+                                            .addClass('silver')
+                                    )
+                                )
+                            )
+                        }
+                        $('[data-toggle="tooltip"]').tooltip();
+                    }
+                });
+            })
         })
     </script>
     <body>
         <hr class="my-4">
         <div class="container">
-            <form action="/foundry" method="post">
+            <form>
                 <div class="form-row">
                     <div class="col-3">
                         <select name="category" class="form-control" >
-                            <option value="" disabled <%= selected.category ? "" : "selected" %> >Category</option>
-                            <% fileList.forEach(y=>{ y=y.replace('.json','')%>
-                                <option label="<%= y %>" value="<%= y %>" <%= y == selected.category ? "selected" : ""  %> ><%= y %></option>
+                            <option value="" disabled selected>Category</option>
+                            <% categories.forEach(y=>{ y=y.replace('.json','')%>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
                             <% }); %>
                         </select>
                     </div>
                     <div class="col-3">
                         <select name="city" class="form-control">
-                            <option value="" disabled <%= selected.city ? "" : "selected" %>>City</option>
+                            <option value="" disabled selected >City</option>
                             <% cities.forEach(y=> {%>
-                                <option label="<%= y %>" value="<%= y %>" <%= y == selected.city ? "selected" : ""  %> ><%= y %></option>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
                             <% }); %>
                         </select>
                     </div>
                     <div class="col-4">
                         <% tiers.forEach(y=>{ %>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="tiers" id="<%= 'T' + y %>" value="<%= y %>" <%= (selected.tiers && selected.tiers.includes(y + "")) ? "checked" : ""  %> >
+                                <input class="form-check-input" type="checkbox" name="tiers" id="<%= 'T' + y %>" value="<%= y %>" >
                                 <label class="form-check-label" for="<%= 'T' + y %>"><%= 'T' + y %></label>
                             </div>
                         <% }); %>
                     </div>
                     <div class="col-2">
-                        <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
+                        <button type="button" id="lookup" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
                     </div>
                 </div>
             </form>
             <br>
-             <% if (listItems !== null) { %>
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Before</th>
-                        <th></th>
-                        <th>After</th>
-                        <th>Benef</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <% listItems.forEach(y=>{ %>
-                    <tr>
-                        <td>
-                            <%= y.item %>
-                        </td>
-                        <td>
-                            <img width="64" height="64" src="<%=y.src%>"></img>
-                            <p class='silver'><%= y.price %></p>
-                        </td>
-                        <td>
-                            <p>
-                                <%=y.ratio%> x 
-                                <img width="32" height="32" src="<%=y.src_enchant%>"></img>
-                            </p>
-                            <p class='silver' data-toggle="tooltip" data-placement="left" title="<%=y.price_enchant%> /u">
-                                <%=y.complete_price_enchant%>
-                            </p>
-                        </td>
-                        <td>
-                            <img width="64" height="64" src="<%=y.src_next%>"></img>
-                            <p class='silver'><%= y.price_next %></p>
-                        </td>
-                        <td>
-                            <p class='silver'><%= y.benef %></p>
-                        </td>
-                    </tr>
-                    <% }); %>
-                    </tbody>
-                </table>
-            <% }; %>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Before</th>
+                    <th></th>
+                    <th>After</th>
+                    <th>Benef</th>
+                </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
         </div>
     </body>
 </html>
