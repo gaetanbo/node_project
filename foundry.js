@@ -55,20 +55,19 @@ function pickRatio(name){
     return ratio.find(x => x.types.some(y => name.includes(y))).value;
 }
 
-function loadEnchantPrices(){
+function loadEnchantPrices(city){
     return new Promise((resolve, reject) => {
         let pricesPromise = [];
         for(let enchantItem in enchantPrices){
             for(let i=4; i<9; i++){
-                pricesPromise.push(utils.getPrice(`T${i}_${enchantPrices[enchantItem].name}`, "Caerleon"));
+                pricesPromise.push(utils.getPrice(`T${i}_${enchantPrices[enchantItem].name}`, city));
             }
         }
         Promise.all(pricesPromise).then(data => {
-            data = data.map(d => JSON.parse(d)[0]);
             for(let enchantItem in enchantPrices){
                 for(let i=4; i<9; i++){
                     // Calculus to place right price on correct object
-                    let obj = data[( enchantItem[1] - 1 ) * 4 + ( i - 4 )]
+                    let obj = data[( enchantItem[1] - 1 ) * 4 + ( i - 4 )][0]
                     if(obj){
                         enchantPrices[enchantItem].prices[i] = obj.sell_price_min;
                     }else{
@@ -91,14 +90,13 @@ foundryRoute.get('/foundry/query', (req, res) => {
     let fileList = utils.getJsonList();
     if(fileList.some(x => x.replace('.json','') === req.query.category)){ // Check if the category used exists
         try{
-            loadEnchantPrices().then( _ => {
+            loadEnchantPrices(city).then( _ => {
                 let listItems = [];
                 let usefullItem = utils.getObjectList(req.query.category + ".json");
                 if(req.query.tiers){ // Check if tiers list paramater is exists
                     usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
                 }
                 Promise.all(usefullItem.map(item => utils.getPrice(item.UniqueName, city, _quality.reduce((a,c) => (a?a+",":a) + c) ))).then( data => {
-                    data = data.map(d => JSON.parse(d));
                     for(let i=0;i<data.length;i++){ // Rely on an index to get info of item and it's associated price
                         let item = usefullItem[i]; 
                         let willEnchant = pickWillEnchant(item.UniqueName);
@@ -106,7 +104,7 @@ foundryRoute.get('/foundry/query', (req, res) => {
                         if(willEnchant.after !== ""){
                             try{
                                 let itemEnchantPrice = enchantPrices[willEnchant.after].prices[item.UniqueName.substring(1,2)]; // Get price of ressources needed to upgrade
-                                let itemInfo = data.find(x => x[0].item_id === item.UniqueName);
+                                let itemInfo = data[i];
                                 let itemNextInfo = data.find(x => x[0].item_id === willEnchant.after_name);
                                 // Check for every quality
                                 for(let quality of _quality){

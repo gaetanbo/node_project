@@ -12,19 +12,18 @@ const utils = {
                 'Access-Control-Allow-Origin': '*'
             }
         };
-        //console.log(url);
         return new Promise(function (resolve, reject) {
-            request.get(options, function (err, resp, body2) {
+            request.get(options, function (err, resp, body) {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(body2);
+                    resolve(JSON.parse(body));
                 }
             })
         })
     },
     getData : function(itemName) {
-        var url = "https://www.albion-online-data.com/api/v2/stats/prices/" + itemName;
+        var url = `https://gameinfo.albiononline.com/api/gameinfo/items/${itemName}/data`;
         var options = {
             url: url,
             headers: {
@@ -37,7 +36,7 @@ const utils = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(body);
+                    resolve(JSON.parse(body));
                 }
             })
         })

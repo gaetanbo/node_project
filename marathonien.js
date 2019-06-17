@@ -81,12 +81,17 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
             if(req.query.tiers){ // Check if tiers list paramater is exists
                 usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
             }
-            Promise.all(usefullItem.map(item => utils.getPrice(item.UniqueName, cityQuery, _quality.reduce((a,c) => (a?a+",":a) + c) ))).then( data => {
+            Promise.all(
+                    usefullItem.map(item => Promise.all([
+                        utils.getPrice(item.UniqueName, cityQuery, _quality.reduce((a,c) => (a?a+",":a) + c)),
+                        utils.getData(item.UniqueName)
+                    ]))
+                ).then( data => {
                 let warp = _warp[from_city][to_city];
-                data = data.map(d => JSON.parse(d));
                 for(let i=0;i<data.length;i++){ // Rely on an index to get info of item and it's associated price
                     let item = usefullItem[i]; 
-                    let itemInfo = data.find(x => x[0].item_id === item.UniqueName);
+                    let itemInfo = data[i][0]
+                    let itemData = data[i][1];
                     // Check for every quality
                     for(let quality of _quality){
                         let qualitytItemsInfos = itemInfo.filter( x => x.quality == quality); // Get the correct items by quality inside the array for TN
@@ -96,11 +101,12 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                             let from_itemPrice = from_itemInfos.sell_price_min;
                             let to_itemPrice = to_itemInfos.sell_price_min
                             let benef = to_itemPrice - from_itemPrice;
-                            let ratio = (to_itemPrice - from_itemPrice) / warp;
+                            let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / itemData.weight);
                             if(from_itemPrice > 0 && to_itemPrice > 0 && benef > 0){
                                 listItems.push({
                                     item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
                                     name : item.UniqueName,
+                                    weight : itemData.weight,
                                     from_price : utils.numberWithCommas(from_itemPrice),
                                     to_price : utils.numberWithCommas(to_itemPrice),
                                     src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName + "?quality=" + quality,
@@ -111,7 +117,7 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                         }
                     }
                 }
-                listItems.sort((a,b)=> b.benef - a.benef);
+                listItems.sort((a,b)=> b.ratio - a.ratio);
                 listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
                     return res.status(200).json(listItems);              
             }).catch(e => {
@@ -123,7 +129,6 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
     }else{
         return res.status(500).json("Error with query");
     }
-    
 })
 
 marathonienRoute.get('/marathonien', (req, res) => {
