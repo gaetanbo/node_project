@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="/css/foundry.css" rel="stylesheet" type="text/css">
+    <%- include('partial/header', {title: "Trader Marathonien"}); %>
+    <script>
+        $(function () {
+            $('#lookup').click( _ => {
+
+                $('#table_body').empty();
+                $('#table_body').append(`
+                    <tr>
+                        <td colspan="6">
+                            <div class="text-center">
+                                <div class="spinner-grow" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `)
+
+                let tiers = $('input[type=checkbox]:checked').map(function(_, el) {
+                                return $(el).val();
+                            }).get();
+                let category = $('[name=category]').val();
+                let from_city = $('[name=from_city]').val();
+                let to_city = $('[name=to_city]').val();
+
+                $.ajax({
+                    url: "marathonien/query",
+                    data: {from_city, to_city, category, tiers},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#table_body').empty();
+                        for(d of data){
+                            $('#table_body').append(
+                                $('<tr>')
+                                .append(
+                                    $('<td>').append(
+                                            $('<img>')
+                                                .attr('src', d.src)
+                                                .attr('width', '64')
+                                                .attr('height', '64')
+                                        )
+                                ).append(
+                                    $('<td>').text(d.item)
+                                ).append(
+                                    $('<td>')
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text("FROM : " + d.from_price)
+                                            .addClass('silver')
+                                    ).append(
+                                        $('<p>')
+                                            .text("TO : " +d.to_price)
+                                            .addClass('silver')
+                                    )
+                                ).append(
+                                    $('<td>').text(d.ratio)
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.benef)
+                                            .addClass('silver')
+                                    )
+                                )
+                            )
+                        }
+                        $('[data-toggle="tooltip"]').tooltip();
+                    }
+                });
+            })
+        })
+    </script>
+    <body>
+        <hr class="my-4">
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="col-3">
+                        <select name="from_city" class="form-control">
+                            <option value="" disabled selected >FROM City</option>
+                            <% cities.forEach(y=> {%>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <select name="to_city" class="form-control">
+                            <option value="" disabled selected >TO City</option>
+                            <option value="Any" >Any</option>
+                            <% cities.forEach(y=> {%>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <select name="category" class="form-control" >
+                            <option value="" disabled selected>Category</option>
+                            <% categories.forEach(y=>{ y=y.replace('.json','')%>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <% tiers.forEach(y=>{ %>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tiers" id="<%= 'T' + y %>" value="<%= y %>" >
+                                <label class="form-check-label" for="<%= 'T' + y %>"><%= 'T' + y %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" id="lookup" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Item</th>
+                    <th>Weight</th>
+                    <th>Prices</th>
+                    <th>Ratio</th>
+                    <th>Benef</th>
+                </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

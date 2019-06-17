@@ -11,6 +11,7 @@ const utils = require("./utils");
 
 // Add my routes from declared from other files
 const foundryRoute = require("./foundry");
+const marathonienRoute = require("./marathonien");
 
 moment.locale('fr');
 app.use(express.static('public'));
@@ -24,6 +25,7 @@ let jsonList = utils.getJsonList();
 let categoryAsked = "";
 
 app.use("/", foundryRoute);
+app.use("/", marathonienRoute);
 
 app.get('/', function (req, res) {
     res.render('index');
@@ -229,7 +231,7 @@ function bbizworthy(x, benefAsked) {
         let diffs = [];
         var q_level = [1, 2, 3, 4, 5];
         var q_text = ["None", "Normale", "Acceptable", "Admirable", "Formidable", "Exceptionnelle"];
-        var dataPromise = utils.getData(x.UniqueName);
+        var dataPromise = utils.getPrice(x.UniqueName, "Caerleon,Black Market");
         let worth = [];
         dataPromise.then(function (resultats) {
             try {
