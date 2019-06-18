@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Simple Cloth",
+          "DE-DE": "Einfacher Stoff",
+          "FR-FR": "Morceau de tissu",
+          "RU-RU": "Простая ткань",
+          "PL-PL": "Prosta Tkanina",
+          "ES-ES": "Tela simple",
+          "PT-BR": "Tecido Simples"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "751",
+        "UniqueName": "T2_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Neat Cloth",
+          "DE-DE": "Ordentlicher Stoff",
+          "FR-FR": "Tissu propre",
+          "RU-RU": "Крепкая ткань",
+          "PL-PL": "Czysta Tkanina",
+          "ES-ES": "Tela pulcra",
+          "PT-BR": "Tecido Limpo"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "752",
+        "UniqueName": "T3_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Fine Cloth",
+          "DE-DE": "Guter Stoff",
+          "FR-FR": "Tissu délicat",
+          "RU-RU": "Изысканная ткань",
+          "PL-PL": "Dobra Tkanina",
+          "ES-ES": "Tela buena",
+          "PT-BR": "Tecido Fino"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "753",
+        "UniqueName": "T4_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Ornate Cloth",
+          "DE-DE": "Kunstvoller Stoff",
+          "FR-FR": "Tissu ouvragé",
+          "RU-RU": "Ткань с узором",
+          "PL-PL": "Ozdobna Tkanina",
+          "ES-ES": "Tela decorada",
+          "PT-BR": "Tecido Ornado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "754",
+        "UniqueName": "T5_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Lavish Cloth",
+          "DE-DE": "Qualitätsstoff",
+          "FR-FR": "Tissu somptueux",
+          "RU-RU": "Дорогая ткань",
+          "PL-PL": "Bogata Tkanina",
+          "ES-ES": "Tela suntuosa",
+          "PT-BR": "Tecido Rico"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "755",
+        "UniqueName": "T6_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Opulent Cloth",
+          "DE-DE": "Luxusstoff",
+          "FR-FR": "Tissu opulent",
+          "RU-RU": "Роскошная ткань",
+          "PL-PL": "Wykwintna Tkanina",
+          "ES-ES": "Tela opulenta",
+          "PT-BR": "Tecido Opulento"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "756",
+        "UniqueName": "T7_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_CLOTH",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_CLOTH_DESC",
+        "LocalizedNames": {
+          "EN-US": "Baroque Cloth",
+          "DE-DE": "Barocker Stoff",
+          "FR-FR": "Tissu baroque",
+          "RU-RU": "Великолепная ткань",
+          "PL-PL": "Barokowa Tkanina",
+          "ES-ES": "Tela barroca",
+          "PT-BR": "Tecido Barroco"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining fiber.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fasern.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de fibre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке волокна.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki włókna.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar fibras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar fibra."
+        },
+        "Index": "757",
+        "UniqueName": "T8_CLOTH"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_CLOTH_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_CLOTH_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Fine Cloth",
+          "DE-DE": "Ungewöhnlicher guter Stoff",
+          "FR-FR": "Tissu délicat peu commun",
+          "RU-RU": "Необычная изысканная ткань",
+          "PL-PL": "Niepospolita Dobra Tkanina",
+          "ES-ES": "Tela buena poco común",
+          "PT-BR": "Tecido Fino Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "758",
+        "UniqueName": "T4_CLOTH_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_CLOTH_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_CLOTH_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Ornate Cloth",
+          "DE-DE": "Ungewöhnlicher kunstvoller Stoff",
+          "FR-FR": "Tissu ouvragé peu commun",
+          "RU-RU": "Необычная ткань с узором",
+          "PL-PL": "Niepospolita Ozdobna Tkanina",
+          "ES-ES": "Tela decorada poco común",
+          "PT-BR": "Tecido Ornado Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "759",
+        "UniqueName": "T5_CLOTH_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_CLOTH_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_CLOTH_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Lavish Cloth",
+          "DE-DE": "Ungewöhnlicher Qualitätsstoff",
+          "FR-FR": "Tissu somptueux peu commun",
+          "RU-RU": "Необычная дорогая ткань",
+          "PL-PL": "Niepospolita Bogata Tkanina",
+          "ES-ES": "Tela suntuosa poco común",
+          "PT-BR": "Tecido Rico Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "760",
+        "UniqueName": "T6_CLOTH_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_CLOTH_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_CLOTH_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Opulent Cloth",
+          "DE-DE": "Ungewöhnlicher Luxusstoff",
+          "FR-FR": "Tissu opulent peu commun",
+          "RU-RU": "Необычная роскошная ткань",
+          "PL-PL": "Niepospolita Wykwintna Tkanina",
+          "ES-ES": "Tela opulenta poco común",
+          "PT-BR": "Tecido Opulento Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "761",
+        "UniqueName": "T7_CLOTH_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_CLOTH_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_CLOTH_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Baroque Cloth",
+          "DE-DE": "Ungewöhnlicher barocker Stoff",
+          "FR-FR": "Tissu baroque peu commun",
+          "RU-RU": "Необычная великолепная ткань",
+          "PL-PL": "Niepospolita Barokowa Tkanina",
+          "ES-ES": "Tela barroca poco común",
+          "PT-BR": "Tecido Barroco Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used in crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "762",
+        "UniqueName": "T8_CLOTH_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_CLOTH_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_CLOTH_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Fine Cloth",
+          "DE-DE": "Seltener guter Stoff",
+          "FR-FR": "Tissu délicat rare",
+          "RU-RU": "Редкая изысканная ткань",
+          "PL-PL": "Rzadka Dobra Tkanina",
+          "ES-ES": "Tela buena rara",
+          "PT-BR": "Tecido Fino Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "763",
+        "UniqueName": "T4_CLOTH_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_CLOTH_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_CLOTH_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Ornate Cloth",
+          "DE-DE": "Seltener kunstvoller Stoff",
+          "FR-FR": "Tissu ouvragé rare",
+          "RU-RU": "Редкая ткань с узором",
+          "PL-PL": "Rzadka Ozdobna Tkanina",
+          "ES-ES": "Tela decorada rara",
+          "PT-BR": "Tecido Ornado Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "764",
+        "UniqueName": "T5_CLOTH_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_CLOTH_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_CLOTH_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Lavish Cloth",
+          "DE-DE": "Seltener Qualitätsstoff",
+          "FR-FR": "Tissu somptueux rare",
+          "RU-RU": "Редкая дорогая ткань",
+          "PL-PL": "Rzadka Bogata Tkanina",
+          "ES-ES": "Tela suntuosa rara",
+          "PT-BR": "Tecido Rico Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "765",
+        "UniqueName": "T6_CLOTH_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_CLOTH_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_CLOTH_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Opulent Cloth",
+          "DE-DE": "Seltener Luxusstoff",
+          "FR-FR": "Tissu opulent rare",
+          "RU-RU": "Редкая роскошная ткань",
+          "PL-PL": "Rzadka Wykwintna Tkanina",
+          "ES-ES": "Tela opulenta rara",
+          "PT-BR": "Tecido Opulento Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "766",
+        "UniqueName": "T7_CLOTH_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_CLOTH_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_CLOTH_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Baroque Cloth",
+          "DE-DE": "Seltener barocker Stoff",
+          "FR-FR": "Tissu baroque rare",
+          "RU-RU": "Редкая великолепная ткань",
+          "PL-PL": "Rzadka Barokowa Tkanina",
+          "ES-ES": "Tela barroca rara",
+          "PT-BR": "Tecido Barroco Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used in crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "767",
+        "UniqueName": "T8_CLOTH_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_CLOTH_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_CLOTH_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Fine Cloth",
+          "DE-DE": "Außergewöhnlicher guter Stoff",
+          "FR-FR": "Tissu délicat exceptionnel",
+          "RU-RU": "Уникальная тонкая ткань",
+          "PL-PL": "Wyjątkowa Dobra Tkanina",
+          "ES-ES": "Tela buena excepcional",
+          "PT-BR": "Tecido Fino Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "768",
+        "UniqueName": "T4_CLOTH_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_CLOTH_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_CLOTH_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Ornate Cloth",
+          "DE-DE": "Außergewöhnlicher kunstvoller Stoff",
+          "FR-FR": "Tissu ouvragé exceptionnel",
+          "RU-RU": "Уникальная ткань с узором",
+          "PL-PL": "Wyjątkowa Ozdobna Tkanina",
+          "ES-ES": "Tela decorada excepcional",
+          "PT-BR": "Tecido Ornado Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "769",
+        "UniqueName": "T5_CLOTH_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_CLOTH_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_CLOTH_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Lavish Cloth",
+          "DE-DE": "Außergewöhnlicher Qualitätsstoff",
+          "FR-FR": "Tissu somptueux exceptionnel",
+          "RU-RU": "Уникальная дорогая ткань",
+          "PL-PL": "Wyjątkowa Bogata Tkanina",
+          "ES-ES": "Tela suntuosa excepcional",
+          "PT-BR": "Tecido Rico Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "770",
+        "UniqueName": "T6_CLOTH_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_CLOTH_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_CLOTH_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Opulent Cloth",
+          "DE-DE": "Außergewöhnlicher Luxusstoff",
+          "FR-FR": "Tissu opulent exceptionnel",
+          "RU-RU": "Уникальная роскошная ткань",
+          "PL-PL": "Wyjątkowa Wykwintna Tkanina",
+          "ES-ES": "Tela opulenta excepcional",
+          "PT-BR": "Tecido Opulento Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "771",
+        "UniqueName": "T7_CLOTH_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_CLOTH_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_CLOTH_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Baroque Cloth",
+          "DE-DE": "Außergewöhnlicher barocker Stoff",
+          "FR-FR": "Tissu baroque exceptionnel",
+          "RU-RU": "Уникальная великолепная ткань",
+          "PL-PL": "Wyjątkowa Barokowa Tkanina",
+          "ES-ES": "Tela barroca excepcional",
+          "PT-BR": "Tecido Barroco Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "772",
+        "UniqueName": "T8_CLOTH_LEVEL3@3"
+      }
+]

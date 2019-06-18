@@ -1,0 +1,170 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Limestone Block",
+          "DE-DE": "Kalksteinblock",
+          "FR-FR": "Bloc de calcaire",
+          "RU-RU": "Блок известняка",
+          "PL-PL": "Blok wapienia",
+          "ES-ES": "Bloque de caliza",
+          "PT-BR": "Bloco de Calcário"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "700",
+        "UniqueName": "T2_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Sandstone Block",
+          "DE-DE": "Sandsteinblock",
+          "FR-FR": "Bloc de grès",
+          "RU-RU": "Блок песчаника",
+          "PL-PL": "Blok Piaskowca",
+          "ES-ES": "Bloque de arenisca",
+          "PT-BR": "Bloco de Arenito"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "701",
+        "UniqueName": "T3_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Travertine Block",
+          "DE-DE": "Travertinblock",
+          "FR-FR": "Bloc de travertin",
+          "RU-RU": "Блок травертина",
+          "PL-PL": "Blok Trawertynu",
+          "ES-ES": "Bloque de travertino",
+          "PT-BR": "Bloco de Travertino"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "702",
+        "UniqueName": "T4_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Granite Block",
+          "DE-DE": "Granitblock",
+          "FR-FR": "Bloc de granite",
+          "RU-RU": "Блок гранита",
+          "PL-PL": "Blok Granitu",
+          "ES-ES": "Bloque de granito",
+          "PT-BR": "Bloco de Granito"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "703",
+        "UniqueName": "T5_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Slate Block",
+          "DE-DE": "Schieferblock",
+          "FR-FR": "Bloc d'ardoise",
+          "RU-RU": "Блок лунного камня",
+          "PL-PL": "Blok Łupkowy",
+          "ES-ES": "Bloque de pizarra",
+          "PT-BR": "Bloco de Ardósia"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "704",
+        "UniqueName": "T6_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Basalt Block",
+          "DE-DE": "Basaltblock",
+          "FR-FR": "Bloc de basalte",
+          "RU-RU": "Блок базальта",
+          "PL-PL": "Blok Bazaltu",
+          "ES-ES": "Bloque de basalto",
+          "PT-BR": "Bloco de Basalto"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "705",
+        "UniqueName": "T7_STONEBLOCK"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_STONEBLOCK",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_STONEBLOCK_DESC",
+        "LocalizedNames": {
+          "EN-US": "Marble Block",
+          "DE-DE": "Marmorblock",
+          "FR-FR": "Bloc de marbre",
+          "RU-RU": "Блок мрамора",
+          "PL-PL": "Blok Marmuru",
+          "ES-ES": "Bloque de mármol",
+          "PT-BR": "Bloco de Mármore"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining stone.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Stein.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de pierre raffinée.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке камня.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki kamienia.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar piedras",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pedra."
+        },
+        "Index": "706",
+        "UniqueName": "T8_STONEBLOCK"
+      }
+]

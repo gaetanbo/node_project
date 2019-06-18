@@ -1,0 +1,554 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T1_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T1_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Scraps of Hide",
+          "DE-DE": "Zerfetztes Fell",
+          "FR-FR": "Peau de bête en lambeaux",
+          "RU-RU": "Рваная шкура",
+          "PL-PL": "Skrawki Skór",
+          "ES-ES": "Piel de esquirlas",
+          "PT-BR": "Pelego Roto"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Low-quality hide used for crafting. It is too weak to be transmuted.",
+          "DE-DE": "Minderwertiges Fell zur Fertigung. Zu schwach zum Umwandeln.",
+          "FR-FR": "Peau de piètre qualité, pour la fabrication. Trop faible pour la transmutation.",
+          "RU-RU": "Низкокачественная шкура, используется для крафтинга. Нельзя улучшить.",
+          "PL-PL": "Skóra niskiej jakości, używana w rzemiośle. Jest zbyt słaba do transmutacji.",
+          "ES-ES": "Piel de baja calidad, usada en artesanía. Demasiado débil para transmutar.",
+          "PT-BR": "Pelego reles usado para produção. Fraco demais para transmutar."
+        },
+        "Index": "633",
+        "UniqueName": "T1_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T2_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rugged Hide",
+          "DE-DE": "Grobes Fell",
+          "FR-FR": "Peau de bête résistante",
+          "RU-RU": "Грубая шкура",
+          "PL-PL": "Szorstka Skóra",
+          "ES-ES": "Piel recia",
+          "PT-BR": "Pelego Rústico"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "634",
+        "UniqueName": "T2_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Thin Hide",
+          "DE-DE": "Dünnes Fell",
+          "FR-FR": "Peau de bête fine",
+          "RU-RU": "Тонкая шкура",
+          "PL-PL": "Cienka Skóra",
+          "ES-ES": "Piel fina",
+          "PT-BR": "Pelego Fino"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "635",
+        "UniqueName": "T3_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Medium Hide",
+          "DE-DE": "Mittelschweres Fell",
+          "FR-FR": "Peau de bête moyenne",
+          "RU-RU": "Средняя шкура",
+          "PL-PL": "Średnia Skóra",
+          "ES-ES": "Piel media",
+          "PT-BR": "Pelego Médio"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "636",
+        "UniqueName": "T4_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Heavy Hide",
+          "DE-DE": "Schweres Fell",
+          "FR-FR": "Peau de bête lourde",
+          "RU-RU": "Тяжелая шкура",
+          "PL-PL": "Ciężka Skóra",
+          "ES-ES": "Piel pesada",
+          "PT-BR": "Pelego Pesado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "637",
+        "UniqueName": "T5_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Robust Hide",
+          "DE-DE": "Robustes Fell",
+          "FR-FR": "Peau de bête solide",
+          "RU-RU": "Прочная шкура",
+          "PL-PL": "Odporna Skóra",
+          "ES-ES": "Piel fornida",
+          "PT-BR": "Pelego Robusto"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "638",
+        "UniqueName": "T6_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Thick Hide",
+          "DE-DE": "Dickes Fell",
+          "FR-FR": "Peau de bête épaisse",
+          "RU-RU": "Толстая шкура",
+          "PL-PL": "Gruba Skóra",
+          "ES-ES": "Piel gruesa",
+          "PT-BR": "Pelego Grosso"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "639",
+        "UniqueName": "T7_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_HIDE",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_HIDE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Resilient Hide",
+          "DE-DE": "Widerstandsfähiges Fell",
+          "FR-FR": "Peau de bête résistante",
+          "RU-RU": "Надежная шкура",
+          "PL-PL": "Wytrzymała Skóra",
+          "ES-ES": "Piel resistente",
+          "PT-BR": "Pelego Resistente"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Hide used for crafting. Can be refined into leather or transmuted into higher-level material.",
+          "DE-DE": "Fell für handwerkliche Zwecke. Kann zu Leder weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Peau utilisée pour la fabrication. Peut être raffiné en cuir ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Шкуры используются для крафта. Могут быть переработаны в кожу или улучшены до более высокого уровня.",
+          "PL-PL": "Skóry zwierzęce używane w rzemiośle. Mogą zostać przerobione na skóry garbowane lub przetrasmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Pieles usadas para fabricacion. Pueden ser refinadas en Cueros o transmutadas en material de un mayor nivel.",
+          "PT-BR": "Pelego usado para fabricação. Pode ser transaformado em couro ou transmutado para um material de nível superior."
+        },
+        "Index": "640",
+        "UniqueName": "T8_HIDE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_HIDE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_HIDE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Medium Hide",
+          "DE-DE": "Ungewöhnliches mittelschweres Fell",
+          "FR-FR": "Peau de bête moyenne peu commune",
+          "RU-RU": "Необычная средняя шкура",
+          "PL-PL": "Niepospolita Średnia Skóra",
+          "ES-ES": "Piel media poco común",
+          "PT-BR": "Pelego Médio Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "641",
+        "UniqueName": "T4_HIDE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_HIDE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_HIDE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Heavy Hide",
+          "DE-DE": "Ungewöhnliches schweres Fell",
+          "FR-FR": "Peau de bête lourde peu commune",
+          "RU-RU": "Необычная тяжелая шкура",
+          "PL-PL": "Niepospolita Ciężka Skóra",
+          "ES-ES": "Piel pesada poco común",
+          "PT-BR": "Pelego Pesado Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "642",
+        "UniqueName": "T5_HIDE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_HIDE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_HIDE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Robust Hide",
+          "DE-DE": "Ungewöhnliches robustes Fell",
+          "FR-FR": "Peau de bête solide peu commune",
+          "RU-RU": "Необычная прочная шкура",
+          "PL-PL": "Niepospolita Odporna Skóra",
+          "ES-ES": "Piel fornida poco común",
+          "PT-BR": "Pelego Robusto Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "643",
+        "UniqueName": "T6_HIDE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_HIDE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_HIDE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Thick Hide",
+          "DE-DE": "Ungewöhnliches dickes Fell",
+          "FR-FR": "Peau de bête épaisse peu commune",
+          "RU-RU": "Необычная толстая шкура",
+          "PL-PL": "Niepospolita Gruba Skóra",
+          "ES-ES": "Piel gruesa poco común",
+          "PT-BR": "Pelego Grosso Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "644",
+        "UniqueName": "T7_HIDE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_HIDE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_HIDE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Resilient Hide",
+          "DE-DE": "Ungewöhnliches widerstandsfähiges Fell",
+          "FR-FR": "Peau de bête résistante peu commune",
+          "RU-RU": "Необычная надежная шкура",
+          "PL-PL": "Niepospolita Wytrzymała Skóra",
+          "ES-ES": "Piel resistente poco común",
+          "PT-BR": "Pelego Resistente Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "645",
+        "UniqueName": "T8_HIDE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_HIDE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_HIDE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Medium Hide",
+          "DE-DE": "Seltenes mittelschweres Fell",
+          "FR-FR": "Peau de bête moyenne rare",
+          "RU-RU": "Редкая средняя шкура",
+          "PL-PL": "Rzadka Średnia Skóra",
+          "ES-ES": "Piel media rara",
+          "PT-BR": "Pelego Médio Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "646",
+        "UniqueName": "T4_HIDE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_HIDE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_HIDE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Heavy Hide",
+          "DE-DE": "Seltenes schweres Fell",
+          "FR-FR": "Peau de bête lourde rare",
+          "RU-RU": "Редкая тяжелая шкура",
+          "PL-PL": "Rzadka Ciężka Skóra",
+          "ES-ES": "Piel pesada rara",
+          "PT-BR": "Pelego Pesado Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "647",
+        "UniqueName": "T5_HIDE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_HIDE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_HIDE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Robust Hide",
+          "DE-DE": "Seltenes robustes Fell",
+          "FR-FR": "Peau de bête solide rare",
+          "RU-RU": "Редкая прочная шкура",
+          "PL-PL": "Rzadka Odporna Skóra",
+          "ES-ES": "Piel fornida rara",
+          "PT-BR": "Pelego Robusto Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "648",
+        "UniqueName": "T6_HIDE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_HIDE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_HIDE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Thick Hide",
+          "DE-DE": "Seltenes dickes Fell",
+          "FR-FR": "Peau de bête épaisse rare",
+          "RU-RU": "Редкая толстая шкура",
+          "PL-PL": "Rzadka Gruba Skóra",
+          "ES-ES": "Piel gruesa rara",
+          "PT-BR": "Pelego Grosso Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "649",
+        "UniqueName": "T7_HIDE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_HIDE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_HIDE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Resilient Hide",
+          "DE-DE": "Seltenes widerstandsfähiges Fell",
+          "FR-FR": "Peau de bête résistante rare",
+          "RU-RU": "Редкая надежная шкура",
+          "PL-PL": "Rzadka Wytrzymała Skóra",
+          "ES-ES": "Piel resistente rara",
+          "PT-BR": "Pelego Resistente Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "650",
+        "UniqueName": "T8_HIDE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_HIDE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_HIDE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Medium Hide",
+          "DE-DE": "Außergewöhnliches mittleres Fell",
+          "FR-FR": "Peau moyenne exceptionnelle",
+          "RU-RU": "Уникальная средняя шкура",
+          "PL-PL": "Wyjątkowa Średnia Skóra",
+          "ES-ES": "Piel media excepcional",
+          "PT-BR": "Pelego Médio Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "651",
+        "UniqueName": "T4_HIDE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_HIDE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_HIDE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Heavy Hide",
+          "DE-DE": "Außergewöhnliches schweres Fell",
+          "FR-FR": "Peau de bête lourde exceptionnelle",
+          "RU-RU": "Уникальная тяжелая шкура",
+          "PL-PL": "Wyjątkowa Ciężka Skóra",
+          "ES-ES": "Piel pesada excepcional",
+          "PT-BR": "Pelego Pesado Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "652",
+        "UniqueName": "T5_HIDE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_HIDE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_HIDE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Robust Hide",
+          "DE-DE": "Außergewöhnliches robustes Fell",
+          "FR-FR": "Peau de bête solide exceptionnelle",
+          "RU-RU": "Уникальная прочная шкура",
+          "PL-PL": "Wyjątkowa Odporna Skóra",
+          "ES-ES": "Piel fornida excepcional",
+          "PT-BR": "Pelego Robusto Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "653",
+        "UniqueName": "T6_HIDE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_HIDE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_HIDE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Thick Hide",
+          "DE-DE": "Außergewöhnliches dickes Fell",
+          "FR-FR": "Peau de bête épaisse exceptionnelle",
+          "RU-RU": "Уникальная толстая шкура",
+          "PL-PL": "Wyjątkowa Gruba Skóra",
+          "ES-ES": "Piel gruesa excepcional",
+          "PT-BR": "Pelego Grosso Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "654",
+        "UniqueName": "T7_HIDE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_HIDE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_HIDE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Resilient Hide",
+          "DE-DE": "Außergewöhnliches widerstandsfähiges Fell",
+          "FR-FR": "Peau de bête résistante exceptionnelle",
+          "RU-RU": "Уникальная надежная шкура",
+          "PL-PL": "Wyjątkowa Wytrzymała Skóra",
+          "ES-ES": "Piel resistente excepcional",
+          "PT-BR": "Pelego Resistente Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "655",
+        "UniqueName": "T8_HIDE_LEVEL3@3"
+      } 
+]

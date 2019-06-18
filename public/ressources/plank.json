@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Birch Planks",
+          "DE-DE": "Birkenholzplanken",
+          "FR-FR": "Planches de bouleau",
+          "RU-RU": "Березовые брусья",
+          "PL-PL": "Deski Brzozowe",
+          "ES-ES": "Tablas de abedul",
+          "PT-BR": "Tábuas de Bétula"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "678",
+        "UniqueName": "T2_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Chestnut Planks",
+          "DE-DE": "Kastanienplanken",
+          "FR-FR": "Planches de châtaignier",
+          "RU-RU": "Каштановые брусья",
+          "PL-PL": "Deski Kasztanowe",
+          "ES-ES": "Tablas de castaño",
+          "PT-BR": "Tábuas de Castanheira"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "679",
+        "UniqueName": "T3_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Pine Planks",
+          "DE-DE": "Kiefernplanken",
+          "FR-FR": "Planches de pin",
+          "RU-RU": "Сосновые брусья",
+          "PL-PL": "Deski Sosnowe",
+          "ES-ES": "Tablas de pino",
+          "PT-BR": "Tábuas de Pinho"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "680",
+        "UniqueName": "T4_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Cedar Planks",
+          "DE-DE": "Zedernplanken",
+          "FR-FR": "Planches de cèdre",
+          "RU-RU": "Брусья из мозаичного дерева",
+          "PL-PL": "Deski Cedrowe",
+          "ES-ES": "Tablas de cedro",
+          "PT-BR": "Tábuas de Cedro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "681",
+        "UniqueName": "T5_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Bloodoak Planks",
+          "DE-DE": "Bluteichenplanken",
+          "FR-FR": "Planches de chêne rouge",
+          "RU-RU": "Брусья из кровавого дерева",
+          "PL-PL": "Deski Dębowe",
+          "ES-ES": "Tablas de roble rojo",
+          "PT-BR": "Tábuas de Carvalho-sangue"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "682",
+        "UniqueName": "T6_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Ashenbark Planks",
+          "DE-DE": "Eschenrindenplanken",
+          "FR-FR": "Planches de frêne",
+          "RU-RU": "Брусья из железного дерева",
+          "PL-PL": "Deski Jesionowe",
+          "ES-ES": "Tablas de cortezaceniza",
+          "PT-BR": "Tábuas de Freixo"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "683",
+        "UniqueName": "T7_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_PLANKS",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_PLANKS_DESC",
+        "LocalizedNames": {
+          "EN-US": "Whitewood Planks",
+          "DE-DE": "Weißholzplanken",
+          "FR-FR": "Planches d'épicéa",
+          "RU-RU": "Брусья из белого дерева",
+          "PL-PL": "Deski Topolowe",
+          "ES-ES": "Tablas de maderablanca",
+          "PT-BR": "Tábuas de Pau-branco"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining logs.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Holz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de bois raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке бревен.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki bal drewnianych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar troncos",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar troncos."
+        },
+        "Index": "684",
+        "UniqueName": "T8_PLANKS"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_PLANKS_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_PLANKS_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Pine Planks",
+          "DE-DE": "Ungewöhnliche Kiefernplanken",
+          "FR-FR": "Planches de pin peu communes",
+          "RU-RU": "Необычные сосновые брусья",
+          "PL-PL": "Niepospolite Deski Sosnowe",
+          "ES-ES": "Tablas de pino poco común",
+          "PT-BR": "Tábuas de Pinho Incomuns"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "685",
+        "UniqueName": "T4_PLANKS_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_PLANKS_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_PLANKS_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Cedar Planks",
+          "DE-DE": "Ungewöhnliches Zedernplanken",
+          "FR-FR": "Planches de cèdre peu communes",
+          "RU-RU": "Необычные брусья из мозаичного дерева",
+          "PL-PL": "Niepospolite Deski Cedrowe",
+          "ES-ES": "Tablas de cedro poco común",
+          "PT-BR": "Tábuas de Cedro Incomuns"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "686",
+        "UniqueName": "T5_PLANKS_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_PLANKS_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_PLANKS_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Bloodoak Planks",
+          "DE-DE": "Ungewöhnliche Bluteichenplanken",
+          "FR-FR": "Planches de chêne rouge peu communes",
+          "RU-RU": "Необычные брусья из кровавого дерева",
+          "PL-PL": "Niepospolite Deski Dębowe",
+          "ES-ES": "Tablas de roble rojo poco común",
+          "PT-BR": "Tábuas de Carvalho-sangue Incomuns"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован необычный материал.",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "687",
+        "UniqueName": "T6_PLANKS_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_PLANKS_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_PLANKS_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Ashenbark Planks",
+          "DE-DE": "Ungewöhnliche Eschenrindenplanken",
+          "FR-FR": "Planches de frêne peu communes",
+          "RU-RU": "Необычные брусья из железного дерева",
+          "PL-PL": "Niepospolite Deski Jesionowe",
+          "ES-ES": "Tablas de cortezaceniza poco común",
+          "PT-BR": "Tábuas de Freixo Incomuns"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "688",
+        "UniqueName": "T7_PLANKS_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_PLANKS_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_PLANKS_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Whitewood Planks",
+          "DE-DE": "Ungewöhnliche Weißholzplanken",
+          "FR-FR": "Planches d'épicéa peu communes",
+          "RU-RU": "Необычные брусья из белого дерева",
+          "PL-PL": "Niepospolite Deski Topolowe",
+          "ES-ES": "Tablas de maderablanca poco común",
+          "PT-BR": "Tábuas de Pau-branco Incomuns"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "689",
+        "UniqueName": "T8_PLANKS_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_PLANKS_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_PLANKS_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Pine Planks",
+          "DE-DE": "Seltene Kiefernplanken",
+          "FR-FR": "Planches de pin rares",
+          "RU-RU": "Редкие сосновые брусья",
+          "PL-PL": "Rzadkie Deski Sosnowe",
+          "ES-ES": "Tablas de pino raro",
+          "PT-BR": "Tábuas de Pinho Raras"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "690",
+        "UniqueName": "T4_PLANKS_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_PLANKS_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_PLANKS_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Cedar Planks",
+          "DE-DE": "Seltene Zedernplanken",
+          "FR-FR": "Planches de cèdre rares",
+          "RU-RU": "Редкие брусья из мозаичного дерева",
+          "PL-PL": "Rzadkie Deski Cedrowe",
+          "ES-ES": "Tablas de cedro raro",
+          "PT-BR": "Tábuas de Cedro Raras"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "691",
+        "UniqueName": "T5_PLANKS_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_PLANKS_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_PLANKS_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Bloodoak Planks",
+          "DE-DE": "Seltene Bluteichenplanken",
+          "FR-FR": "Planches de chêne rouge rares",
+          "RU-RU": "Редкие брусья из кровавого дерева",
+          "PL-PL": "Rzadkie Deski Dębowe",
+          "ES-ES": "Tablas de roble rojo raro",
+          "PT-BR": "Tábuas de Carvalho-sangue Raras"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован редкий материал.",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "692",
+        "UniqueName": "T6_PLANKS_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_PLANKS_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_PLANKS_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Ashenbark Planks",
+          "DE-DE": "Seltene Eschenrindenplanken",
+          "FR-FR": "Planches de frêne rares",
+          "RU-RU": "Редкие брусья из железного дерева",
+          "PL-PL": "Rzadkie Deski Jesionowe",
+          "ES-ES": "Tablas de cortezaceniza rara",
+          "PT-BR": "Tábuas de Freixo Raras"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "693",
+        "UniqueName": "T7_PLANKS_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_PLANKS_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_PLANKS_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Whitewood Planks",
+          "DE-DE": "Seltene Weißholzplanken",
+          "FR-FR": "Planches d'épicéa rares",
+          "RU-RU": "Редкие брусья из белого дерева",
+          "PL-PL": "Rzadkie Deski Topolowe",
+          "ES-ES": "Tablas de maderablanca rara",
+          "PT-BR": "Tábuas de Pau-branco Raras"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "694",
+        "UniqueName": "T8_PLANKS_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_PLANKS_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_PLANKS_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Pine Planks",
+          "DE-DE": "Außergewöhnliche Kiefernplanken",
+          "FR-FR": "Planches de de pin exceptionnelles",
+          "RU-RU": "Уникальные сосновые брусья",
+          "PL-PL": "Wyjątkowe Deski Sosnowe",
+          "ES-ES": "Tablas de pino excepcionales",
+          "PT-BR": "Tábuas de Pinho Excepcionais"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "695",
+        "UniqueName": "T4_PLANKS_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_PLANKS_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_PLANKS_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Cedar Planks",
+          "DE-DE": "Außergewöhnliche Zedernplanken",
+          "FR-FR": "Planches de cèdre exceptionnelles",
+          "RU-RU": "Уникальные брусья из мозаичного дерева",
+          "PL-PL": "Wyjątkowe Deski Cedrowe",
+          "ES-ES": "Tablas de cedro excepcional",
+          "PT-BR": "Tábuas de Cedro Excepcionais"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "696",
+        "UniqueName": "T5_PLANKS_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_PLANKS_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_PLANKS_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Bloodoak Planks",
+          "DE-DE": "Außergewöhnliche Bluteichenplanken",
+          "FR-FR": "Planches de chêne rouge exceptionnelles",
+          "RU-RU": "Уникальные брусья из кровавого дерева",
+          "PL-PL": "Wyjątkowe Deski Dębowe",
+          "ES-ES": "Tablas de roble rojo excepcional",
+          "PT-BR": "Tábuas de Carvalho-sangue Excepcionais"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "697",
+        "UniqueName": "T6_PLANKS_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_PLANKS_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_PLANKS_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Ashenbark Planks",
+          "DE-DE": "Außergewöhnliche Eschenrindenplanken",
+          "FR-FR": "Planches de frêne exceptionnelles",
+          "RU-RU": "Уникальные брусья из железного дерева",
+          "PL-PL": "Wyjątkowe Deski Jesionowe",
+          "ES-ES": "Tablas de cortezaceniza excepcional",
+          "PT-BR": "Tábuas de Freixo Excepcionais"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "698",
+        "UniqueName": "T7_PLANKS_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_PLANKS_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_PLANKS_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Whitewood Planks",
+          "DE-DE": "Außergewöhnliche Weißholzplanken",
+          "FR-FR": "Planches d'épicéa exceptionnelles",
+          "RU-RU": "Уникальные брусья из белого дерева",
+          "PL-PL": "Wyjątkowe Deski Topolowe",
+          "ES-ES": "Tablas de maderablanca excepcional",
+          "PT-BR": "Tábuas de Pau-branco Excepcionais"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "699",
+        "UniqueName": "T8_PLANKS_LEVEL3@3"
+      }
+]

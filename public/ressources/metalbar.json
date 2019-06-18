@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Copper Bar",
+          "DE-DE": "Kupferbarren",
+          "FR-FR": "Barre en cuivre",
+          "RU-RU": "Слиток меди",
+          "PL-PL": "Sztabka Miedzi",
+          "ES-ES": "Lingote de cobre",
+          "PT-BR": "Barra de Cobre"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "707",
+        "UniqueName": "T2_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Bronze Bar",
+          "DE-DE": "Bronzebarren",
+          "FR-FR": "Barre de bronze",
+          "RU-RU": "Слиток бронзы",
+          "PL-PL": "Sztabka Brązu",
+          "ES-ES": "Lingote de bronce",
+          "PT-BR": "Barra de Bronze"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "708",
+        "UniqueName": "T3_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Steel Bar",
+          "DE-DE": "Stahlbarren",
+          "FR-FR": "Barre d'acier",
+          "RU-RU": "Слиток стали",
+          "PL-PL": "Sztabka Stali",
+          "ES-ES": "Lingote de acero",
+          "PT-BR": "Barra de Aço"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "709",
+        "UniqueName": "T4_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Titanium Steel Bar",
+          "DE-DE": "Titanstahlbarren",
+          "FR-FR": "Barre de titane",
+          "RU-RU": "Слиток титановой стали",
+          "PL-PL": "Sztabka Stali Tytanowej",
+          "ES-ES": "Lingote de titanio",
+          "PT-BR": "Barra de Aço Titânio"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "710",
+        "UniqueName": "T5_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Runite Steel Bar",
+          "DE-DE": "Runitstahlbarren",
+          "FR-FR": "Barre de runite",
+          "RU-RU": "Слиток рунитовой стали",
+          "PL-PL": "Sztabka Runicznej Stali",
+          "ES-ES": "Lingote de runita",
+          "PT-BR": "Barra de Aço Runita"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "711",
+        "UniqueName": "T6_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Meteorite Steel Bar",
+          "DE-DE": "Meteoritstahlbarren",
+          "FR-FR": "Barre de météorite",
+          "RU-RU": "Слиток метеоритной стали",
+          "PL-PL": "Sztabka Meteorytowej Stali",
+          "ES-ES": "Lingote de meteorito",
+          "PT-BR": "Barra de Aço Meteorito"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "712",
+        "UniqueName": "T7_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_METALBAR",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_METALBAR_DESC",
+        "LocalizedNames": {
+          "EN-US": "Adamantium Steel Bar",
+          "DE-DE": "Adamantstahlbarren",
+          "FR-FR": "Barre d'adamantine",
+          "RU-RU": "Слиток адамантиевой стали",
+          "PL-PL": "Sztabka Adamantytowej Stali",
+          "ES-ES": "Lingote de adamantio",
+          "PT-BR": "Barra de Aço Adamântio"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining ore.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Erz.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de minerai raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке руды.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki rudy.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar minerales",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar minério."
+        },
+        "Index": "713",
+        "UniqueName": "T8_METALBAR"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_METALBAR_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_METALBAR_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Steel Bar",
+          "DE-DE": "Ungewöhnlicher Stahlbarren",
+          "FR-FR": "Barre d'acier peu commune",
+          "RU-RU": "Необычный слиток стали",
+          "PL-PL": "Niepospolita Sztabka Stali",
+          "ES-ES": "Ling. de acero poco común",
+          "PT-BR": "Barra de Aço Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "714",
+        "UniqueName": "T4_METALBAR_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_METALBAR_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_METALBAR_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Titanium Steel Bar",
+          "DE-DE": "Ungewöhnlicher Titanstahlbarren",
+          "FR-FR": "Barre de titane peu commune",
+          "RU-RU": "Необычный слиток титановой стали",
+          "PL-PL": "Niepospolita Sztabka Stali Tytanowej",
+          "ES-ES": "Lingote de titanio poco común",
+          "PT-BR": "Barra de Aço Titânio Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "715",
+        "UniqueName": "T5_METALBAR_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_METALBAR_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_METALBAR_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Runite Steel Bar",
+          "DE-DE": "Ungewöhnlicher Runitstahlbarren",
+          "FR-FR": "Barre de runite peu commune",
+          "RU-RU": "Необычный слиток рунитовой стали",
+          "PL-PL": "Niepospolita Sztabka Runicznej Stali",
+          "ES-ES": "Lingote de runita poco común",
+          "PT-BR": "Barra de Aço Runita Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "716",
+        "UniqueName": "T6_METALBAR_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_METALBAR_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_METALBAR_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Meteorite Steel Bar",
+          "DE-DE": "Ungewöhnlicher Meteoritstahlbarren",
+          "FR-FR": "Barre de météorite peu commune",
+          "RU-RU": "Необычный слиток метеоритной стали",
+          "PL-PL": "Niepospolita Sztabka Meteorytowej Stali",
+          "ES-ES": "Lingote de meteorito poco común",
+          "PT-BR": "Barra de Aço Meteorito Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "717",
+        "UniqueName": "T7_METALBAR_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_METALBAR_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_METALBAR_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Adamantium Steel Bar",
+          "DE-DE": "Ungewöhnlicher Adamantstahlbarren",
+          "FR-FR": "Barre d'adamantine peu commune",
+          "RU-RU": "Необычный слиток адамантиевой стали",
+          "PL-PL": "Niepospolita Sztabka Adamantytowej Stali",
+          "ES-ES": "Lingote de adamantio poco común",
+          "PT-BR": "Barra de Aço Adamântio Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "718",
+        "UniqueName": "T8_METALBAR_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_METALBAR_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_METALBAR_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Steel Bar",
+          "DE-DE": "Seltener Stahlbarren",
+          "FR-FR": "Barre d'acier rare",
+          "RU-RU": "Редкий слиток стали",
+          "PL-PL": "Rzadka Sztabka Stali",
+          "ES-ES": "Lingote de acero raro",
+          "PT-BR": "Barra de Aço Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "719",
+        "UniqueName": "T4_METALBAR_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_METALBAR_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_METALBAR_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Titanium Steel Bar",
+          "DE-DE": "Seltener Titanstahlbarren",
+          "FR-FR": "Barre de titane rare",
+          "RU-RU": "Редкий слиток титановой стали",
+          "PL-PL": "Rzadka Sztabka Stali Tytanowej",
+          "ES-ES": "Lingote de titanio rara",
+          "PT-BR": "Barra de Aço Titânio Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "720",
+        "UniqueName": "T5_METALBAR_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_METALBAR_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_METALBAR_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Runite Steel Bar",
+          "DE-DE": "Seltener Runitstahlbarren",
+          "FR-FR": "Barre de runite rare",
+          "RU-RU": "Редкий слиток рунитовой стали",
+          "PL-PL": "Rzadka Sztabka Runicznej Stali",
+          "ES-ES": "Lingote de runita rara",
+          "PT-BR": "Barra de Aço Runita Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "721",
+        "UniqueName": "T6_METALBAR_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_METALBAR_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_METALBAR_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Meteorite Steel Bar",
+          "DE-DE": "Seltener Meteoritstahlbarren",
+          "FR-FR": "Barre de météorite rare",
+          "RU-RU": "Редкий слиток метеоритной стали",
+          "PL-PL": "Rzadka Sztabka Meteorytowej Stali",
+          "ES-ES": "Lingote de meteorito raro",
+          "PT-BR": "Barra de Aço Meteorito Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "722",
+        "UniqueName": "T7_METALBAR_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_METALBAR_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_METALBAR_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Adamantium Steel Bar",
+          "DE-DE": "Seltener Adamantstahlbarren",
+          "FR-FR": "Barre d'adamantine rare",
+          "RU-RU": "Редкий слиток адамантиевой стали",
+          "PL-PL": "Rzadka Sztabka Adamantytowej Stali",
+          "ES-ES": "Lingote de adamantio raro",
+          "PT-BR": "Barra de Aço Adamântio Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "723",
+        "UniqueName": "T8_METALBAR_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_METALBAR_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_METALBAR_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Steel Bar",
+          "DE-DE": "Außergewöhnlicher Stahlbarren",
+          "FR-FR": "Barre d'acier exceptionnelle",
+          "RU-RU": "Уникальный слиток стали",
+          "PL-PL": "Wyjątkowa Sztabka Stali",
+          "ES-ES": "Lingote de acero excepcional",
+          "PT-BR": "Barra de Aço Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "724",
+        "UniqueName": "T4_METALBAR_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_METALBAR_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_METALBAR_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Titanium Steel Bar",
+          "DE-DE": "Außergewöhnlicher Titanstahlbarren",
+          "FR-FR": "Barre de titane exceptionnelle",
+          "RU-RU": "Уникальный слиток титановой стали",
+          "PL-PL": "Wyjątkowa Sztabka Stali Tytanowej",
+          "ES-ES": "Lingote de titanio excepcional",
+          "PT-BR": "Barra de Aço Titânio Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "725",
+        "UniqueName": "T5_METALBAR_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_METALBAR_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_METALBAR_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Runite Steel Bar",
+          "DE-DE": "Außergewöhnlicher Runitstahlbarren",
+          "FR-FR": "Barre de runite exceptionnelle",
+          "RU-RU": "Уникальный слиток рунитовой стали",
+          "PL-PL": "Wyjątkowa Sztabka Runicznej Stali",
+          "ES-ES": "Lingote de runita excepcional",
+          "PT-BR": "Barra de Aço Runita Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "726",
+        "UniqueName": "T6_METALBAR_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_METALBAR_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_METALBAR_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Meteorite Steel Bar",
+          "DE-DE": "Außergewöhnlicher Meteoritstahlbarren",
+          "FR-FR": "Barre de météorite exceptionnelle",
+          "RU-RU": "Уникальный слиток метеоритной стали",
+          "PL-PL": "Wyjątkowa Sztabka Meteorytowej Stali",
+          "ES-ES": "Lingote de meteorito excepcional",
+          "PT-BR": "Barra de Aço Meteorito Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "727",
+        "UniqueName": "T7_METALBAR_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_METALBAR_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_METALBAR_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Adamantium Steel Bar",
+          "DE-DE": "Außergewöhnlicher Adamantstahlbarren",
+          "FR-FR": "Barre d'adamantine exceptionnelle",
+          "RU-RU": "Уникальный слиток адамантиевой стали",
+          "PL-PL": "Wyjątkowa Sztabka Adamantytowej Stali",
+          "ES-ES": "Lingote de adamantio excepcional",
+          "PT-BR": "Barra de Aço Adamântio Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "728",
+        "UniqueName": "T8_METALBAR_LEVEL3@3"
+      }
+]

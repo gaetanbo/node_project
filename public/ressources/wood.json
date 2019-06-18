@@ -1,0 +1,555 @@
+[
+    
+{
+    "LocalizationNameVariable": "@ITEMS_T1_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T1_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rough Logs",
+      "DE-DE": "Rohholz",
+      "FR-FR": "Troncs bruts",
+      "RU-RU": "Обычные бревна",
+      "PL-PL": "Nieociosane Bale",
+      "ES-ES": "Troncos en brutos",
+      "PT-BR": "Troncos Brutos"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Common low-quality wood used for crafting. It is too weak to be refined.",
+      "DE-DE": "Gewöhnliches, minderwertiges Holz zum Fertigen. Zu schwach zum Verfeinern.",
+      "FR-FR": "Bois de piètre qualité, pour la fabrication. Trop faible pour le raffinement.",
+      "RU-RU": "Низкокачественная древесина, используется для крафтинга. Нельзя улучшить.",
+      "PL-PL": "Pospolite drewno niskiej jakości. Używane w rzemiośle. Jest zbyt słabe do transmutacji.",
+      "ES-ES": "Madera común de baja calidad, usada en artesanía. Demasiado débil para refinar.",
+      "PT-BR": "Madeira comum de pouca qualidade usada para produção. Fraca demais para refinar."
+    },
+    "Index": "580",
+    "UniqueName": "T1_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T2_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T2_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Birch Logs",
+      "DE-DE": "Birkenholz",
+      "FR-FR": "Troncs de bouleau",
+      "RU-RU": "Березовые бревна",
+      "PL-PL": "Bale Brzozy",
+      "ES-ES": "Troncos de abedul",
+      "PT-BR": "Troncos de Bétula"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "581",
+    "UniqueName": "T2_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T3_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T3_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Chestnut Logs",
+      "DE-DE": "Kastanienholz",
+      "FR-FR": "Troncs de châtaignier",
+      "RU-RU": "Каштановые бревна",
+      "PL-PL": "Bale Kasztanowca",
+      "ES-ES": "Troncos de castaño",
+      "PT-BR": "Troncos de Castanheira"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "582",
+    "UniqueName": "T3_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T4_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Pine Logs",
+      "DE-DE": "Kiefernholz",
+      "FR-FR": "Troncs de pin",
+      "RU-RU": "Сосновые бревна",
+      "PL-PL": "Bale Sosny",
+      "ES-ES": "Troncos de pino",
+      "PT-BR": "Troncos de Pinho"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "583",
+    "UniqueName": "T4_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T5_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Cedar Logs",
+      "DE-DE": "Zedernholz",
+      "FR-FR": "Troncs de cèdre",
+      "RU-RU": "Бревна мозаичного дерева",
+      "PL-PL": "Bale Cedru",
+      "ES-ES": "Troncos de cedro",
+      "PT-BR": "Troncos de Cedro"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "584",
+    "UniqueName": "T5_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T6_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Bloodoak Logs",
+      "DE-DE": "Bluteichenholz",
+      "FR-FR": "Troncs de chêne rouge",
+      "RU-RU": "Бревна кровавого дерева",
+      "PL-PL": "Bale Dębowe",
+      "ES-ES": "Troncos de roble rojo",
+      "PT-BR": "Troncos de Carvalho-sangue"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "585",
+    "UniqueName": "T6_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T7_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Ashenbark Logs",
+      "DE-DE": "Eschenrindenholz",
+      "FR-FR": "Troncs de frêne",
+      "RU-RU": "Бревна железного дерева",
+      "PL-PL": "Bale Jesionu",
+      "ES-ES": "Troncos de cortezaceniza",
+      "PT-BR": "Troncos de Freixo"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "586",
+    "UniqueName": "T7_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T8_WOOD",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_WOOD_DESC",
+    "LocalizedNames": {
+      "EN-US": "Whitewood Logs",
+      "DE-DE": "Weißholz",
+      "FR-FR": "Troncs d'épicéa",
+      "RU-RU": "Бревна белого дерева",
+      "PL-PL": "Bale Topoli",
+      "ES-ES": "Troncos de maderablanca",
+      "PT-BR": "Troncos de Pau-branco"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Logs used for crafting. Can be refined into planks or transmuted into higher-level material.",
+      "DE-DE": "Holz für handwerkliche Zwecke. Kann zu Planken weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+      "FR-FR": "Bois utilisé pour la fabrication. Peut être raffiné en planches ou transmuté en matériau de plus haut niveau.",
+      "RU-RU": "Бревна используются для крафта. Могут быть переработаны в брусья или улучшены до более высокого уровня.",
+      "PL-PL": "Bale drewniane używane w rzemiośle. Mogą zostać przerobione na deski lub przetransmutowane w surowiec wyższego stopnia.",
+      "ES-ES": "Troncos usados para fabricación. Pueden ser refinados en tablas o transmutados en material de un mayor nivel.",
+      "PT-BR": "Tronco usado para fabricação. Pode ser transaformado em tábuas ou transmutado para um material de nível superior."
+    },
+    "Index": "587",
+    "UniqueName": "T8_WOOD"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T4_WOOD_LEVEL1",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_WOOD_LEVEL1_DESC",
+    "LocalizedNames": {
+      "EN-US": "Uncommon Pine Logs",
+      "DE-DE": "Ungewöhnliches Kiefernholz",
+      "FR-FR": "Troncs de pin peu communs",
+      "RU-RU": "Необычные бревна сосны",
+      "PL-PL": "Niepospolite Bale Sosny",
+      "ES-ES": "Troncos de pino poco común",
+      "PT-BR": "Troncos de Pinho Incomuns"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Uncommon material used for crafting.",
+      "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel peu commun, pour la fabrication.",
+      "RU-RU": "Необычный материал для крафтинга",
+      "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+      "ES-ES": "Material poco común usado en artesanía.",
+      "PT-BR": "Material incomum usado em produção."
+    },
+    "Index": "588",
+    "UniqueName": "T4_WOOD_LEVEL1@1"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T5_WOOD_LEVEL1",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_WOOD_LEVEL1_DESC",
+    "LocalizedNames": {
+      "EN-US": "Uncommon Cedar Logs",
+      "DE-DE": "Ungewöhnliches Zedernholz",
+      "FR-FR": "Troncs de cèdre peu communs",
+      "RU-RU": "Необычные бревна мозаичного дерева",
+      "PL-PL": "Niepospolite Bale Cedru",
+      "ES-ES": "Troncos de cedro poco común",
+      "PT-BR": "Troncos de Cedro Incomuns"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Uncommon material used for crafting.",
+      "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel peu commun, pour la fabrication.",
+      "RU-RU": "Необычный материал для крафтинга",
+      "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+      "ES-ES": "Material poco común usado en artesanía.",
+      "PT-BR": "Material incomum usado em produção."
+    },
+    "Index": "589",
+    "UniqueName": "T5_WOOD_LEVEL1@1"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T6_WOOD_LEVEL1",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_WOOD_LEVEL1_DESC",
+    "LocalizedNames": {
+      "EN-US": "Uncommon Bloodoak Logs",
+      "DE-DE": "Ungewöhnliches Bluteichenholz",
+      "FR-FR": "Troncs de chêne rouge peu communs",
+      "RU-RU": "Необычные бревна кровавого дерева",
+      "PL-PL": "Niepospolite Bale Dębu",
+      "ES-ES": "Troncos de roble rojo poco común",
+      "PT-BR": "Troncos de Carvalho-sangue Incomuns"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Uncommon material used for crafting.",
+      "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel peu commun, pour la fabrication.",
+      "RU-RU": "Необычный материал для крафтинга",
+      "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+      "ES-ES": "Material poco común usado en artesanía.",
+      "PT-BR": "Material incomum usado em produção."
+    },
+    "Index": "590",
+    "UniqueName": "T6_WOOD_LEVEL1@1"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T7_WOOD_LEVEL1",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_WOOD_LEVEL1_DESC",
+    "LocalizedNames": {
+      "EN-US": "Uncommon Ashenbark Logs",
+      "DE-DE": "Ungewöhnliches Eschenrindenholz",
+      "FR-FR": "Troncs de frêne peu communs",
+      "RU-RU": "Необычные бревна железного дерева",
+      "PL-PL": "Niepospolite Bale Jesionu",
+      "ES-ES": "Troncos de cortezaceniza poco común",
+      "PT-BR": "Troncos de Freixo Incomuns"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Uncommon material used for crafting.",
+      "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel peu commun, pour la fabrication.",
+      "RU-RU": "Необычный материал для крафтинга",
+      "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+      "ES-ES": "Material poco común usado en artesanía.",
+      "PT-BR": "Material incomum usado em produção."
+    },
+    "Index": "591",
+    "UniqueName": "T7_WOOD_LEVEL1@1"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T8_WOOD_LEVEL1",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_WOOD_LEVEL1_DESC",
+    "LocalizedNames": {
+      "EN-US": "Uncommon Whitewood Logs",
+      "DE-DE": "Ungewöhnliches Weißholz",
+      "FR-FR": "Troncs d'épicéa peu communs",
+      "RU-RU": "Необычные бревна белого дерева",
+      "PL-PL": "Niepospolite Bale Topoli",
+      "ES-ES": "Troncos de pino maderablanca poco común",
+      "PT-BR": "Troncos de Pau-branco Incomuns"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Uncommon material used for crafting.",
+      "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel peu commun, pour la fabrication.",
+      "RU-RU": "Необычный материал для крафтинга",
+      "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+      "ES-ES": "Material poco común usado en artesanía.",
+      "PT-BR": "Material incomum usado em produção."
+    },
+    "Index": "592",
+    "UniqueName": "T8_WOOD_LEVEL1@1"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T4_WOOD_LEVEL2",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_WOOD_LEVEL2_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rare Pine Logs",
+      "DE-DE": "Seltenes Kiefernholz",
+      "FR-FR": "Troncs de pin rares",
+      "RU-RU": "Редкие бревна сосны",
+      "PL-PL": "Rzadkie Bale Sosny",
+      "ES-ES": "Troncos de pino raro",
+      "PT-BR": "Troncos de Pinho Raros"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Rare material used for crafting.",
+      "DE-DE": "Seltenes Material zum Fertigen.",
+      "FR-FR": "Matériel rare, pour la fabrication.",
+      "RU-RU": "Редкий материал для крафтинга",
+      "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+      "ES-ES": "Material raro usado en artesanía.",
+      "PT-BR": "Material raro usado em produção."
+    },
+    "Index": "593",
+    "UniqueName": "T4_WOOD_LEVEL2@2"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T5_WOOD_LEVEL2",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_WOOD_LEVEL2_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rare Cedar Logs",
+      "DE-DE": "Seltenes Zedernholz",
+      "FR-FR": "Troncs de cèdre rares",
+      "RU-RU": "Редкие бревна мозаичного дерева",
+      "PL-PL": "Rzadkie Bale Cedru",
+      "ES-ES": "Troncos de cedro raro",
+      "PT-BR": "Troncos de Cedro Raros"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Rare material used for crafting.",
+      "DE-DE": "Seltenes Material zum Fertigen.",
+      "FR-FR": "Matériel rare, pour la fabrication.",
+      "RU-RU": "Редкий материал для крафтинга",
+      "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+      "ES-ES": "Material raro usado en artesanía.",
+      "PT-BR": "Material raro usado em produção."
+    },
+    "Index": "594",
+    "UniqueName": "T5_WOOD_LEVEL2@2"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T6_WOOD_LEVEL2",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_WOOD_LEVEL2_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rare Bloodoak Logs",
+      "DE-DE": "Seltenes Bluteichenholz",
+      "FR-FR": "Troncs de chêne rouge rares",
+      "RU-RU": "Редкие бревна кровавого дерева",
+      "PL-PL": "Rzadkie Bale Dębu",
+      "ES-ES": "Troncos de roble rojo raro",
+      "PT-BR": "Troncos de Carvalho-sangue Raros"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Rare material used for crafting.",
+      "DE-DE": "Seltenes Material zum Fertigen.",
+      "FR-FR": "Matériel rare, pour la fabrication.",
+      "RU-RU": "Редкий материал для крафтинга",
+      "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+      "ES-ES": "Material raro usado en artesanía.",
+      "PT-BR": "Material raro usado em produção."
+    },
+    "Index": "595",
+    "UniqueName": "T6_WOOD_LEVEL2@2"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T7_WOOD_LEVEL2",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_WOOD_LEVEL2_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rare Ashenbark Logs",
+      "DE-DE": "Seltenes Eschenrindenholz",
+      "FR-FR": "Troncs de frêne rares",
+      "RU-RU": "Редкие бревна железного дерева",
+      "PL-PL": "Rzadkie Bale Jesionu",
+      "ES-ES": "Troncos de cortezaceniza rara",
+      "PT-BR": "Troncos de Freixo Raros"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Rare material used for crafting.",
+      "DE-DE": "Seltenes Material zum Fertigen.",
+      "FR-FR": "Matériel rare, pour la fabrication.",
+      "RU-RU": "Редкий материал для крафтинга",
+      "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+      "ES-ES": "Material raro usado en artesanía.",
+      "PT-BR": "Material raro usado em produção."
+    },
+    "Index": "596",
+    "UniqueName": "T7_WOOD_LEVEL2@2"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T8_WOOD_LEVEL2",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_WOOD_LEVEL2_DESC",
+    "LocalizedNames": {
+      "EN-US": "Rare Whitewood Logs",
+      "DE-DE": "Seltenes Weißholz",
+      "FR-FR": "Troncs d'épicéa rares",
+      "RU-RU": "Редкие бревна белого дерева",
+      "PL-PL": "Rzadkie Bale Topoli",
+      "ES-ES": "Troncos de maderablanca rara",
+      "PT-BR": "Troncos de Pau-branco Raros"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Rare material used for crafting.",
+      "DE-DE": "Seltenes Material zum Fertigen.",
+      "FR-FR": "Matériel rare, pour la fabrication.",
+      "RU-RU": "Редкий материал для крафтинга",
+      "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+      "ES-ES": "Material raro usado en artesanía.",
+      "PT-BR": "Material raro usado em produção."
+    },
+    "Index": "597",
+    "UniqueName": "T8_WOOD_LEVEL2@2"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T4_WOOD_LEVEL3",
+    "LocalizationDescriptionVariable": "@ITEMS_T4_WOOD_LEVEL3_DESC",
+    "LocalizedNames": {
+      "EN-US": "Exceptional Pine Logs",
+      "DE-DE": "Außergewöhnliches Kiefernholz",
+      "FR-FR": "Troncs de pin exceptionnels",
+      "RU-RU": "Уникальные сосновые бревна",
+      "PL-PL": "Wyjątkowe Bale Sosny",
+      "ES-ES": "Troncos de pino excepcionales",
+      "PT-BR": "Troncos de Pinho Excepcionais"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Exceptional material used for crafting.",
+      "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+      "RU-RU": "Для крафтинга использован уникальный материал.",
+      "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+      "ES-ES": "Material excepcional usado en artesanía.",
+      "PT-BR": "Material excepcional usado em produção."
+    },
+    "Index": "598",
+    "UniqueName": "T4_WOOD_LEVEL3@3"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T5_WOOD_LEVEL3",
+    "LocalizationDescriptionVariable": "@ITEMS_T5_WOOD_LEVEL3_DESC",
+    "LocalizedNames": {
+      "EN-US": "Exceptional Cedar Logs",
+      "DE-DE": "Außergewöhnliches Zedernholz",
+      "FR-FR": "Troncs de cèdre exceptionnels",
+      "RU-RU": "Уникальные бревна мозаичного дерева",
+      "PL-PL": "Wyjątkowe Bale Cedru",
+      "ES-ES": "Troncos de cedro excepcional",
+      "PT-BR": "Troncos de Cedro Excepcionais"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Exceptional material used for crafting.",
+      "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+      "RU-RU": "Уникальный материал для крафтинга",
+      "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+      "ES-ES": "Material excepcional usado en artesanía.",
+      "PT-BR": "Material excepcional usado em produção."
+    },
+    "Index": "599",
+    "UniqueName": "T5_WOOD_LEVEL3@3"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T6_WOOD_LEVEL3",
+    "LocalizationDescriptionVariable": "@ITEMS_T6_WOOD_LEVEL3_DESC",
+    "LocalizedNames": {
+      "EN-US": "Exceptional Bloodoak Logs",
+      "DE-DE": "Außergewöhnliches Bluteichenholz",
+      "FR-FR": "Troncs de chêne rouge exceptionnels",
+      "RU-RU": "Уникальные бревна кровавого дерева",
+      "PL-PL": "Wyjątkowe Bale Dębu",
+      "ES-ES": "Troncos de roble rojo excepcional",
+      "PT-BR": "Troncos de Carvalho-sangue Excepcionais"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Exceptional material used for crafting.",
+      "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+      "RU-RU": "Уникальный материал для крафтинга",
+      "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+      "ES-ES": "Material excepcional usado en artesanía.",
+      "PT-BR": "Material excepcional usado em produção."
+    },
+    "Index": "600",
+    "UniqueName": "T6_WOOD_LEVEL3@3"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T7_WOOD_LEVEL3",
+    "LocalizationDescriptionVariable": "@ITEMS_T7_WOOD_LEVEL3_DESC",
+    "LocalizedNames": {
+      "EN-US": "Exceptional Ashenbark Logs",
+      "DE-DE": "Außergewöhnliches Eschenrindenholz",
+      "FR-FR": "Troncs de frêne exceptionnels",
+      "RU-RU": "Уникальные бревна железного дерева",
+      "PL-PL": "Wyjątkowe Bale Jesionu",
+      "ES-ES": "Troncos de cortezaceniza excepcional",
+      "PT-BR": "Troncos de Freixo Excepcionais"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Exceptional material used for crafting.",
+      "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+      "RU-RU": "Уникальный материал для крафтинга",
+      "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+      "ES-ES": "Material excepcional usado en artesanía.",
+      "PT-BR": "Material excepcional usado em produção."
+    },
+    "Index": "601",
+    "UniqueName": "T7_WOOD_LEVEL3@3"
+  },
+  {
+    "LocalizationNameVariable": "@ITEMS_T8_WOOD_LEVEL3",
+    "LocalizationDescriptionVariable": "@ITEMS_T8_WOOD_LEVEL3_DESC",
+    "LocalizedNames": {
+      "EN-US": "Exceptional Whitewood Logs",
+      "DE-DE": "Außergewöhnliches Weißholz",
+      "FR-FR": "Troncs d'épicéa exceptionnels",
+      "RU-RU": "Уникальные бревна белого дерева",
+      "PL-PL": "Wyjątkowe Bale Topoli",
+      "ES-ES": "Troncos de maderablanca excepcional",
+      "PT-BR": "Troncos de Pau-branco Excepcionais"
+    },
+    "LocalizedDescriptions": {
+      "EN-US": "Exceptional material used for crafting.",
+      "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+      "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+      "RU-RU": "Уникальный материал для крафтинга",
+      "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+      "ES-ES": "Material excepcional usado en artesanía.",
+      "PT-BR": "Material excepcional usado em produção."
+    },
+    "Index": "602",
+    "UniqueName": "T8_WOOD_LEVEL3@3"
+  }
+]

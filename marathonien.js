@@ -105,7 +105,7 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                             let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / itemData.weight);
                             if(from_itemPrice > 0 && to_itemPrice > 0 && benef > 0){
                                 listItems.push({
-                                    item : item.LocalizedNames.find(x => x.Key == "FR-FR").Value,
+                                    item : item.LocalizedNames.length ? item.LocalizedNames.find(x => x.Key == "FR-FR").Value : item.LocalizedNames["FR-FR"],
                                     name : item.UniqueName,
                                     weight : itemData.weight,
                                     from_price : utils.numberWithCommas(from_itemPrice),

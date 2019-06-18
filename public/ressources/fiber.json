@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Cotton",
+          "DE-DE": "Baumwolle",
+          "FR-FR": "Coton",
+          "RU-RU": "Хлопок",
+          "PL-PL": "Bawełna",
+          "ES-ES": "Algodón",
+          "PT-BR": "Algodão"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "656",
+        "UniqueName": "T2_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Flax",
+          "DE-DE": "Flachs",
+          "FR-FR": "Lin",
+          "RU-RU": "Лен",
+          "PL-PL": "Len",
+          "ES-ES": "Lino",
+          "PT-BR": "Linho"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "657",
+        "UniqueName": "T3_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Hemp",
+          "DE-DE": "Hanf",
+          "FR-FR": "Chanvre",
+          "RU-RU": "Пенька",
+          "PL-PL": "Konopie",
+          "ES-ES": "Cáñamo",
+          "PT-BR": "Cânhamo"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "658",
+        "UniqueName": "T4_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Skyflower",
+          "DE-DE": "Himmelsblume",
+          "FR-FR": "Vanillier de Cayenne",
+          "RU-RU": "Звездоцвет",
+          "PL-PL": "Witułka",
+          "ES-ES": "Duranta",
+          "PT-BR": "Verbena"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "659",
+        "UniqueName": "T5_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Redleaf Cotton",
+          "DE-DE": "Rotblatt-Baumwolle",
+          "FR-FR": "Coton feuille-rouge",
+          "RU-RU": "Хлопок-краснолист",
+          "PL-PL": "Czerwona Bawełna",
+          "ES-ES": "Algodón rojo",
+          "PT-BR": "Algodão-vermelho"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "660",
+        "UniqueName": "T6_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Sunflax",
+          "DE-DE": "Sonnenflachs",
+          "FR-FR": "Lin ensoleillé",
+          "RU-RU": "Златолен",
+          "PL-PL": "Słoneczny Len",
+          "ES-ES": "Lino solar",
+          "PT-BR": "Linhossol"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "661",
+        "UniqueName": "T7_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_FIBER",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_FIBER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Ghost Hemp",
+          "DE-DE": "Geisterhanf",
+          "FR-FR": "Chanvre fantôme",
+          "RU-RU": "Призрачная пенька",
+          "PL-PL": "Mroczne Konopie",
+          "ES-ES": "Cáñamo fantasma",
+          "PT-BR": "Cânhamo-fantasma"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Fiber used for crafting. Can be refined into cloth or transmuted into higher-level material.",
+          "DE-DE": "Fasern für handwerkliche Zwecke. Kann zu Stoff weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Fibre utilisée pour la fabrication. Peut être raffiné en tissu ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Волокно используется для крафта. Может быть переработано в ткань или улучшено до более высокого уровня.",
+          "PL-PL": "Włókno używane w rzemiośle. Może zostać przerobione na materiał lub przetransmutowane w surowiec wyższego stopnia.",
+          "ES-ES": "Fibra utilizada para fabricación. Puede ser refinada a tela o transmutada en material de un mayor nivel.",
+          "PT-BR": "Fibra usada para fabricação. Pode ser transaformada em tecido ou transmutada para um material de nível superior."
+        },
+        "Index": "662",
+        "UniqueName": "T8_FIBER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_FIBER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_FIBER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Hemp",
+          "DE-DE": "Ungewöhnlicher Hanf",
+          "FR-FR": "Chanvre peu commun",
+          "RU-RU": "Необычная пенька",
+          "PL-PL": "Niepospolite Konopie",
+          "ES-ES": "Cáñamo poco común",
+          "PT-BR": "Cânhamo Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "663",
+        "UniqueName": "T4_FIBER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_FIBER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_FIBER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Skyflower",
+          "DE-DE": "Ungewöhnliche Himmelsblume",
+          "FR-FR": "Vanillier de Cayenne peu commun",
+          "RU-RU": "Необычный звездоцвет",
+          "PL-PL": "Niepospolita Witułka",
+          "ES-ES": "Duranta poco común",
+          "PT-BR": "Verbena Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "664",
+        "UniqueName": "T5_FIBER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_FIBER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_FIBER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Redleaf Cotton",
+          "DE-DE": "Ungewöhnliche Rotblatt-Baumwolle",
+          "FR-FR": "Coton feuille-rouge peu commun",
+          "RU-RU": "Необычный хлопок-краснолист",
+          "PL-PL": "Niepospolita Czerwona Bawełna",
+          "ES-ES": "Algodón rojo poco común",
+          "PT-BR": "Algodão-vermelho Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "665",
+        "UniqueName": "T6_FIBER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_FIBER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_FIBER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Sunflax",
+          "DE-DE": "Ungewöhnlicher Sonnenflachs",
+          "FR-FR": "Lin ensoleillé peu commun",
+          "RU-RU": "Необычный златолен",
+          "PL-PL": "Niepospolity Słoneczny Len",
+          "ES-ES": "Lino solar poco común",
+          "PT-BR": "Linhossol Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "666",
+        "UniqueName": "T7_FIBER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_FIBER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_FIBER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Ghost Hemp",
+          "DE-DE": "Ungewöhnlicher Geisterhanf",
+          "FR-FR": "Chanvre fantôme peu commun",
+          "RU-RU": "Необычная призрачная пенька",
+          "PL-PL": "Niepospolite Mroczne Konopie",
+          "ES-ES": "Cáñamo fantasma poco común",
+          "PT-BR": "Cânhamo-fantasma Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "667",
+        "UniqueName": "T8_FIBER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_FIBER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_FIBER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Hemp",
+          "DE-DE": "Seltener Hanf",
+          "FR-FR": "Chanvre rare",
+          "RU-RU": "Редкая пенька",
+          "PL-PL": "Rzadkie Konopie",
+          "ES-ES": "Cáñamo raro",
+          "PT-BR": "Cânhamo Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "668",
+        "UniqueName": "T4_FIBER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_FIBER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_FIBER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Skyflower",
+          "DE-DE": "Seltene Himmelsblume",
+          "FR-FR": "Vanillier de Cayenne rare",
+          "RU-RU": "Редкий звездоцвет",
+          "PL-PL": "Rzadka Witułka",
+          "ES-ES": "Duranta rara",
+          "PT-BR": "Verbena Rara"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "669",
+        "UniqueName": "T5_FIBER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_FIBER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_FIBER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Redleaf Cotton",
+          "DE-DE": "Seltene Rotblatt-Baumwolle",
+          "FR-FR": "Coton feuille-rouge rare",
+          "RU-RU": "Редкий хлопок-краснолист",
+          "PL-PL": "Rzadka Czerwona Bawełna",
+          "ES-ES": "Algodón rojo raro",
+          "PT-BR": "Algodão-vermelho Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "670",
+        "UniqueName": "T6_FIBER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_FIBER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_FIBER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Sunflax",
+          "DE-DE": "Seltener Sonnenflachs",
+          "FR-FR": "Lin ensoleillé rare",
+          "RU-RU": "Редкий златолен",
+          "PL-PL": "Rzadki Słoneczny Len",
+          "ES-ES": "Lino solar raro",
+          "PT-BR": "Linhossol Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "671",
+        "UniqueName": "T7_FIBER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_FIBER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_FIBER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Ghost Hemp",
+          "DE-DE": "Seltener Geisterhanf",
+          "FR-FR": "Chanvre fantôme rare",
+          "RU-RU": "Редкая призрачная пенька",
+          "PL-PL": "Rzadkie Mroczne Konopie",
+          "ES-ES": "Cáñamo fantasma raro",
+          "PT-BR": "Cânhamo-fantasma Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "672",
+        "UniqueName": "T8_FIBER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_FIBER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_FIBER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Hemp",
+          "DE-DE": "Außergewöhnlicher Hanf",
+          "FR-FR": "Chanvre exceptionnel",
+          "RU-RU": "Уникальная пенька",
+          "PL-PL": "Wyjątkowe Konopie",
+          "ES-ES": "Cáñamo excepcional",
+          "PT-BR": "Cânhamo Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "673",
+        "UniqueName": "T4_FIBER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_FIBER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_FIBER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Skyflower",
+          "DE-DE": "Außergewöhnliche Himmelsblume",
+          "FR-FR": "Vanillier de Cayenne exceptionnel",
+          "RU-RU": "Уникальный звездоцвет",
+          "PL-PL": "Wyjątkowa Witułka",
+          "ES-ES": "Duranta excepcional",
+          "PT-BR": "Verbena Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "674",
+        "UniqueName": "T5_FIBER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_FIBER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_FIBER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Redleaf Cotton",
+          "DE-DE": "Außergewöhnliche Rotblatt-Baumwolle",
+          "FR-FR": "Coton feuille-rouge exceptionnel",
+          "RU-RU": "Уникальный хлопок-краснолист",
+          "PL-PL": "Wyjątkowa Czerwona Bawełna",
+          "ES-ES": "Algodón rojo excepcional",
+          "PT-BR": "Algodão-vermelho Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "675",
+        "UniqueName": "T6_FIBER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_FIBER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_FIBER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Sunflax",
+          "DE-DE": "Außergewöhnlicher Sonnenflachs",
+          "FR-FR": "Lin ensoleillé exceptionnel",
+          "RU-RU": "Уникальный златолен",
+          "PL-PL": "Wyjątkowy Słoneczny Len",
+          "ES-ES": "Lino solar excepcional",
+          "PT-BR": "Linhossol Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "676",
+        "UniqueName": "T7_FIBER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_FIBER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_FIBER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Ghost Hemp",
+          "DE-DE": "Außergewöhnlicher Geisterhanf",
+          "FR-FR": "Chanvre fantôme exceptionnel",
+          "RU-RU": "Уникальная призрачная пенька",
+          "PL-PL": "Wyjątkowe Mroczne Konopie",
+          "ES-ES": "Cáñamo fantasma excepcional",
+          "PT-BR": "Cânhamo-fantasma Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "677",
+        "UniqueName": "T8_FIBER_LEVEL3@3"
+      }
+]

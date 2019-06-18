@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Copper Ore",
+          "DE-DE": "Kupfererz",
+          "FR-FR": "Minerai de cuivre",
+          "RU-RU": "Медная руда",
+          "PL-PL": "Ruda Miedzi",
+          "ES-ES": "Mineral de cobre",
+          "PT-BR": "Minério de Cobre"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "611",
+        "UniqueName": "T2_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Tin Ore",
+          "DE-DE": "Zinnerz",
+          "FR-FR": "Minerai d'étain",
+          "RU-RU": "Оловянная руда",
+          "PL-PL": "Ruda Cyny",
+          "ES-ES": "Mineral de estaño",
+          "PT-BR": "Minério de Estanho"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "612",
+        "UniqueName": "T3_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Iron Ore",
+          "DE-DE": "Eisenerz",
+          "FR-FR": "Minerai de fer",
+          "RU-RU": "Железная руда",
+          "PL-PL": "Ruda Żelaza",
+          "ES-ES": "Mineral de hierro",
+          "PT-BR": "Minério de Ferro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "613",
+        "UniqueName": "T4_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Titanium Ore",
+          "DE-DE": "Titanerz",
+          "FR-FR": "Minerai de titane",
+          "RU-RU": "Титановая руда",
+          "PL-PL": "Ruda Tytanu",
+          "ES-ES": "Mineral de titanio",
+          "PT-BR": "Minério de Titânio"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "614",
+        "UniqueName": "T5_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Runite Ore",
+          "DE-DE": "Runiterz",
+          "FR-FR": "Minerai de runite",
+          "RU-RU": "Рунитовая руда",
+          "PL-PL": "Ruda Runiczna",
+          "ES-ES": "Mineral de runita",
+          "PT-BR": "Minério de Runita"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "615",
+        "UniqueName": "T6_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Meteorite Ore",
+          "DE-DE": "Meteoriterz",
+          "FR-FR": "Minerai de météorite",
+          "RU-RU": "Метеоритная руда",
+          "PL-PL": "Ruda Meteorytowa",
+          "ES-ES": "Mineral de meteorito",
+          "PT-BR": "Minério de Meteorito"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "616",
+        "UniqueName": "T7_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_ORE",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_ORE_DESC",
+        "LocalizedNames": {
+          "EN-US": "Adamantium Ore",
+          "DE-DE": "Adamanterz",
+          "FR-FR": "Minerai d'adamantine",
+          "RU-RU": "Адамантиевая руда",
+          "PL-PL": "Ruda Adamantytu",
+          "ES-ES": "Mineral de adamantio",
+          "PT-BR": "Minério de Adamântio"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Ore used for crafting. Can be refined into metal bars or transmuted into higher-level material.",
+          "DE-DE": "Erz für handwerkliche Zwecke. Kann zu Metallbarren weiterverarbeitet oder in ein höherwertiges Material verwandelt werden.",
+          "FR-FR": "Minerai utilisé pour la fabrication. Peut être raffiné en barre de métal ou transmuté en matériau de plus haut niveau.",
+          "RU-RU": "Руда используется для крафта. Может быть переработана в слитки или улучшена до более высокого уровня.",
+          "PL-PL": "Ruda używana w rzemiośle. Może zostać przerobiona na metalowe sztabki lub przetransmutowana w surowiec wyższego stopnia.",
+          "ES-ES": "Minerales usados para fabricación. Pueden ser refinados en barras de metal o transmutados en material de un mayor nivel.",
+          "PT-BR": "Minério usado para fabricação. Pode ser transaformado em metal ou transmutado para um material de nível superior."
+        },
+        "Index": "617",
+        "UniqueName": "T8_ORE"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_ORE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_ORE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Iron Ore",
+          "DE-DE": "Ungewöhnliches Eisenerz",
+          "FR-FR": "Minerai de fer peu commun",
+          "RU-RU": "Необычная железная руда",
+          "PL-PL": "Niepospolita Ruda Żelaza",
+          "ES-ES": "Mineral de hierro poco común",
+          "PT-BR": "Minério de Ferro Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "618",
+        "UniqueName": "T4_ORE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_ORE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_ORE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Titanium Ore",
+          "DE-DE": "Ungewöhnliches Titanerz",
+          "FR-FR": "Minerai de titane peu commun",
+          "RU-RU": "Необычная титановая руда",
+          "PL-PL": "Niepospolita Ruda Tytanu",
+          "ES-ES": "Mineral de titanio poco común",
+          "PT-BR": "Minério de Titânio Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "619",
+        "UniqueName": "T5_ORE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_ORE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_ORE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Runite Ore",
+          "DE-DE": "Ungewöhnliches Runiterz",
+          "FR-FR": "Minerai de runite peu commun",
+          "RU-RU": "Необычная рунитовая руда",
+          "PL-PL": "Niepospolita Ruda Runiczna",
+          "ES-ES": "Mineral de runita poco común",
+          "PT-BR": "Minério de Runita Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "620",
+        "UniqueName": "T6_ORE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_ORE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_ORE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Meteorite Ore",
+          "DE-DE": "Ungewöhnliches Meteoriterz",
+          "FR-FR": "Minerai de météorite peu commun",
+          "RU-RU": "Необычная метеоритная руда",
+          "PL-PL": "Niepospolita Ruda Meteorytowa",
+          "ES-ES": "Mineral de meteorito poco común",
+          "PT-BR": "Minério de Meteorito Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "621",
+        "UniqueName": "T7_ORE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_ORE_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_ORE_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Adamantium Ore",
+          "DE-DE": "Ungewöhnliches Adamanterz",
+          "FR-FR": "Minerai d'adamantine peu commun",
+          "RU-RU": "Необычная адамантиевая руда",
+          "PL-PL": "Niepospolita Ruda Adamantytu",
+          "ES-ES": "Mineral de adamantio poco común",
+          "PT-BR": "Minério de Adamântio Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "622",
+        "UniqueName": "T8_ORE_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_ORE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_ORE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Iron Ore",
+          "DE-DE": "Seltenes Eisenerz",
+          "FR-FR": "Minerai de fer rare",
+          "RU-RU": "Редкая железная руда",
+          "PL-PL": "Rzadka Ruda Żelaza",
+          "ES-ES": "Mineral de hierro raro",
+          "PT-BR": "Minério de Ferro Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "623",
+        "UniqueName": "T4_ORE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_ORE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_ORE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Titanium Ore",
+          "DE-DE": "Seltenes Titanerz",
+          "FR-FR": "Minerai de titane rare",
+          "RU-RU": "Редкая титановая руда",
+          "PL-PL": "Rzadka Ruda Tytanu",
+          "ES-ES": "Mineral de titanio raro",
+          "PT-BR": "Minério de Titânio Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "624",
+        "UniqueName": "T5_ORE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_ORE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_ORE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Runite Ore",
+          "DE-DE": "Seltenes Runiterz",
+          "FR-FR": "Minerai de runite rare",
+          "RU-RU": "Редкая рунитовая руда",
+          "PL-PL": "Rzadka Ruda Runiczna",
+          "ES-ES": "Mineral de runita rara",
+          "PT-BR": "Minério de Runita Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "625",
+        "UniqueName": "T6_ORE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_ORE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_ORE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Meteorite Ore",
+          "DE-DE": "Seltenes Meteoriterz",
+          "FR-FR": "Minerai de météorite rare",
+          "RU-RU": "Редкая метеоритная руда",
+          "PL-PL": "Rzadka Ruda Meteorytowa",
+          "ES-ES": "Mineral de meteorito raro",
+          "PT-BR": "Minério de Meteorito Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "626",
+        "UniqueName": "T7_ORE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_ORE_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_ORE_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Adamantium Ore",
+          "DE-DE": "Seltenes Adamanterz",
+          "FR-FR": "Minerai d'adamantine rare",
+          "RU-RU": "Редкая адамантиевая руда",
+          "PL-PL": "Rzadka Ruda Adamantytu",
+          "ES-ES": "Mineral de adamantio raro",
+          "PT-BR": "Minério de Adamântio Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "627",
+        "UniqueName": "T8_ORE_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_ORE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_ORE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Iron Ore",
+          "DE-DE": "Außergewöhnliches Eisenerz",
+          "FR-FR": "Minerai de fer exceptionnel",
+          "RU-RU": "Уникальная железная руда",
+          "PL-PL": "Wyjątkowa Ruda Żelaza",
+          "ES-ES": "Mineral de hierro excepcional",
+          "PT-BR": "Minério de Ferro Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "628",
+        "UniqueName": "T4_ORE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_ORE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_ORE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Titanium Ore",
+          "DE-DE": "Außergewöhnliches Titanerz",
+          "FR-FR": "Minerai de titane exceptionnel",
+          "RU-RU": "Уникальная титановая руда",
+          "PL-PL": "Wyjątkowa Ruda Tytanu",
+          "ES-ES": "Mineral de titanio excepcional",
+          "PT-BR": "Minério de Titânio Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "629",
+        "UniqueName": "T5_ORE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_ORE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_ORE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Runite Ore",
+          "DE-DE": "Außergewöhnliches Runiterz",
+          "FR-FR": "Minerai de runite exceptionnel",
+          "RU-RU": "Уникальная рунитовая руда",
+          "PL-PL": "Wyjątkowa Ruda Runiczna",
+          "ES-ES": "Mineral de runita excepcional",
+          "PT-BR": "Minério de Runita Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "630",
+        "UniqueName": "T6_ORE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_ORE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_ORE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Meteorite Ore",
+          "DE-DE": "Außergewöhnliches Meteoriterz",
+          "FR-FR": "Minerai de météorite exceptionnel",
+          "RU-RU": "Уникальная метеоритная руда",
+          "PL-PL": "Wyjątkowa Ruda Meteorytowa",
+          "ES-ES": "Mineral de meteorito excepcional",
+          "PT-BR": "Minério de Meteorito Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "631",
+        "UniqueName": "T7_ORE_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_ORE_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_ORE_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Adamantium Ore",
+          "DE-DE": "Außergewöhnliches Adamanterz",
+          "FR-FR": "Minerai d'adamantine exceptionnel",
+          "RU-RU": "Уникальная адамантиевая руда",
+          "PL-PL": "Wyjątkowa Ruda Adamantytu",
+          "ES-ES": "Mineral de adamantio excepcional",
+          "PT-BR": "Minério de Adamântio Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "632",
+        "UniqueName": "T8_ORE_LEVEL3@3"
+      }    
+]

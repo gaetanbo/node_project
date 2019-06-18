@@ -1,0 +1,530 @@
+[
+    {
+        "LocalizationNameVariable": "@ITEMS_T2_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T2_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Stiff Leather",
+          "DE-DE": "Starres Leder",
+          "FR-FR": "Cuir raide",
+          "RU-RU": "Жесткая кожа",
+          "PL-PL": "Sztywna Skóra",
+          "ES-ES": "Cuero firme",
+          "PT-BR": "Couro Esticado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "729",
+        "UniqueName": "T2_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T3_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T3_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Thick Leather",
+          "DE-DE": "Dickes Leder",
+          "FR-FR": "Cuir épais",
+          "RU-RU": "Толстая кожа",
+          "PL-PL": "Gruba Skóra",
+          "ES-ES": "Cuero grueso",
+          "PT-BR": "Couro Grosso"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "730",
+        "UniqueName": "T3_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Worked Leather",
+          "DE-DE": "Bearbeitetes Leder",
+          "FR-FR": "Cuir travaillé",
+          "RU-RU": "Обработанная кожа",
+          "PL-PL": "Znoszona Skóra",
+          "ES-ES": "Cuero trabajado",
+          "PT-BR": "Couro Trabalhado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "731",
+        "UniqueName": "T4_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Cured Leather",
+          "DE-DE": "Gegerbtes Leder",
+          "FR-FR": "Cuir traité",
+          "RU-RU": "Выделанная кожа",
+          "PL-PL": "Suszona Skóra",
+          "ES-ES": "Cuero curtido",
+          "PT-BR": "Couro Curtido"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "732",
+        "UniqueName": "T5_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Hardened Leather",
+          "DE-DE": "Gehärtetes Leder",
+          "FR-FR": "Cuir durci",
+          "RU-RU": "Кожа демона",
+          "PL-PL": "Utwardzona Skóra",
+          "ES-ES": "Cuero endurecido",
+          "PT-BR": "Couro Endurecido"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "733",
+        "UniqueName": "T6_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Reinforced Leather",
+          "DE-DE": "Verstärktes Leder",
+          "FR-FR": "Cuir renforcé",
+          "RU-RU": "Прочная кожа",
+          "PL-PL": "Wzmocniona Skóra",
+          "ES-ES": "Cuero reforzado",
+          "PT-BR": "Couro Reforçado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "734",
+        "UniqueName": "T7_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_LEATHER",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_LEATHER_DESC",
+        "LocalizedNames": {
+          "EN-US": "Fortified Leather",
+          "DE-DE": "Gefestigtes Leder",
+          "FR-FR": "Cuir fortifié",
+          "RU-RU": "Долговечная кожа",
+          "PL-PL": "Zahartowana Skóra",
+          "ES-ES": "Cuero fortalecido",
+          "PT-BR": "Couro Fortificado"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Advanced material used in crafting, created by refining hide.",
+          "DE-DE": "Fortgeschrittenes Material fürs Handwerk, hergestellt durch die Veredlung von Fell.",
+          "FR-FR": "Matériau avancé utilisé dans la fabrication, créé à partir de cuir raffiné.",
+          "RU-RU": "Продвинутый материал для крафта, создаваемый при переработке шкур.",
+          "PL-PL": "Zaawansowany surowiec używany w rzemiośle, powstaje z przeróbki skór zwierzęcych.",
+          "ES-ES": "Material avanzado utilizado en fabricación, creado al refinar pieles",
+          "PT-BR": "Material avançado usado na fabricação, criado ao refinar pelego."
+        },
+        "Index": "735",
+        "UniqueName": "T8_LEATHER"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_LEATHER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_LEATHER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Worked Leather",
+          "DE-DE": "Ungewöhnliches bearbeitetes Leder",
+          "FR-FR": "Cuir travaillé peu commun",
+          "RU-RU": "Необычная обработанная кожа",
+          "PL-PL": "Niepospolita Znoszona Skóra",
+          "ES-ES": "Cuero trabajado poco común",
+          "PT-BR": "Couro Trabalhado Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "736",
+        "UniqueName": "T4_LEATHER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_LEATHER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_LEATHER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Cured Leather",
+          "DE-DE": "Ungewöhnliches gegerbtes Leder",
+          "FR-FR": "Cuir traité peu commun",
+          "RU-RU": "Необычная выделанная кожа",
+          "PL-PL": "Niepospolita Suszona Skóra",
+          "ES-ES": "Cuero curtido poco común",
+          "PT-BR": "Couro Curtido Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "737",
+        "UniqueName": "T5_LEATHER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_LEATHER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_LEATHER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Hardened Leather",
+          "DE-DE": "Ungewöhnliches gehärtetes Leder",
+          "FR-FR": "Cuir durci peu commun",
+          "RU-RU": "Необычная кожа демона",
+          "PL-PL": "Niepospolita Utwardzona Skóra",
+          "ES-ES": "Cuero endurecido poco común",
+          "PT-BR": "Couro Endurecido Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "738",
+        "UniqueName": "T6_LEATHER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_LEATHER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_LEATHER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Reinforced Leather",
+          "DE-DE": "Ungewöhnliches verstärktes Leder",
+          "FR-FR": "Cuir renforcé peu commun",
+          "RU-RU": "Необычная прочная кожа",
+          "PL-PL": "Niepospolita Wzmocniona Skóra",
+          "ES-ES": "Cuero reforzado poco común",
+          "PT-BR": "Couro Reforçado Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "739",
+        "UniqueName": "T7_LEATHER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_LEATHER_LEVEL1",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_LEATHER_LEVEL1_DESC",
+        "LocalizedNames": {
+          "EN-US": "Uncommon Fortified Leather",
+          "DE-DE": "Ungewöhnliches gefestigtes Leder",
+          "FR-FR": "Cuir fortifié peu commun",
+          "RU-RU": "Необычная долговечная кожа",
+          "PL-PL": "Niepospolita Zahartowana Skóra",
+          "ES-ES": "Cuero fortalecido poco común",
+          "PT-BR": "Couro Fortificado Incomum"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Uncommon material used for crafting.",
+          "DE-DE": "Ungewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel peu commun, pour la fabrication.",
+          "RU-RU": "Необычный материал для крафтинга",
+          "PL-PL": "Niepospolite tworzywo rzemieślnicze.",
+          "ES-ES": "Material poco común usado en artesanía.",
+          "PT-BR": "Material incomum usado em produção."
+        },
+        "Index": "740",
+        "UniqueName": "T8_LEATHER_LEVEL1@1"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_LEATHER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_LEATHER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Worked Leather",
+          "DE-DE": "Seltenes bearbeitetes Leder",
+          "FR-FR": "Cuir travaillé rare",
+          "RU-RU": "Редкая обработанная кожа",
+          "PL-PL": "Rzadka Znoszona Skóra",
+          "ES-ES": "Cuero trabajado raro",
+          "PT-BR": "Couro Trabalhado Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "741",
+        "UniqueName": "T4_LEATHER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_LEATHER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_LEATHER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Cured Leather",
+          "DE-DE": "Seltenes gegerbtes Leder",
+          "FR-FR": "Cuir traité rare",
+          "RU-RU": "Редкая выделанная кожа",
+          "PL-PL": "Rzadka Suszona Skóra",
+          "ES-ES": "Cuero curtido raro",
+          "PT-BR": "Couro Curtido Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "742",
+        "UniqueName": "T5_LEATHER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_LEATHER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_LEATHER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Hardened Leather",
+          "DE-DE": "Seltenes gehärtetes Leder",
+          "FR-FR": "Cuir durci rare",
+          "RU-RU": "Редкая кожа демона",
+          "PL-PL": "Rzadka Utwardzona Skóra",
+          "ES-ES": "Cuero endurecido raro",
+          "PT-BR": "Couro Endurecido Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "743",
+        "UniqueName": "T6_LEATHER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_LEATHER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_LEATHER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Reinforced Leather",
+          "DE-DE": "Seltenes verstärktes Leder",
+          "FR-FR": "Cuir renforcé rare",
+          "RU-RU": "Редкая прочная кожа",
+          "PL-PL": "Rzadka Wzmocniona Skóra",
+          "ES-ES": "Cuero reforzado raro",
+          "PT-BR": "Couro Reforçado Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "744",
+        "UniqueName": "T7_LEATHER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_LEATHER_LEVEL2",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_LEATHER_LEVEL2_DESC",
+        "LocalizedNames": {
+          "EN-US": "Rare Fortified Leather",
+          "DE-DE": "Seltenes gefestigtes Leder",
+          "FR-FR": "Cuir fortifié rare",
+          "RU-RU": "Редкая долговечная кожа",
+          "PL-PL": "Rzadka Zahartowana Skóra",
+          "ES-ES": "Cuero fortalecido raro",
+          "PT-BR": "Couro Fortificado Raro"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Rare material used for crafting.",
+          "DE-DE": "Seltenes Material zum Fertigen.",
+          "FR-FR": "Matériel rare, pour la fabrication.",
+          "RU-RU": "Редкий материал для крафтинга",
+          "PL-PL": "Rzadkie tworzywo rzemieślnicze.",
+          "ES-ES": "Material raro usado en artesanía.",
+          "PT-BR": "Material raro usado em produção."
+        },
+        "Index": "745",
+        "UniqueName": "T8_LEATHER_LEVEL2@2"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T4_LEATHER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T4_LEATHER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Worked Leather",
+          "DE-DE": "Außergewöhnliches bearbeitetes Leder",
+          "FR-FR": "Cuir travaillé exceptionnel",
+          "RU-RU": "Уникальная обработанная кожа",
+          "PL-PL": "Wyjątkowa Znoszona Skóra",
+          "ES-ES": "Cuero trabajado excepcional",
+          "PT-BR": "Couro Trabalhado Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Для крафтинга использован уникальный материал.",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "746",
+        "UniqueName": "T4_LEATHER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T5_LEATHER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T5_LEATHER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Cured Leather",
+          "DE-DE": "Außergewöhnlich gegerbtes Leder",
+          "FR-FR": "Cuir traité exceptionnel",
+          "RU-RU": "Уникальная выделанная кожа",
+          "PL-PL": "Wyjątkowa Suszona Skóra",
+          "ES-ES": "Cuero curtido excepcional",
+          "PT-BR": "Couro Curtido Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "747",
+        "UniqueName": "T5_LEATHER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T6_LEATHER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T6_LEATHER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Hardened Leather",
+          "DE-DE": "Außergewöhnliches gehärtetes Leder",
+          "FR-FR": "Cuir durci exceptionnel",
+          "RU-RU": "Уникальная кожа демона",
+          "PL-PL": "Wyjątkowa Utwardzona Skóra",
+          "ES-ES": "Cuero endurecido excepcional",
+          "PT-BR": "Couro Endurecido Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "748",
+        "UniqueName": "T6_LEATHER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T7_LEATHER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T7_LEATHER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Reinforced Leather",
+          "DE-DE": "Außergewöhnliches verstärktes Leder",
+          "FR-FR": "Cuir renforcé exceptionnel",
+          "RU-RU": "Уникальная прочная кожа",
+          "PL-PL": "Wyjątkowa Wzmocniona Skóra",
+          "ES-ES": "Cuero reforzado excepcional",
+          "PT-BR": "Couro Reforçado Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "749",
+        "UniqueName": "T7_LEATHER_LEVEL3@3"
+      },
+      {
+        "LocalizationNameVariable": "@ITEMS_T8_LEATHER_LEVEL3",
+        "LocalizationDescriptionVariable": "@ITEMS_T8_LEATHER_LEVEL3_DESC",
+        "LocalizedNames": {
+          "EN-US": "Exceptional Fortified Leather",
+          "DE-DE": "Außergewöhnliches gefestigtes Leder",
+          "FR-FR": "Cuir fortifié exceptionnel",
+          "RU-RU": "Уникальная долговечная кожа",
+          "PL-PL": "Wyjątkowa Zahartowana Skóra",
+          "ES-ES": "Cuero fortalecido excepcional",
+          "PT-BR": "Couro Fortificado Excepcional"
+        },
+        "LocalizedDescriptions": {
+          "EN-US": "Exceptional material used for crafting.",
+          "DE-DE": "Außergewöhnliches Material zum Fertigen.",
+          "FR-FR": "Matériel exceptionnel, pour la fabrication.",
+          "RU-RU": "Уникальный материал для крафтинга",
+          "PL-PL": "Wyjątkowe tworzywo rzemieślnicze.",
+          "ES-ES": "Material excepcional usado en artesanía.",
+          "PT-BR": "Material excepcional usado em produção."
+        },
+        "Index": "750",
+        "UniqueName": "T8_LEATHER_LEVEL3@3"
+      }
+]
