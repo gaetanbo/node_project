@@ -85,7 +85,7 @@ app.get('/recipe', function (req, res) {
 
 
 app.post('/recipe', function (req, res) {
-    let usefullItem = utils.getObjectList(req.body.recipe_group);
+    let usefullItem = utils.getItemList(req.body.recipe_group.replace(".json",""));
     let recipeItems = [];
     let selectdata = [];
     usefullItem.forEach(x => {
@@ -191,7 +191,7 @@ app.get('/bbiz', function (req, res) {
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
     benefAsked = req.body.benef;
-    usefullItem = utils.getObjectList(categoryAsked);       // Obtain the list of items in the Select Category
+    usefullItem = utils.getItemList(categoryAsked.replace(".json",""));       // Obtain the list of items in the Select Category
     benefAskedAffichage = utils.numberWithCommas(benefAsked);
     Promise.all(usefullItem.map(x => bbizworthy(x, benefAsked))).then(data => {
         res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null, benefAskedAffichage});

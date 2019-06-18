@@ -92,7 +92,7 @@ foundryRoute.get('/foundry/query', (req, res) => {
         try{
             loadEnchantPrices(city).then( _ => {
                 let listItems = [];
-                let usefullItem = utils.getObjectList(req.query.category + ".json");
+                let usefullItem = utils.getItemList(req.query.category);
                 if(req.query.tiers){ // Check if tiers list paramater is exists
                     usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
                 }

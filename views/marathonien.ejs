@@ -97,11 +97,14 @@
                         </select>
                     </div>
                     <div class="col-2">
-                        <select name="category" class="form-control" >
-                            <option value="" disabled selected>Category</option>
+                        <select name="type" class="form-control" >
+                            <option value="" disabled selected>Type</option>
                             <% categories.forEach(y=>{ y=y.replace('.json','')%>
                                 <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
                             <% }); %>
+                        </select>
+                        <select name="category" class="form-control" >
+                            <option value="" disabled selected>Category</option>
                         </select>
                     </div>
                     <div class="col-2">

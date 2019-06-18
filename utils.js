@@ -41,21 +41,18 @@ const utils = {
             })
         })
     },
+    getItemList: function(name){
+        return this.getObjectList("items/" + name);
+    },
+    getRessourceList: function(name){
+        return this.getObjectList("ressources/" + name);
+    },
     getObjectList: function(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
         usefullItem = [];
-        var fichier = './public/items/' + jsonFile;
+        var fichier = './public/' + jsonFile + ".json";
         let rawcontent = fs.readFileSync(fichier);
         let contentFile = JSON.parse(rawcontent);
-        contentFile.forEach(function (item, i) {
-            let name = item.UniqueName;
-            let tiers = name.substring(0, 2);
-            if (tiers == "T1" || tiers == "T2" || tiers == "T3") {
-                //console.log('bullshit tier');
-            } else {
-                usefullItem.push(item);
-            }
-        });
-        return usefullItem
+        return contentFile.filter(item => { let tiers = item.UniqueName.substring(0, 2); return (tiers != "T1" && tiers != "T2" && tiers != "T3") }) 
     },
     getJsonList : function () {
         let jsonList = [];
