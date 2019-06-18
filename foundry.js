@@ -87,7 +87,7 @@ foundryRoute.get('/foundry/query', (req, res) => {
     if(req.query.city && _cities.some( x => x.toLowerCase() === req.query.city.toLowerCase())){ // Check if the city used exists
         city = req.query.city;
     }
-    let fileList = utils.getJsonList();
+    let fileList = utils.getItemJsonList();
     if(fileList.some(x => x.replace('.json','') === req.query.category)){ // Check if the category used exists
         try{
             loadEnchantPrices(city).then( _ => {
@@ -156,7 +156,7 @@ foundryRoute.get('/foundry/query', (req, res) => {
 })
 
 foundryRoute.get('/foundry', (req, res) => {
-    res.render('foundry', {categories : utils.getJsonList(), cities : _cities, tiers : _tiers});
+    res.render('foundry', {categories : utils.getItemJsonList(), cities : _cities, tiers : _tiers});
 })
 
 module.exports = foundryRoute;

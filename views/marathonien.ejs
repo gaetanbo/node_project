@@ -4,6 +4,29 @@
     <%- include('partial/header', {title: "Trader Marathonien"}); %>
     <script>
         $(function () {
+            $('#category').prop( "disabled", true );
+
+            $('#type').change( _ => {
+                $.ajax({
+                    url: "marathonien/get-category",
+                    data: {category : $('#type').val()},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#category option:not(:disabled)').remove();
+                        for(d of data){
+                            $('#category').append(
+                                $('<option>')
+                                    .attr('label',d)
+                                    .attr('value',d)
+                                    .text(d)
+                            )
+                        }
+                        $('#category').prop( "disabled", false );
+                    }
+                });
+            })
+
             $('#lookup').click( _ => {
 
                 $('#table_body').empty();
@@ -22,13 +45,14 @@
                 let tiers = $('input[type=checkbox]:checked').map(function(_, el) {
                                 return $(el).val();
                             }).get();
+                let type = $('[name=type]').val();
                 let category = $('[name=category]').val();
                 let from_city = $('[name=from_city]').val();
                 let to_city = $('[name=to_city]').val();
 
                 $.ajax({
                     url: "marathonien/query",
-                    data: {from_city, to_city, category, tiers},
+                    data: {from_city, to_city, type, category, tiers},
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (data) {
@@ -97,13 +121,13 @@
                         </select>
                     </div>
                     <div class="col-2">
-                        <select name="type" class="form-control" >
+                        <select id="type" name="type" class="form-control" >
                             <option value="" disabled selected>Type</option>
-                            <% categories.forEach(y=>{ y=y.replace('.json','')%>
+                            <% types.forEach(y=>{%>
                                 <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
                             <% }); %>
                         </select>
-                        <select name="category" class="form-control" >
+                        <select id="category" name="category" class="form-control" >
                             <option value="" disabled selected>Category</option>
                         </select>
                     </div>

@@ -4,6 +4,8 @@ const utils = require("./utils");
 const _quality = [1, 2, 3, 4, 5];
 const _cities = ["Caerleon","Thetford","Fort Sterling","Lymhurst","Bridgewatch","Martlock"];
 const _tiers = [3,4,5,6,7,8];
+const _types = utils.getJsonTypeList();
+
 
 //SAFE WARP NO BZ
 const _warp = { "Caerleon" : 
@@ -73,11 +75,10 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
         cityQuery = _cities.reduce((a,c) => (a?a+",":a) + c);
     }
 
-    let fileList = utils.getJsonList();
-    if(fileList.some(x => x.replace('.json','') === req.query.category)){ // Check if the category used exists
+    if( req.query.type && _types.includes(req.query.type) && req.query.category ){ // Check if the category used exists
         try{
             listItems = [];
-            let usefullItem = utils.getItemList(req.query.category);
+            let usefullItem = utils.getObjectList(req.query.type + "/" +req.query.category);
             if(req.query.tiers){ // Check if tiers list paramater is exists
                 usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
             }
@@ -131,8 +132,16 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
     }
 })
 
+marathonienRoute.get('/marathonien/get-category', (req, res) => {
+    if(req.query.category && utils.getJsonTypeList().includes(req.query.category)){
+        return res.status(200).json(utils.getJsonList(req.query.category + "/"));
+    }else{
+        return res.status(200).json([]); 
+    }
+})
+
 marathonienRoute.get('/marathonien', (req, res) => {
-    res.render('marathonien', {categories : utils.getJsonList(), cities : _cities, tiers : _tiers});
+    res.render('marathonien', {types : _types, cities : _cities, tiers : _tiers});
 })
 
 module.exports = marathonienRoute;

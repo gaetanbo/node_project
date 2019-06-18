@@ -20,7 +20,7 @@ app.use(logger);
 app.set('view engine', 'ejs');
 
 // Initialize the list of JSON file on server
-let jsonList = utils.getJsonList();
+let jsonList = utils.getItemJsonList();
 // Initialize var for .get/bbiz :
 let categoryAsked = "";
 

@@ -52,12 +52,22 @@ const utils = {
         var fichier = './public/' + jsonFile + ".json";
         let rawcontent = fs.readFileSync(fichier);
         let contentFile = JSON.parse(rawcontent);
-        return contentFile.filter(item => { let tiers = item.UniqueName.substring(0, 2); return (tiers != "T1" && tiers != "T2" && tiers != "T3") }) 
+        return contentFile
+            .filter(item => { let tiers = item.UniqueName.substring(0, 2); return (tiers != "T1" && tiers != "T2" && tiers != "T3") })
     },
-    getJsonList : function () {
-        let jsonList = [];
-        let files = fs.readdirSync("./public/items/")
-        return files;
+    getItemJsonList: function(){
+        return this.getJsonList("items/");
+    },
+    getRessourceJsonList: function(){
+        return this.getJsonList("ressources/");
+    },
+    getJsonList : function (folder) {
+        let files = fs.readdirSync("./public/" + folder)
+        return files
+            .map(x => x.replace(".json",""));;
+    },
+    getJsonTypeList : function (folder) {
+        return ["items", "ressources"];
     },
     numberWithCommas: function(x) {
         var parts = x.toString().split(".");
