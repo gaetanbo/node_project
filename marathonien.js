@@ -59,6 +59,17 @@ const _warp = { "Caerleon" :
     }
 }
 
+const _ressources_weight = {
+    "T1" : .2,
+    "T2" : .2,
+    "T3" : .3,
+    "T4" : .5,
+    "T5" : .8,
+    "T6" : 1.1,
+    "T7" : 1.7,
+    "T8" : 2.6,
+}
+
 marathonienRoute.get('/marathonien/query', (req, res) => {
     let from_city = "Caerleon";
     if(req.query.from_city && _cities.some( x => x.toLowerCase() === req.query.from_city.toLowerCase())){ // Check if the city used exists
@@ -102,12 +113,17 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                             let from_itemPrice = from_itemInfos.sell_price_min;
                             let to_itemPrice = to_itemInfos.sell_price_min
                             let benef = to_itemPrice - from_itemPrice;
-                            let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / itemData.weight);
+                            let weight = itemData.weight;
+                            if(req.query.type === "ressources"){
+                                weight = _ressources_weight[item.UniqueName.substring(0,2)]
+                            }
+                            weight = (weight * ( req.query.bonus ? 0.7 : 1 )).toFixed(2); // Take into account the bonus of gathering gear weight reduction
+                            let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / weight );
                             if(from_itemPrice > 0 && to_itemPrice > 0 && benef > 0){
                                 listItems.push({
                                     item : item.LocalizedNames.length ? item.LocalizedNames.find(x => x.Key == "FR-FR").Value : item.LocalizedNames["FR-FR"],
                                     name : item.UniqueName,
-                                    weight : itemData.weight,
+                                    weight : weight,
                                     from_price : utils.numberWithCommas(from_itemPrice),
                                     to_price : utils.numberWithCommas(to_itemPrice),
                                     src : "https://gameinfo.albiononline.com/api/gameinfo/items/" + item.UniqueName + "?quality=" + quality,
@@ -120,7 +136,7 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                 }
                 listItems.sort((a,b)=> b.ratio - a.ratio);
                 listItems = listItems.map(x => {x.benef = utils.numberWithCommas(x.benef); return x});
-                    return res.status(200).json(listItems);              
+                return res.status(200).json(listItems);              
             }).catch(e => {
                 return res.status(500).json(e.message);
             })
