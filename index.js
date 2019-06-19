@@ -12,6 +12,7 @@ const utils = require("./utils");
 
 // Add my routes from declared from other files
 const foundryRoute = require("./foundry");
+const recipeRoute = require("./recipe");
 const marathonienRoute = require("./marathonien");
 
 moment.locale('fr');
@@ -26,156 +27,14 @@ app.set('view engine', 'ejs');
 let categoryAsked = "";
 
 app.use("/", foundryRoute);
+app.use("/", recipeRoute);
 app.use("/", marathonienRoute);
 
 app.get('/', function (req, res) {
     res.render('index');
 });
 
-app.get('/guild', function (req, res) {
-    res.render('guild');
-});
 
-app.get('/player', function (req, res) {
-    res.render('player');
-});
-
-app.post('/player', function (req, res) {
-    var player = "";
-    player = req.body.player_asked;
-    console.log(player)
-    res.render('player');
-      //    $.get("https://gameinfo.albiononline.com/api/gameinfo/search?q="+player,function(data)  {
-      //				if (data.players === undefined || data.players.length == 0) {
-      //					alert('No player Found');
-      //				} else if(data.players.length == 1) {
-      //				 	var playerId = data.players[0].Id;
-      //					console.log(data.players);
-      //				 	$("#player_results").append("<p><strong>"+data.players[0].Name+"</strong></p>");
-      //					$.get("https://gameinfo.albiononline.com/api/gameinfo/players/"+playerId,function(playerdata)  {
-      //						console.log(playerdata);
-      //						var craftot = addCommas(playerdata.LifetimeStatistics.Crafting.Total);
-      //						var gathertot = addCommas(playerdata.LifetimeStatistics.Gathering.All.Total);
-      //						var pvetot = addCommas(playerdata.LifetimeStatistics.PvE.Total);
-      //						var deathtot = addCommas(playerdata.DeathFame);
-      //					});
-      //				} else{
-      //					data.players.forEach(x=> {
-      //						if (x.GuildName === null || x.GuildName === "") {
-      //                            console.log(x.Name)
-      //                            $("#player_results").append("<p><strong>"+x.Name+"</strong> ");
-      //						} else {
-      //                            console.log(x.Name)
-      //                            console.log(x.GuildNameName)
-      //					   }
-      //                    });
-      //                }
-      //    });
-});
-
-app.get('/recipe', function (req, res) {
-        res.render('recipe', {select: consts.categories["items"], select1: null, iteminfo: null, prices: null,total:null,cost:null});
-});
-
-
-app.post('/recipe', function (req, res) {
-    let usefullItem = utils.getObjectList(req.body.recipe_group, "items");
-    let recipeItems = [];
-    let selectdata = [];
-    usefullItem.forEach(x => {
-        let enchant = x.UniqueName.substring(x.UniqueName.length, x.UniqueName.length - 2);
-        let enchantment = "";
-        if (enchant.includes("@1")) {
-            enchantment = ".1";
-        } else if (enchant.includes("@2")) {
-            enchantment = ".2";
-        } else if (enchant.includes("@3")) {
-            enchantment = ".3";
-        } else {
-            enchantment = "flat";
-        }
-        selectdata = {
-            UniqueName: x.UniqueName,
-            FrName: x.LocalizedNames.find(x => x.Key == 'FR-FR').Value,
-            enchant: enchantment
-        }
-        recipeItems.push(selectdata);
-    })
-    res.render('recipe', {select: null, select1: recipeItems, iteminfo: null, prices: null,total:null,enchant:null,cost:null});
-});
-
-
-app.post('/recipe2', function (req, res) {
-    let itemdata = "";
-    itemdata = req.body.recipe_item;
-    var recipePromise = getRecipe(itemdata);
-    let item = "";
-    let costvalue = 0;
-    // let costval;
-    // var costPromise = utils.getPrice(itemdata);
-    // costPromise.then(function(cost) {
-    //   costData = JSON.parse(cost);
-    //   costData.forEach( (w,i)=> {
-    //     if (w.city === "Caerleon" && w.quality == 0 ) {
-    //     var data = w.sell_price_min;
-    //     console.log(data);
-    //     costval = data;
-    //     }
-    //   })
-    //   costvalue = utils.numberWithCommas(costval);
-    //   console.log(costvalue);
-    // }).catch(err => {
-    //     console.log(err);
-    //     res.render('index');
-    // });
-
-    recipePromise.then(function (recipe) {
-        item = JSON.parse(recipe);
-        let craftingList = []
-        let enchant = "";
-        if (itemdata.includes("@1")) {
-              craftingList = item.enchantments.enchantments[0].craftingRequirements.craftResourceList;
-              enchant = "@1";
-          } else if (itemdata.includes("@2")) {
-              craftingList = item.enchantments.enchantments[1].craftingRequirements.craftResourceList
-              enchant = "@2";
-          } else if (itemdata.includes("@3")) {
-              craftingList = item.enchantments.enchantments[2].craftingRequirements.craftResourceList
-              enchant = "@3";
-          }else{
-              craftingList = item.craftingRequirements.craftResourceList
-          }
-          Promise.all(craftingList.map(x=>utils.getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
-            prices = [].concat.apply([], prix);
-            let newarray=[];
-            craftingList.forEach( (y,i) => {
-              if (prices[i] !== undefined){
-                if ( y.uniqueName === prices[i].item_id || y.uniqueName ===  prices[i].item_id.substring(0,prices[i].item_id.length -2 )){
-                  let obj0 = {
-                  'prix': utils.numberWithCommas(prices[i].sell_price_min),
-                  'date':prices[i].sell_price_min_date,
-                  'name':y.uniqueName,
-                  'count':y.count,
-                  'total_price': utils.numberWithCommas(y.count * prices[i].sell_price_min),
-                  'total_inter': y.count * prices[i].sell_price_min
-                };
-                newarray.push(obj0);
-              }
-            }
-          });
-          let total = 0;
-          newarray.forEach(x=> {
-            let valeur = x.total_inter
-            total += valeur;
-          })
-          let readable_total = utils.numberWithCommas(total);
-          res.render('recipe', {select: null, select1: null, iteminfo: item, prices: newarray,total:readable_total, enchant,cost:costvalue});
-        }).catch(err => {
-            console.log(err);
-            res.render('index');
-        })
-    });
-})
 
 app.get('/bbiz', function (req, res) {
     res.render('bbiz', {select: consts.categories["items"], info: null, data: null, benefAskedAffichage: null, error: null});
