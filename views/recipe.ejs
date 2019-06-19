@@ -1,90 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link href="/css/foundry.css" rel="stylesheet" type="text/css">
     <%- include('partial/header', {title: "Recipe"}); %>
+    <script>
+        $(function(){
+            $('#catSelect').change( _ => {
+                let cat = $('[name=category]').val()
+                console.log('cat : '+cat);
+                $.ajax({
+                    url: "recipe/get-category",
+                    data: {category : cat},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                    }
+                });
+                // Get the list of all items for this category, then display them in the option of "itemSelect"
+            });
+            // $('#searchRecipe').click( _ => {
+            //     $('#reciperesult').empty();
+            //     city = $('[name=city]').val();
+            //     $('#reciperesult').append("This is a succes !");
+            // });
+        });
+
+
+    </script>
     <body>
         <hr class="my-4">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <form action="/recipe" method="post">
-                        <select name="recipe_group" required>
-                            <% if (select !== null){ %>
-                            <% select.forEach(function(item,i) { %>
-                            <option label="<%= item %>" value="<%= item %>"><%= item %></option>
-                            <% }); %>
-                            <% } %>
-                        </select>
-                        <input type="submit" value="POST">
-                    </form>
-                </div>
-                <div class="col-6">
-                    <form action="/recipe2" method="post">
-                        <select name="recipe_item" required>
-                            <% if(select1 !== null){%>
-                            <% select1.forEach(function(item,i) { %>
-                            <option label="<%= item.UniqueName %>" value="<%= item.UniqueName %>"><%= item.FrName %> @ <%=
-                                item.enchant
-                                %>
-                            </option>
-                            <% }); %>
-                            <% } %>
-                        </select>
-                        <input type="submit" value="POST">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <% if(iteminfo !== null) { %>
-            <div class="row" style="margin-top: 5%">
-                <div class="col-4">
-                    <p>Nom : <%= iteminfo.localizedNames['FR-FR']%> </p>
-                    <% if(enchant !== null) { %>
-                    <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName + enchant%>"/>
-                    <% } else { %>
-                    <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=iteminfo.uniqueName%>"/>
-                    <% } %>
-                </div>
-                <div class="col-4">
-                    <p>Tiers : <%= iteminfo.tier %></p>
-                </div>
-                <div class="col-4">
-                <% if (total !== null && cost !== null ) { %>
-                    <p style="color:red">Total for crafting is : <%= total %></p>
-                    <p style="color:green">Item at Caerleon costs : <%= cost %></p>
-                <% } %>
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-12">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Ressource</th>
-                            <th>Qté</th>
-                            <th>Prix Caerleon</th>
-                            <th>Prix Total Ressource</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <% if (prices !== null ) { %>
-                            <% prices.forEach( x=> { %>
-                                <tr>
-                                    <td>
-                                        <img width="64" height="64" src="https://gameinfo.albiononline.com/api/gameinfo/items/<%=x.name%>"/>
-                                        <p><%= x.name %></p>
-                                    </td>
-                                    <td><p><%= x.count %></p></td>
-                                    <td><p><%= x.prix%> silver</p><p> @ <%= x.date%></p></td>
-                                    <td><p><%= x.total_price %> </p></td>
-                                </tr>
-                            <% })%>
-                        <% } %>
-                        </tbody>
-                    </table>
+                <form>
+                    <div class="form-row">
+                        <div class="col-4">
+                            <select id="catSelect" name="category" class="form-control">
+                                <option value="" disabled selected>Category</option>
+                                <% if(categories !== null) { %>
+                                  <% categories.forEach(y=>{y=y.replace('.json','') %>
+                                <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
+                                <% });%>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                                <select id="itemSelect" name="item" class="form-control">
+                                    <option value="" disabled selected> Item </option>
+                                </select>
+                        </div>
+                        <!--                        <div class="col-3">
+							<select name="city" class="form-control">
+                                <option value="" disabled selected>City</option>
+                                <%# cities.forEach(y=> { %>
+                                    <option label="<%#= y %>" value="<%#= y %>" > <%#= y %></option>
+                                <%# });%>
+                            </select>
+                        </div>              -->
+                        <div class="col-4">
+                            <button type="button" id="searchRecipe" class="btn btn-primary btn-block"><i class="fa fa-search"></i>Search Recipe</button>
+                        </div>
                     </div>
+                </form>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="reciperesult">
+
                 </div>
-            <% }%>
+            </div>
         </div>
     </body>
 </html>
