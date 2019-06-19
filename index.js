@@ -37,17 +37,17 @@ app.get('/', function (req, res) {
 
 
 app.get('/bbiz', function (req, res) {
-    res.render('bbiz', {select: consts.categories["items"], info: null, data: null, benefAskedAffichage: null, error: null});
+    res.render('bbiz', {select: consts.categories["melee"], info: null, data: null, benefAskedAffichage: null, error: null});
 })
 
 
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
     benefAsked = req.body.benef;
-    usefullItem = utils.getObjectList(categoryAsked, "items");       // Obtain the list of items in the Select Category
+    usefullItem = utils.getObjectList(categoryAsked, "melee");       // Obtain the list of items in the Select Category
     benefAskedAffichage = utils.numberWithCommas(benefAsked);
     Promise.all(usefullItem.map(x => bbizworthy(x, benefAsked))).then(data => {
-        res.render('bbiz', {select: consts.categories["items"], info: categoryAsked, data, error: null, benefAskedAffichage});
+        res.render('bbiz', {select: consts.categories["melee"], info: categoryAsked, data, error: null, benefAskedAffichage});
     }).catch(err => {
         res.render('index');
     })

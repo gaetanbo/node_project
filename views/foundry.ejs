@@ -4,6 +4,34 @@
     <%- include('partial/header', {title: "Foundry"}); %>
     <script>
         $(function () {
+
+            $('#category').prop( "disabled", true );
+            $('#type').change( _ => {
+                if($('#type').val() === "ressources"){
+                    $('#bonus_container').removeClass('d-none');
+                }else{
+                    $('#bonus_container').addClass('d-none');
+                }
+                $.ajax({
+                    url: "foundry/get-category",
+                    data: {category : $('#type').val()},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#category option:not(:disabled)').remove();
+                        for(d of data){
+                            $('#category').append(
+                                $('<option>')
+                                    .attr('label',d)
+                                    .attr('value',d)
+                                    .text(d)
+                            )
+                        }
+                        $('#category').prop( "disabled", false );
+                    }
+                });
+            });
+
             $('#lookup').click( _ => {
 
                 $('#table_body').empty();
@@ -22,12 +50,13 @@
                 let tiers = $('input[type=checkbox]:checked').map(function(_, el) {
                                 return $(el).val();
                             }).get();
+                let type = $('[name=type]').val();
                 let category = $('[name=category]').val();
                 let city = $('[name=city]').val();
 
                 $.ajax({
                     url: "foundry/query",
-                    data: {city, category, tiers},
+                    data: {city, category, type, tiers},
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (data) {
@@ -96,9 +125,9 @@
             <form>
                 <div class="form-row">
                     <div class="col-3">
-                        <select name="category" class="form-control" >
-                            <option value="" disabled selected>Category</option>
-                            <% categories.forEach(y=>{ y=y.replace('.json','')%>
+                        <select id="type" name="type" class="form-control" >
+                            <option value="" disabled selected>Type</option>
+                            <% types.forEach(y=>{%>
                                 <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
                             <% }); %>
                         </select>
@@ -121,6 +150,13 @@
                     </div>
                     <div class="col-2">
                         <button type="button" id="lookup" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-3">
+                        <select id="category" name="category" class="form-control" >
+                            <option value="" disabled selected>Category</option>
+                        </select>
                     </div>
                 </div>
             </form>

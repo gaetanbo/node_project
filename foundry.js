@@ -88,11 +88,11 @@ foundryRoute.get('/foundry/query', (req, res) => {
     if(req.query.city && _cities.some( x => x.toLowerCase() === req.query.city.toLowerCase())){ // Check if the city used exists
         city = req.query.city;
     }
-    if(consts.categories["items"].includes(req.query.category)){ // Check if the category used exists
+    if(req.query.type && consts.types.includes(req.query.type) && consts.categories[req.query.type].includes(req.query.category)){ // Check if the category used exists
         try{
             loadEnchantPrices(city).then( _ => {
                 let listItems = [];
-                let usefullItem = utils.getObjectList(req.query.category, "items");
+                let usefullItem = utils.getObjectList(req.query.category, req.query.type);
                 if(req.query.tiers){ // Check if tiers list paramater is exists
                     usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
                 }
@@ -155,8 +155,20 @@ foundryRoute.get('/foundry/query', (req, res) => {
     
 })
 
+foundryRoute.get('/foundry/get-category', (req, res) => {
+    if(req.query.category && consts.types.includes(req.query.category)){
+        return res.status(200).json(consts.categories[req.query.category]);
+    }else{
+        return res.status(200).json([]); 
+    }
+})
+
 foundryRoute.get('/foundry', (req, res) => {
-    res.render('foundry', {categories : consts.categories["items"], cities : _cities, tiers : _tiers});
+    res.render('foundry', {
+        types : consts.types.filter(x => ["artefacts","ressources","consumable"].every( c => x !== c)), 
+        cities : _cities, 
+        tiers : _tiers
+    });
 })
 
 module.exports = foundryRoute;

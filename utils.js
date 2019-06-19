@@ -18,7 +18,12 @@ const utils = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(JSON.parse(body));
+                    try{
+                        resolve(JSON.parse(body));
+                    }
+                    catch(e){
+                        reject(e)
+                    }
                 }
             })
         })
@@ -37,7 +42,12 @@ const utils = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(JSON.parse(body));
+                    try{
+                        resolve(JSON.parse(body));
+                    }
+                    catch(e){
+                        reject(e)
+                    }
                 }
             })
         })
