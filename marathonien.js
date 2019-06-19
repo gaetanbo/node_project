@@ -1,10 +1,11 @@
 const marathonienRoute = require('express').Router();
+const consts = require("./consts");
 const utils = require("./utils"); 
 
 const _quality = [1, 2, 3, 4, 5];
 const _cities = ["Caerleon","Thetford","Fort Sterling","Lymhurst","Bridgewatch","Martlock"];
 const _tiers = [3,4,5,6,7,8];
-const _types = utils.getJsonTypeList();
+const _types = consts.types;
 
 
 //SAFE WARP NO BZ
@@ -70,6 +71,62 @@ const _ressources_weight = {
     "T8" : 2.6,
 }
 
+const _equipments_weight = {
+    "ARMOR" : {
+        "T1" : 1,
+        "T2" : 1,
+        "T3" : 2,
+        "T4" : 3,
+        "T5" : 5,
+        "T6" : 7,
+        "T7" : 11,
+        "T8" : 17    
+    },
+    "HEAD" : {
+        "T1" : 0,
+        "T2" : 0,
+        "T3" : 2,
+        "T4" : 3,
+        "T5" : 5,
+        "T6" : 7,
+        "T7" : 11,
+        "T8" : 17    
+    },
+    "SHOES" : {
+        "T1" : 0,
+        "T2" : 0,
+        "T3" : 1,
+        "T4" : 1,
+        "T5" : 2,
+        "T6" : 3,
+        "T7" : 5,
+        "T8" : 8   
+    }
+}
+
+const _accessories_weight = {
+    "BAG" : {
+        "T1" : 1,
+        "T2" : 1,
+        "T3" : 2,
+        "T4" : 3,
+        "T5" : 5,
+        "T6" : 7,
+        "T7" : 11,
+        "T8" : 17    
+    },
+    "CAPE" : {
+        "T1" : 0,
+        "T2" : 0,
+        "T3" : 1,
+        "T4" : 1,
+        "T5" : 2,
+        "T6" : 3,
+        "T7" : 5,
+        "T8" : 8   
+    },
+}
+
 marathonienRoute.get('/marathonien/query', (req, res) => {
     let from_city = "Caerleon";
     if(req.query.from_city && _cities.some( x => x.toLowerCase() === req.query.from_city.toLowerCase())){ // Check if the city used exists
@@ -89,7 +146,7 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
     if( req.query.type && _types.includes(req.query.type) && req.query.category ){ // Check if the category used exists
         try{
             listItems = [];
-            let usefullItem = utils.getObjectList(req.query.type + "/" +req.query.category);
+            let usefullItem = utils.getObjectList(req.query.category, req.query.type);
             if(req.query.tiers){ // Check if tiers list paramater is exists
                 usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
             }
@@ -114,8 +171,20 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                             let to_itemPrice = to_itemInfos.sell_price_min
                             let benef = to_itemPrice - from_itemPrice;
                             let weight = itemData.weight;
-                            if(req.query.type === "ressources"){
-                                weight = _ressources_weight[item.UniqueName.substring(0,2)]
+                            switch(req.query.type){
+                                case "ressources" : 
+                                    weight = _ressources_weight[item.UniqueName.substring(0,2)]; 
+                                    break;
+                                case "accessories" : 
+                                    if(item.UniqueName.includes("BAG")){
+                                        weight = _accessories_weight["BAG"][item.UniqueName.substring(0,2)]; 
+                                    }else{
+                                        weight = _accessories_weight["CAPE"][item.UniqueName.substring(0,2)]; 
+                                    }
+                                    break;
+                                case "equipments" : 
+                                        weight = _equipments_weight[item.UniqueName.split('_')[1]][item.UniqueName.substring(0,2)]; 
+                                    break;
                             }
                             weight = (weight * ( req.query.bonus ? 0.7 : 1 )).toFixed(2); // Take into account the bonus of gathering gear weight reduction
                             let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / weight );
@@ -149,8 +218,8 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
 })
 
 marathonienRoute.get('/marathonien/get-category', (req, res) => {
-    if(req.query.category && utils.getJsonTypeList().includes(req.query.category)){
-        return res.status(200).json(utils.getJsonList(req.query.category + "/"));
+    if(req.query.category && consts.types.includes(req.query.category)){
+        return res.status(200).json(consts.categories[req.query.category]);
     }else{
         return res.status(200).json([]); 
     }

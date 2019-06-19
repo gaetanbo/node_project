@@ -7,6 +7,7 @@ const fs = require('fs');
 const logger = require('./logger');
 
 // Add my services / function I need from other files
+const consts = require("./consts");
 const utils = require("./utils");
 
 // Add my routes from declared from other files
@@ -14,13 +15,13 @@ const foundryRoute = require("./foundry");
 const marathonienRoute = require("./marathonien");
 
 moment.locale('fr');
+consts.startup();
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger);
 app.set('view engine', 'ejs');
 
-// Initialize the list of JSON file on server
-let jsonList = utils.getItemJsonList();
 // Initialize var for .get/bbiz :
 let categoryAsked = "";
 
@@ -73,19 +74,12 @@ app.post('/player', function (req, res) {
 });
 
 app.get('/recipe', function (req, res) {
-    var path = './public/items';
-    let nom = [];
-    fs.readdir(path, function (err, items) {
-        for (var i = 0; i < items.length; i++) {
-            nom.push(items[i]);
-        }
-        res.render('recipe', {select: nom, select1: null, iteminfo: null, prices: null,total:null,cost:null});
-    })
+        res.render('recipe', {select: consts.categories["items"], select1: null, iteminfo: null, prices: null,total:null,cost:null});
 });
 
 
 app.post('/recipe', function (req, res) {
-    let usefullItem = utils.getItemList(req.body.recipe_group.replace(".json",""));
+    let usefullItem = utils.getObjectList(req.body.recipe_group, "items");
     let recipeItems = [];
     let selectdata = [];
     usefullItem.forEach(x => {
@@ -152,7 +146,7 @@ app.post('/recipe2', function (req, res) {
               craftingList = item.craftingRequirements.craftResourceList
           }
           Promise.all(craftingList.map(x=>utils.getPrice(x.uniqueName.includes("ARTEFACT")?x.uniqueName:x.uniqueName+enchant,"Caerleon"))).then( prix=>{
-            prices = [].concat.apply([], prix.map(x => JSON.parse(x)));
+            prices = [].concat.apply([], prix);
             let newarray=[];
             craftingList.forEach( (y,i) => {
               if (prices[i] !== undefined){
@@ -184,17 +178,17 @@ app.post('/recipe2', function (req, res) {
 })
 
 app.get('/bbiz', function (req, res) {
-    res.render('bbiz', {select: jsonList, info: null, data: null, benefAskedAffichage: null, error: null});
+    res.render('bbiz', {select: consts.categories["items"], info: null, data: null, benefAskedAffichage: null, error: null});
 })
 
 
 app.post('/bbiz', function (req, res, body) {
     categoryAsked = req.body.bbiz_group;
     benefAsked = req.body.benef;
-    usefullItem = utils.getItemList(categoryAsked.replace(".json",""));       // Obtain the list of items in the Select Category
+    usefullItem = utils.getObjectList(categoryAsked, "items");       // Obtain the list of items in the Select Category
     benefAskedAffichage = utils.numberWithCommas(benefAsked);
     Promise.all(usefullItem.map(x => bbizworthy(x, benefAsked))).then(data => {
-        res.render('bbiz', {select: jsonList, info: categoryAsked, data, error: null, benefAskedAffichage});
+        res.render('bbiz', {select: consts.categories["items"], info: categoryAsked, data, error: null, benefAskedAffichage});
     }).catch(err => {
         res.render('index');
     })
@@ -235,8 +229,7 @@ function bbizworthy(x, benefAsked) {
         let worth = [];
         dataPromise.then(function (resultats) {
             try {
-                res = JSON.parse(resultats);
-                res.forEach(y => {
+                resultats.forEach(y => {
                     switch (y.city) {
                         case "Black Market":
                             q_level.forEach(q => {

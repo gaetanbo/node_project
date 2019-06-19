@@ -1,5 +1,6 @@
 const fs = require('fs');
 const request = require('request');
+const consts = require("./consts");
 
 const utils = {
     getPrice : function(item, city, quality) {
@@ -41,33 +42,23 @@ const utils = {
             })
         })
     },
-    getItemList: function(name){
-        return this.getObjectList("items/" + name);
-    },
-    getRessourceList: function(name){
-        return this.getObjectList("ressources/" + name);
-    },
-    getObjectList: function(jsonFile) {          // Doesnt return only flat item now, return all 120 weapons each time
-        usefullItem = [];
-        var fichier = './public/' + jsonFile + ".json";
-        let rawcontent = fs.readFileSync(fichier);
-        let contentFile = JSON.parse(rawcontent);
-        return contentFile
-            .filter(item => { let tiers = item.UniqueName.substring(0, 2); return (tiers != "T1" && tiers != "T2" && tiers != "T3") })
-    },
-    getItemJsonList: function(){
-        return this.getJsonList("items/");
-    },
-    getRessourceJsonList: function(){
-        return this.getJsonList("ressources/");
-    },
-    getJsonList : function (folder) {
-        let files = fs.readdirSync("./public/" + folder)
-        return files
-            .map(x => x.replace(".json",""));;
-    },
-    getJsonTypeList : function (folder) {
-        return ["items", "ressources"];
+    getObjectList: function(filename, type) {          // Doesnt return only flat item now, return all 120 weapons each time
+        try{
+            usefullItem = [];
+            let path = "";
+            if(type){
+                path = consts.path[type][filename];
+            }else{
+                let guessedType = consts.types.find(t => Object.keys(consts.path[t]).some( x => x === filename));
+                path = consts.path[guessedType][filename];
+            }
+            let rawcontent = fs.readFileSync(path);
+            let contentFile = JSON.parse(rawcontent);
+            return contentFile
+                .filter(item => { let tiers = item.UniqueName.substring(0, 2); return (tiers != "T1" && tiers != "T2" && tiers != "T3") })
+        }catch(e){
+            return [];
+        }
     },
     numberWithCommas: function(x) {
         var parts = x.toString().split(".");

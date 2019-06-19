@@ -1,4 +1,5 @@
 const foundryRoute = require('express').Router();
+const consts = require("./consts");
 const utils = require("./utils"); 
 
 const _quality = [1, 2, 3, 4, 5];
@@ -87,12 +88,11 @@ foundryRoute.get('/foundry/query', (req, res) => {
     if(req.query.city && _cities.some( x => x.toLowerCase() === req.query.city.toLowerCase())){ // Check if the city used exists
         city = req.query.city;
     }
-    let fileList = utils.getItemJsonList();
-    if(fileList.some(x => x.replace('.json','') === req.query.category)){ // Check if the category used exists
+    if(consts.categories["items"].includes(req.query.category)){ // Check if the category used exists
         try{
             loadEnchantPrices(city).then( _ => {
                 let listItems = [];
-                let usefullItem = utils.getItemList(req.query.category);
+                let usefullItem = utils.getObjectList(req.query.category, "items");
                 if(req.query.tiers){ // Check if tiers list paramater is exists
                     usefullItem = usefullItem.filter(item => req.query.tiers.includes(item.UniqueName.substring(1,2))); // Trim the item array to remove unused tiers
                 }
@@ -156,7 +156,7 @@ foundryRoute.get('/foundry/query', (req, res) => {
 })
 
 foundryRoute.get('/foundry', (req, res) => {
-    res.render('foundry', {categories : utils.getItemJsonList(), cities : _cities, tiers : _tiers});
+    res.render('foundry', {categories : consts.categories["items"], cities : _cities, tiers : _tiers});
 })
 
 module.exports = foundryRoute;
