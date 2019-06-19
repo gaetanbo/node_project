@@ -3,7 +3,7 @@ moment.locale('fr');
 
 const logger = (req, res, next) => {
     console.log(
-        `${req.protocol}://${req.get('host')}${req.originalUrl}/${req.body.bbiz_group} @ ${moment().format("LLLL")}`
+        `${req.protocol}://${req.get('host')}${req.originalUrl} @ ${moment().format("LLLL")}`
     );
     next();
 };
