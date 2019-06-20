@@ -18,13 +18,18 @@
 
     <title>Albion Tavern - HomePage</title>
 
-    <h1 class="text-center"><%= title %></h1>
-    <div class="container">
-        <div class="row">
-            <div class="col"><a href="/bbiz"><p>BBiz !</p></a></div>
-            <div class="col"><a href="/recipe"><p>Recipe</p></a></div>
-            <div class="col"><a href="/foundry"><p>Foundry</p></a></div>
-            <div class="col"><a href="/marathonien"><p>Trader Marathonien</p></a></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="https://avatars0.githubusercontent.com/u/32732112?s=460&v=4" width="30" height="30" class="d-inline-block align-top" alt="">
+            Albion Helper
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link <%= title == 'Black Biz' ? 'active' :'' %> " href="/bbiz">Black Biz</a>
+            <a class="nav-item nav-link <%= title == 'Recipe' ? 'active' :'' %> " href="/recipe">Recipe</a>
+            <a class="nav-item nav-link <%= title == 'Foundry' ? 'active' :'' %> " href="/foundry">Foundry</a>
+            <a class="nav-item nav-link <%= title == 'Trader Marathonien' ? 'active' :'' %> " href="/marathonien">Trader Marathonien</a>
+            </div>
         </div>
-    </div>
+    </nav>
 </head>
