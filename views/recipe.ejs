@@ -5,6 +5,33 @@
     <script>
         $(function(){
             $('#itemSelect').prop("disabled",true);     // Disable item select since no cat chosen
+            $('#catSelect').prop("disabled",true);     // Disable item select since no cat chosen
+            $('#typeSelect').change( _ => {
+                let type = $('[name=typeSelect]').val()
+                $.ajax({
+                    url: "recipe/get-type",
+                    data: {types : type},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        // console.log(data);
+                        $('#catSelect option:not(:disabled)').remove();
+                        for (d of data ) {
+                            $('#catSelect').append(
+                                $('<option>')
+                                    .attr('label',d)
+                                    .attr('value',d)
+                                    .text(d)
+                            )
+                        }
+                        $('#catSelect').prop("disabled",false);
+                    },
+                    error : function(error) {
+                        $('#itemSelect').empty();
+                    }
+                });
+            });
+
             $('#catSelect').change( _ => {
                 let cat = $('[name=category]').val()
                 $.ajax({
@@ -29,6 +56,7 @@
                     }
                 });
             });
+
             $('#searchRecipe').click( _ => {
                 $('#reciperesult').empty();
                 let item = $('[name=itemSelect]').val();
@@ -40,6 +68,7 @@
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success:function (data) {
+                        console.log(data);
                         $('#reciperesult').append("This is a succes !" +item + " <br> " );
                         $('#reciperesult').append(data);
 
@@ -59,17 +88,27 @@
         <div class="container pt-sm-5">
                 <form>
                     <div class="form-row">
-                        <div class="col-4">
-                            <select id="catSelect" name="category" class="form-control">
-                                <option value="" disabled selected>Category</option>
-                                <% if(categories !== null) { %>
-                                  <% categories.forEach(y=>{y=y.replace('.json','') %>
+                        <div class="col-3">
+                            <select id="typeSelect" name="typeSelect" class="form-control">
+                                <option value="" disabled selected>Types</option>
+                                <% if(types !== null) { %>
+                                  <% types.forEach(y=>{y=y.replace('.json','') %>
                                 <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
                                 <% });%>
                                 <% } %>
                             </select>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
+                            <select id="catSelect" name="category" class="form-control">
+                                <option value="" disabled selected>Category</option>
+                                <% if(categories !== null) { %>
+                                    <% categories.forEach(y=>{y=y.replace('.json','') %>
+                                    <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
+                                    <% });%>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="col-3">
                                 <select id="itemSelect" name="itemSelect" class="form-control">
                                     <option value="" disabled selected> Item </option>
                                 </select>
@@ -83,7 +122,7 @@
                                 <%# });%>
                             </select>
                         </div>              -->
-                        <div class="col-4">
+                        <div class="col-3">
                             <button type="button" id="searchRecipe" class="btn btn-primary btn-block"><i class="fa fa-search"></i>Search Recipe</button>
                         </div>
                     </div>
