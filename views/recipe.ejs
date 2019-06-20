@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="/css/foundry.css" rel="stylesheet" type="text/css">
-    <%- include('partial/header', {title: "Recipe"}); %>
-    <script>
-        $(function(){
-            $('#itemSelect').prop("disabled",true);     // Disable item select since no cat chosen
-            $('#catSelect').prop("disabled",true);     // Disable item select since no cat chosen
-            $('#typeSelect').change( _ => {
-                let type = $('[name=typeSelect]').val()
+<%- include('partial/header', {title: "Recipe"}); %>
+<script>
+    $(function(){
+        $('#itemSelect').prop("disabled",true);     // Disable item select since no cat chosen
+        $('#catSelect').prop("disabled",true);     // Disable item select since no cat chosen
+        $('#typeSelect').change( _ => {
+            let type = $('[name=typeSelect]').val()
+            if (type === "artifacts") {
+                alert('Cant get recipe for artifact, DUH !' )
+            } else if(type === "ressources"){
+                alert('Cant get recipe for ressources, DUH !' )
+            } else {
                 $.ajax({
                     url: "recipe/get-type",
                     data: {types : type},
@@ -27,93 +31,128 @@
                         $('#catSelect').prop("disabled",false);
                     },
                     error : function(error) {
-                        $('#itemSelect').empty();
+                        $('#catSelect').empty();
                     }
                 });
-            });
+            }
+        });
 
-            $('#catSelect').change( _ => {
-                let cat = $('[name=category]').val()
-                $.ajax({
-                    url: "recipe/get-category",
-                    data: {category : cat},
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function (data) {
-                        $('#itemSelect option:not(:disabled)').remove();
-                        for (d of data ) {
-                            $('#itemSelect').append(
-                                $('<option>')
-                                    .attr('label',d.UniqueName)
-                                    .attr('value',d.UniqueName)
-                                    .text(d.UniqueName)
-                            )
-                        }
-                        $('#itemSelect').prop("disabled",false);
-                    },
-                    error : function(error) {
-                        $('#itemSelect').empty();
+        $('#catSelect').change( _ => {
+            let cat = $('[name=category]').val()
+            $.ajax({
+                url: "recipe/get-category",
+                data: {category : cat},
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+                    $('#itemSelect option:not(:disabled)').remove();
+                    for (d of data ) {
+                        $('#itemSelect').append(
+                            $('<option>')
+                                .attr('label',d.UniqueName)
+                                .attr('value',d.UniqueName)
+                                .addClass(d.UniqueName.substring(0,2))
+                                .addClass("enchant"+d.UniqueName.substring(d.UniqueName.length-1,d.UniqueName.length))
+                                .text(d.LocalizedNames.find(x => x.Key == "FR-FR").Value)
+                        )
                     }
-                });
-            });
-
-            $('#searchRecipe').click( _ => {
-                $('#reciperesult').empty();
-                let item = $('[name=itemSelect]').val();
-                let city = "Caerleon";
-                // console.log(item + city);
-                $.ajax({
-                    url: "recipe/query",
-                    data: {item,city},
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success:function (data) {
-                        console.log(data);
-                        $('#reciperesult').append("This is a succes !" +item + " <br> " );
-                        $('#reciperesult').append(data);
-
-                    },
-                    error:function (error) {
-                        $('#reciperesult').empty();
-                        // WTF
-                        console.log(error);
-                    }
-                })
+                    $('#itemSelect').prop("disabled",false);
+                },
+                error : function(error) {
+                    $('#itemSelect').empty();
+                }
             });
         });
 
+        $('#searchRecipe').click( _ => {
+            $('#reciperesult').empty();
+            $('#tableresult').empty();
+            let item = $('[name=itemSelect]').val();
+            let city = "Caerleon";
+            $.ajax({
+                url: "recipe/query",
+                data: {item,city},
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success:function (data) {
+                    let length = data.length;
+                    $('#reciperesult').append(
+                        $('<img>')
+                            .attr('src',"https://gameinfo.albiononline.com/api/gameinfo/items/"+item)
+                            .attr('width','64')
+                            .attr('height','64')
+                    )
+                    $('#reciperesult').append($('<p>').text("Item asked : " +item));
 
-    </script>
-    <body>
-        <div class="container pt-sm-5">
-                <form>
-                    <div class="form-row">
-                        <div class="col-3">
-                            <select id="typeSelect" name="typeSelect" class="form-control">
-                                <option value="" disabled selected>Types</option>
-                                <% if(types !== null) { %>
-                                  <% types.forEach(y=>{y=y.replace('.json','') %>
-                                <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
-                                <% });%>
-                                <% } %>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                            <select id="catSelect" name="category" class="form-control">
-                                <option value="" disabled selected>Category</option>
-                                <% if(categories !== null) { %>
-                                    <% categories.forEach(y=>{y=y.replace('.json','') %>
-                                    <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
-                                    <% });%>
-                                <% } %>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                                <select id="itemSelect" name="itemSelect" class="form-control">
-                                    <option value="" disabled selected> Item </option>
-                                </select>
-                        </div>
-                        <!--  Disabled cities for now -> Default = Caerleon
+                    for(let i=0;i<data.length;i++){
+                        if (i !== data.length-1 ){
+                            $('#tableresult').append(
+                                $('<tr>').append(
+                                    $('<td>').append(
+                                        $('<img>')
+                                            .attr('src', data[i].src)
+                                            .attr('width', '64')
+                                            .attr('height', '64')
+                                    ).append(
+                                        $('<p>').text(data[i].name)
+                                    ))
+                                    .append(
+                                        $('<td>').text(data[i].count)
+                                    ).append(
+                                    $('<td>').text(data[i].prix + " silvers")
+                                ).append(
+                                    $('<td>').text(data[i].subtot + " silvers")
+                                )
+                            )
+                        } else {
+                            // derniere ligne du tableau = > total
+                            $('#reciperesult').append($('<p>').text("Total crafting price : "+data[i].total + " silvers"))
+                            $('#reciperesult').append($('<p>').text("Caerleon lowest qual price : "+data[i].itemprice + " silvers"))
+
+                        }
+                    }
+                },
+                error:function (error) {
+                    $('#reciperesult').empty();
+                    // WTF
+                    console.log(error);
+                }
+            })
+        });
+    });
+
+
+</script>
+<body>
+<div class="container pt-sm-5">
+    <form>
+        <div class="form-row">
+            <div class="col-3">
+                <select id="typeSelect" name="typeSelect" class="form-control">
+                    <option value="" disabled selected>Types</option>
+                    <% if(types !== null) { %>
+                        <% types.forEach(y=>{y=y.replace('.json','') %>
+                        <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
+                        <% });%>
+                    <% } %>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="catSelect" name="category" class="form-control">
+                    <option value="" disabled selected>Category</option>
+                    <% if(categories !== null) { %>
+                        <% categories.forEach(y=>{y=y.replace('.json','') %>
+                        <option label="<%= y %>" value="<%= y %>" > <%= y %></option>
+                        <% });%>
+                    <% } %>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="itemSelect" name="itemSelect" class="form-control">
+                    <option value="" disabled selected> Item </option>
+                </select>
+            </div>
+            <!--  Disabled cities for now -> Default = Caerleon
                                               <div class="col-3">
 							<select name="city" class="form-control">
                                 <option value="" disabled selected>City</option>
@@ -122,19 +161,25 @@
                                 <%# });%>
                             </select>
                         </div>              -->
-                        <div class="col-3">
-                            <button type="button" id="searchRecipe" class="btn btn-primary btn-block"><i class="fa fa-search"></i>Search Recipe</button>
-                        </div>
-                    </div>
-                </form>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12" id="reciperesult">
-
-                </div>
+            <div class="col-3">
+                <button type="button" id="searchRecipe" class="btn btn-primary btn-block"><i class="fa fa-search"></i>Search Recipe</button>
             </div>
         </div>
-    </body>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12" id="reciperesult" style="margin-top: 5%">
+
+        </div>
+    </div>
+    <div class="row">
+        <table class="col-12" style="margin-top: 5%">
+            <thead><tr><th>Nom</th><th>Quantité</th><th>Prix Unitaire</th><th>Total</th></tr></thead>
+            <tbody id="tableresult"></tbody>
+        </table>
+    </div>
+</div>
+</body>
 </html>
