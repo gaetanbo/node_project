@@ -4,25 +4,53 @@
     <%- include('partial/header', {title: "Recipe"}); %>
     <script>
         $(function(){
+            $('#itemSelect').prop("disabled",true);     // Disable item select since no cat chosen
             $('#catSelect').change( _ => {
                 let cat = $('[name=category]').val()
-                console.log('cat : '+cat);
                 $.ajax({
                     url: "recipe/get-category",
                     data: {category : cat},
                     contentType: 'application/json; charset=utf-8',
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data);
+                        $('#itemSelect option:not(:disabled)').remove();
+                        for (d of data ) {
+                            $('#itemSelect').append(
+                                $('<option>')
+                                    .attr('label',d.UniqueName)
+                                    .attr('value',d.UniqueName)
+                                    .text(d.UniqueName)
+                            )
+                        }
+                        $('#itemSelect').prop("disabled",false);
+                    },
+                    error : function(error) {
+                        $('#itemSelect').empty();
                     }
                 });
-                // Get the list of all items for this category, then display them in the option of "itemSelect"
             });
-            // $('#searchRecipe').click( _ => {
-            //     $('#reciperesult').empty();
-            //     city = $('[name=city]').val();
-            //     $('#reciperesult').append("This is a succes !");
-            // });
+            $('#searchRecipe').click( _ => {
+                $('#reciperesult').empty();
+                let item = $('[name=itemSelect]').val();
+                let city = "Caerleon";
+                // console.log(item + city);
+                $.ajax({
+                    url: "recipe/query",
+                    data: {item,city},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success:function (data) {
+                        $('#reciperesult').append("This is a succes !" +item + " <br> " );
+                        $('#reciperesult').append(data);
+
+                    },
+                    error:function (error) {
+                        $('#reciperesult').empty();
+                        // WTF
+                        console.log(error);
+                    }
+                })
+            });
         });
 
 
@@ -43,11 +71,12 @@
                             </select>
                         </div>
                         <div class="col-4">
-                                <select id="itemSelect" name="item" class="form-control">
+                                <select id="itemSelect" name="itemSelect" class="form-control">
                                     <option value="" disabled selected> Item </option>
                                 </select>
                         </div>
-                        <!--                        <div class="col-3">
+                        <!--  Disabled cities for now -> Default = Caerleon
+                                              <div class="col-3">
 							<select name="city" class="form-control">
                                 <option value="" disabled selected>City</option>
                                 <%# cities.forEach(y=> { %>
