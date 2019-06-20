@@ -127,6 +127,17 @@ const _accessories_weight = {
     },
 }
 
+const _artifacts_weight = {
+    "T1" : 0,
+    "T2" : 0,
+    "T3" : 0,
+    "T4" : 2,
+    "T5" : 2,
+    "T6" : 2,
+    "T7" : 2,
+    "T8" : 2,
+}
+
 marathonienRoute.get('/marathonien/query', (req, res) => {
     let from_city = "Caerleon";
     if(req.query.from_city && _cities.some( x => x.toLowerCase() === req.query.from_city.toLowerCase())){ // Check if the city used exists
@@ -182,11 +193,14 @@ marathonienRoute.get('/marathonien/query', (req, res) => {
                                         weight = _accessories_weight["CAPE"][item.UniqueName.substring(0,2)]; 
                                     }
                                     break;
-                                case "equipments" : 
+                                case "armor" : 
                                         weight = _equipments_weight[item.UniqueName.split('_')[1]][item.UniqueName.substring(0,2)]; 
                                     break;
+                                case "artifacts" :
+                                        weight = _artifacts_weight[item.UniqueName.substring(0,2)]; 
+                                    break;
                             }
-                            weight = (weight * ( req.query.bonus ? 0.7 : 1 )).toFixed(2); // Take into account the bonus of gathering gear weight reduction
+                            weight = (weight * ( req.query.bonus==="true" ? 0.7 : 1 )).toFixed(2); // Take into account the bonus of gathering gear weight reduction
                             let ratio = Math.floor(((to_itemPrice - from_itemPrice) / warp) / weight );
                             if(from_itemPrice > 0 && to_itemPrice > 0 && benef > 0){
                                 listItems.push({

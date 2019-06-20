@@ -165,7 +165,7 @@ foundryRoute.get('/foundry/get-category', (req, res) => {
 
 foundryRoute.get('/foundry', (req, res) => {
     res.render('foundry', {
-        types : consts.types.filter(x => ["artefacts","ressources","consumable"].every( c => x !== c)), 
+        types : consts.types.filter(x => ["artifacts","ressources","consumable"].every( c => x !== c)), 
         cities : _cities, 
         tiers : _tiers
     });
