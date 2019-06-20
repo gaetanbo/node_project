@@ -13,6 +13,7 @@ const utils = require("./utils");
 // Add my routes from declared from other files
 const foundryRoute = require("./foundry");
 const recipeRoute = require("./recipe");
+const charbuilderRoute = require("./charbuilder");
 const marathonienRoute = require("./marathonien");
 
 moment.locale('fr');
@@ -28,6 +29,7 @@ let categoryAsked = "";
 
 app.use("/", foundryRoute);
 app.use("/", recipeRoute);
+app.use("/", charbuilderRoute);
 app.use("/", marathonienRoute);
 
 app.get('/', function (req, res) {
