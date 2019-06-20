@@ -30,3 +30,15 @@ p.silver::after {
     margin-left: 5px;
     position: absolute;
 }
+
+.T2{background-color:#b7b7b7;}
+.T3{background-color:#52823d;}
+.T4{background-color:#6fa8dc;}
+.T5{background-color:#e06666;}
+.T6{background-color:#e69138;}
+.T7{background-color:#ffd966;}
+.T8{background-color:#FFFFFF;}
+
+.enchant@1{color:green !important;}
+.enchant@2{color:dodgerblue !important;}
+.enchant@3{color:mediumpurple !important;}
