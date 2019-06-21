@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="/css/foundry.css" rel="stylesheet" type="text/css">
+    <%- include('partial/header', {title: "Black Biz"}); %>
+    <script>
+        $(function () {
+
+            $('#category').prop( "disabled", true );
+            $('#type').change( _ => {
+                if($('#type').val() === "ressources"){
+                    $('#bonus_container').removeClass('d-none');
+                }else{
+                    $('#bonus_container').addClass('d-none');
+                }
+                $.ajax({
+                    url: "blackbiz/get-category",
+                    data: {category : $('#type').val()},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#category option:not(:disabled)').remove();
+                        for(d of data){
+                            $('#category').append(
+                                $('<option>')
+                                    .attr('label',d)
+                                    .attr('value',d)
+                                    .text(d)
+                            )
+                        }
+                        $('#category').prop( "disabled", false );
+                    }
+                });
+            });
+
+            $('#lookup').click( _ => {
+
+                $('#table_body').empty();
+                $('#table_body').append(`
+                    <tr>
+                        <td colspan="8">
+                            <div class="text-center">
+                                <div class="spinner-grow" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `)
+
+                let tiers = $('input[type=checkbox]:checked').map(function(_, el) {
+                                return $(el).val();
+                            }).get();
+                let type = $('[name=type]').val();
+                let category = $('[name=category]').val();
+                $.ajax({
+                    url: "blackbiz/query",
+                    data: {category, type, tiers},
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#table_body').empty();
+                        for(let i = 0;i < data.length;i++){
+                            let d = data[i];
+                            $('#table_body').append(
+                                $('<tr>').append(
+                                    $('<td>').append(
+                                        $('<img>')
+                                            .attr('src', d.src)
+                                            .attr('width', '64')
+                                            .attr('height', '64')
+                                            .click( _ => {
+                                                var copyText = document.getElementById("item_" + i);
+                                                console.log(copyText)
+                                                copyText.select();
+                                                document.execCommand('copy');
+                                            })
+                                    )
+                                ).append(
+                                    $('<td>').text(d.item)
+                                ).append(
+                                    $('<td>').text(d.tier)
+                                ).append(
+                                    $('<td>').text(d.enchant)
+                                ).append(
+                                    $('<td>').text(d.quality)
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.BM_price)
+                                            .addClass('silver')
+                                    )
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.CA_price)
+                                            .addClass('silver')
+                                    )
+                                ).append(
+                                    $('<td>').append(
+                                        $('<p>')
+                                            .text(d.benef)
+                                            .addClass('silver')
+                                    )
+                                )
+                            ).append(
+                                $('<input>')
+                                    .attr("id","item_" + i)
+                                    .attr("type", "text")
+                                    .attr("value", d.item)
+                                    .attr("style","position: fixed;left: -10000px;")
+                            )
+                        }
+                        $('[data-toggle="tooltip"]').tooltip();
+                    }
+                });
+            })
+        })
+    </script>
+    <body>
+        <div class="container pt-sm-5">
+            <form>
+                <div class="form-row">
+                    <div class="col-3">
+                        <select id="type" name="type" class="form-control" >
+                            <option value="" disabled selected>Type</option>
+                            <% types.forEach(y=>{%>
+                                <option label="<%= y %>" value="<%= y %>" ><%= y %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <% tiers.forEach(y=>{ %>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tiers" id="<%= 'T' + y %>" value="<%= y %>" >
+                                <label class="form-check-label" for="<%= 'T' + y %>"><%= 'T' + y %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                    <div class="col-2">
+                        <button type="button" id="lookup" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Lookup</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-3">
+                        <select id="category" name="category" class="form-control" >
+                            <option value="" disabled selected>Category</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Item</th>
+                    <th>Tiers</th>
+                    <th>Enchant</th>
+                    <th>Qualité</th>
+                    <th>Prix BM</th>
+                    <th>Prix CA</th>
+                    <th>Benef</th>
+                </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
